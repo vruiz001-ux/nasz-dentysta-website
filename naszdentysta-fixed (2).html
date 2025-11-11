@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- iOS Specific Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Nasz Dentysta">
+    <meta name="format-detection" content="telephone=yes">
+    
+    <!-- Android Specific Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1e3a8a">
+    
+    <title>Nasz Dentysta - Zielona Góra | Gabinet Dentystyczny od 1989</title>
+    <meta name="description" content="Profesjonalny gabinet dentystyczny w Zielonej Górze. Od 1989 roku oferujemy kompleksowe usługi stomatologiczne.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="dentysta Zielona Góra, stomatolog, gabinet dentystyczny, protetyka, implanty, ortodoncja">
+    <meta name="author" content="Nasz Dentysta">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.naszdentystazgora.com">
+    
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="pl" href="https://www.naszdentystazgora.com">
+    <link rel="alternate" hreflang="en" href="https://www.naszdentystazgora.com">
+    <link rel="alternate" hreflang="uk" href="https://www.naszdentystazgora.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.naszdentystazgora.com">
+    <meta property="og:title" content="Nasz Dentysta - Profesjonalny Gabinet Dentystyczny">
+    <meta property="og:description" content="Od 1989 roku oferujemy kompleksowe usługi stomatologiczne w Zielonej Górze.">
+    <meta property="og:locale" content="pl_PL">
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Nasz Dentysta",
+      "url": "https://www.naszdentystazgora.com",
+      "telephone": ["+48683205066", "+48683202396"],
+      "email": "naszdentystazgora@gmail.com",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Morelowa 23",
+          "addressLocality": "Zielona Góra",
+          "postalCode": "65-001",
+          "addressCountry": "PL"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Drzewna 35",
+          "addressLocality": "Zielona Góra",
+          "postalCode": "65-001",
+          "addressCountry": "PL"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "foundingDate": "1989"
+    }
+    </script>
+
+    <!-- Google Analytics 4 (GA4) - Consent Mode -->
+    <script>
+        // Initialize Google Consent Mode before GA4 loads
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Default consent to 'denied' (GDPR/RODO compliant)
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+    </script>
+
+    <!-- Google Analytics 4 - Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configure GA4 with your Measurement ID
+        gtag('config', 'G-XXXXXXXXXX', {
+            'anonymize_ip': true,  // Anonymize IP addresses (GDPR)
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e40af;
+            --accent: #F59E0B;
+            --text: #1F2937;
+            --text-light: #6B7280;
+            --bg: #FFFFFF;
+            --bg-light: #F9FAFB;
+            --border: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Mobile-first improvements */
+        html {
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            scroll-behavior: smooth;
+        }
+
+        /* iOS Safe Area Support */
+        @supports (padding: max(0px)) {
+            body {
+                padding-left: max(0px, env(safe-area-inset-left));
+                padding-right: max(0px, env(safe-area-inset-right));
+            }
+        }
+
+        /* Improve touch targets for mobile */
+        a, button, input, select, textarea {
+            -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0;
+            background: rgba(30, 58, 138, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 4px;
+            border: 1px solid rgba(30, 58, 138, 0.2);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            min-width: 48px;
+            min-height: 44px;
+            border: none;
+            background: transparent;
+            color: #1e3a8a;
+            cursor: pointer;
+            border-radius: 16px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .lang-btn:hover {
+            background: rgba(30, 58, 138, 0.15);
+        }
+
+        .lang-btn.active {
+            background: #1e3a8a;
+            color: white;
+            box-shadow: 0 2px 8px rgba(30, 58, 138, 0.3);
+        }
+
+        /* Language content visibility */
+        .lang-pl, .lang-en, .lang-ua { display: none; }
+
+        html[lang="pl"] .lang-pl { display: block; }
+        html[lang="en"] .lang-en { display: block; }
+        html[lang="ua"] .lang-ua { display: block; }
+
+        span.lang-pl, span.lang-en, span.lang-ua,
+        a.lang-pl, a.lang-en, a.lang-ua { display: none; }
+
+        html[lang="pl"] span.lang-pl,
+        html[lang="pl"] a.lang-pl { display: inline; }
+        html[lang="en"] span.lang-en,
+        html[lang="en"] a.lang-en { display: inline; }
+        html[lang="ua"] span.lang-ua,
+        html[lang="ua"] a.lang-ua { display: inline; }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(224, 242, 254, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid rgba(30, 58, 138, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 90px;
+            max-width: 350px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 12px;
+            min-width: 48px;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
+            touch-action: manipulation;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 110px;
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .heritage-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), #FBBF24);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            box-shadow: 0 4px 20px rgba(15, 118, 110, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(15, 118, 110, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            color: var(--text);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 1.5rem 0;
+        }
+
+        .about-text ul li {
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        .about-text ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-image:hover img {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Section */
+        .team-section {
+            margin-top: 6rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border);
+        }
+
+        .team-member:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary-light);
+        }
+
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+            overflow: hidden;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .team-specialty {
+            display: inline-block;
+            background: rgba(30, 58, 138, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20BA5A;
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Cookie Consent Banner - GDPR/RODO Compliance */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 10000;
+            display: none;
+            animation: slideUp 0.5s ease;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cookie-text h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .cookie-text p {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .cookie-text a {
+            color: #fbbf24;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            white-space: nowrap;
+        }
+
+        .cookie-btn-accept {
+            background: #10b981;
+            color: white;
+        }
+
+        .cookie-btn-accept:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .cookie-btn-decline {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .cookie-btn-decline:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .cookie-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .cookie-buttons {
+                width: 100%;
+            }
+            .cookie-btn {
+                flex: 1;
+                min-height: 48px;
+                font-size: 1rem;
+            }
+            
+            /* iOS Safe Area for cookie banner */
+            @supports (padding: max(0px)) {
+                .cookie-banner {
+                    padding-bottom: max(1.5rem, calc(1.5rem + env(safe-area-inset-bottom)));
+                }
+            }
+        }
+
+        @media (max-width: 968px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 30px;
+            }
+            
+            /* iOS Safe Area for WhatsApp button */
+            @supports (padding: max(0px)) {
+                .whatsapp-float {
+                    bottom: max(20px, calc(20px + env(safe-area-inset-bottom)));
+                    right: max(20px, calc(20px + env(safe-area-inset-right)));
+                }
+            }
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 2px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-light);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .service-text {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Why Us Section */
+        .why-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 32px;
+            padding: 6rem 4rem;
+            margin: 6rem 2rem;
+        }
+
+        .why-section .section-title,
+        .why-section .section-subtitle {
+            color: white;
+            -webkit-text-fill-color: white;
+        }
+
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .why-text {
+            font-size: 1.125rem;
+            line-height: 1.9;
+            opacity: 0.95;
+        }
+
+        .why-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .why-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .why-image:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent), #FBBF24);
+            border-radius: 32px;
+            padding: 4rem;
+            text-align: center;
+            color: white;
+            margin: 6rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--accent);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            height: 90px;
+            max-width: 350px;
+            width: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .location-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .location-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .location-address {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                top: 110px;
+                left: 0;
+                right: 0;
+                background: #1e3a8a;
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .nav-links a {
+                color: white !important;
+            }
+
+            .nav-links a:hover {
+                color: var(--accent) !important;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                touch-action: manipulation;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-content {
+                grid-template-columns: 1fr;
+            }
+
+            .why-section {
+                padding: 3rem 2rem;
+                margin: 3rem 1rem;
+            }
+
+            .cta-section {
+                padding: 3rem 2rem;
+                margin: 3rem 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#">
+                <img src="data:image/webp;base64,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" alt="Nasz Dentysta Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="#about" class="lang-pl">O nas</a>
+                    <a href="#about" class="lang-en">About</a>
+                    <a href="#about" class="lang-ua">Про нас</a>
+                </li>
+                <li>
+                    <a href="#services" class="lang-pl">Oferta</a>
+                    <a href="#services" class="lang-en">Services</a>
+                    <a href="#services" class="lang-ua">Послуги</a>
+                </li>
+                <li>
+                    <a href="#why" class="lang-pl">Dlaczego my</a>
+                    <a href="#why" class="lang-en">Why Us</a>
+                    <a href="#why" class="lang-ua">Чому ми</a>
+                </li>
+                <li>
+                    <a href="#contact" class="lang-pl">Kontakt</a>
+                    <a href="#contact" class="lang-en">Contact</a>
+                    <a href="#contact" class="lang-ua">Контакти</a>
+                </li>
+                <li>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang-switch="pl">PL</button>
+                        <button class="lang-btn" data-lang-switch="ua">UA</button>
+                        <button class="lang-btn" data-lang-switch="en">EN</button>
+                    </div>
+                </li>
+            </ul>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-btn lang-pl">✉️ Kontakt</a>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-btn lang-en">✉️ Contact Us</a>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-btn lang-ua">✉️ Контакт</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="heritage-badge">
+                <span>⭐</span>
+                <span class="lang-pl">Od 1989 roku</span>
+                <span class="lang-en">Since 1989</span>
+                <span class="lang-ua">З 1989 року</span>
+            </div>
+            
+            <h1 class="lang-pl">Zapraszamy do naszych gabinetów</h1>
+            <h1 class="lang-en">Welcome to Our Dental Clinics</h1>
+            <h1 class="lang-ua">Запрошуємо до наших клінік</h1>
+            
+            <p class="lang-pl">Profesjonalny gabinet dentystyczny w Zielonej Górze. Dysponujemy dwoma gabinetami stomatologicznymi oraz laboratorium protetycznym o standardzie europejskim.</p>
+            <p class="lang-en">Professional dental clinic in Zielona Góra. We have two dental offices and a European-standard prosthetic laboratory.</p>
+            <p class="lang-ua">Професійна стоматологічна клініка в Зеленій Гурі. У нас два стоматологічні кабінети та зуботехнічна лабораторія європейського стандарту.</p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary lang-pl">Umów wizytę</a>
+                <a href="#contact" class="btn-primary lang-en">Book Appointment</a>
+                <a href="#contact" class="btn-primary lang-ua">Записатися</a>
+                
+                <a href="tel:+48683205066" class="btn-secondary lang-pl">Zadzwoń teraz</a>
+                <a href="tel:+48683205066" class="btn-secondary lang-en">Call Now</a>
+                <a href="tel:+48683205066" class="btn-secondary lang-ua">Телефонуйте</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/mjEP28QeP2T1bwE6/unnamed-1-A8521pQqQ6FM5RwL.jpg" alt="Nasz Dentysta - Gabinet Dentystyczny">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2 class="section-title lang-pl">O Nas</h2>
+            <h2 class="section-title lang-en">About Us</h2>
+            <h2 class="section-title lang-ua">Про нас</h2>
+            
+            <p class="section-subtitle lang-pl">Od 35 lat dbamy o zdrowie i piękno Państwa zębów</p>
+            <p class="section-subtitle lang-en">For 35 years we've been caring for the health and beauty of your teeth</p>
+            <p class="section-subtitle lang-ua">Протягом 35 років ми дбаємо про здоров'я та красу ваших зубів</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <div class="lang-pl">
+                    <p>
+                        Dysponujemy <strong>dwoma gabinetami</strong> stomatologicznymi oraz <strong>laboratorium protetycznym</strong> o standardzie europejskim. Znajdujemy się w Zielonej Górze przy <strong>ul. Morelowej 23</strong> oraz <strong>ul. Drzewnej 35</strong>.
+                    </p>
+                    <p>
+                        Nasz zespół to <strong>wykwalifikowani dentyści</strong> z wieloletnim doświadczeniem, którzy na bieżąco podnoszą swoje kwalifikacje. Oferujemy kompleksową opiekę stomatologiczną w zakresie:
+                    </p>
+                    <ul>
+                        <li>Protetyki stomatologicznej</li>
+                        <li>Chirurgii stomatologicznej</li>
+                        <li>Implantologii</li>
+                        <li>Stomatologii zachowawczej</li>
+                        <li>Endodoncji</li>
+                        <li>Periodontologii</li>
+                    </ul>
+                </div>
+
+                <div class="lang-en">
+                    <p>
+                        We have <strong>two dental offices</strong> and a <strong>prosthetic laboratory</strong> of European standard. We are located in Zielona Góra at <strong>ul. Morelowa 23</strong> and <strong>ul. Drzewna 35</strong>.
+                    </p>
+                    <p>
+                        Our team consists of <strong>qualified dentists</strong> with many years of experience who continuously improve their skills. We offer comprehensive dental care in:
+                    </p>
+                    <ul>
+                        <li>Dental Prosthetics</li>
+                        <li>Dental Surgery</li>
+                        <li>Implantology</li>
+                        <li>Conservative Dentistry</li>
+                        <li>Endodontics</li>
+                        <li>Periodontology</li>
+                    </ul>
+                </div>
+
+                <div class="lang-ua">
+                    <p>
+                        У нас є <strong>два стоматологічні кабінети</strong> та <strong>зуботехнічна лабораторія</strong> європейського стандарту. Ми знаходимося в Зеленій Гурі на <strong>вул. Морелова 23</strong> та <strong>вул. Джевна 35</strong>.
+                    </p>
+                    <p>
+                        Наша команда - це <strong>кваліфіковані стоматологи</strong> з багаторічним досвідом, які постійно підвищують свою кваліфікацію. Ми пропонуємо комплексну стоматологічну допомогу в галузі:
+                    </p>
+                    <ul>
+                        <li>Стоматологічне протезування</li>
+                        <li>Стоматологічна хірургія</li>
+                        <li>Імплантологія</li>
+                        <li>Консервативна стоматологія</li>
+                        <li>Ендодонтія</li>
+                        <li>Пародонтологія</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-image">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=424,fit=crop/mjEP28QeP2T1bwE6/dental-mxBjrzWKgQSP4xx0.jpg" alt="Gabinet Nasz Dentysta">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background: var(--bg-light);">
+        <div class="section-header">
+            <h2 class="section-title lang-pl">Nasza Oferta</h2>
+            <h2 class="section-title lang-en">Our Services</h2>
+            <h2 class="section-title lang-ua">Наші послуги</h2>
+            
+            <p class="section-subtitle lang-pl">Kompleksowe usługi stomatologiczne na najwyższym poziomie</p>
+            <p class="section-subtitle lang-en">Comprehensive dental services at the highest level</p>
+            <p class="section-subtitle lang-ua">Комплексні стоматологічні послуги на найвищому рівні</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3 class="service-title lang-pl">Protetyka</h3>
+                <h3 class="service-title lang-en">Prosthetics</h3>
+                <h3 class="service-title lang-ua">Протезування</h3>
+                
+                <p class="service-text lang-pl">Wykonujemy prace protetyczne: korony, mosty, protezy ruchome i stałe. Własne laboratorium protetyczne gwarantuje najwyższą jakość i szybką realizację.</p>
+                <p class="service-text lang-en">We perform prosthetic work: crowns, bridges, removable and fixed dentures. Our own prosthetic laboratory guarantees the highest quality and quick completion.</p>
+                <p class="service-text lang-ua">Виконуємо протезну роботу: коронки, мости, знімні та незнімні протези. Власна зуботехнічна лабораторія гарантує найвищу якість та швидке виконання.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3 class="service-title lang-pl">Chirurgia</h3>
+                <h3 class="service-title lang-en">Surgery</h3>
+                <h3 class="service-title lang-ua">Хірургія</h3>
+                
+                <p class="service-text lang-pl">Ekstrakcje zębów, w tym trudne usunięcia ósmek, resekcje wierzchołków korzeni, oraz inne zabiegi chirurgiczne przeprowadzane z wykorzystaniem nowoczesnego sprzętu.</p>
+                <p class="service-text lang-en">Tooth extractions, including difficult wisdom tooth removals, root tip resections, and other surgical procedures performed using modern equipment.</p>
+                <p class="service-text lang-ua">Екстракція зубів, включаючи складне видалення зубів мудрості, резекції верхівок коренів та інші хірургічні процедури з використанням сучасного обладнання.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3 class="service-title lang-pl">Implantologia</h3>
+                <h3 class="service-title lang-en">Implantology</h3>
+                <h3 class="service-title lang-ua">Імплантологія</h3>
+                
+                <p class="service-text lang-pl">Nowoczesna implantologia stomatologiczna - trwałe rozwiązanie dla osób z brakami zębowymi. Implanty są najtrwalszą i najbardziej komfortową formą uzupełnienia braków.</p>
+                <p class="service-text lang-en">Modern dental implantology - a permanent solution for people with missing teeth. Implants are the most durable and comfortable form of tooth replacement.</p>
+                <p class="service-text lang-ua">Сучасна стоматологічна імплантологія - постійне рішення для людей з відсутніми зубами. Імплантати - найбільш довговічна та комфортна форма заміни зубів.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3 class="service-title lang-pl">Stomatologia Zachowawcza</h3>
+                <h3 class="service-title lang-en">Conservative Dentistry</h3>
+                <h3 class="service-title lang-ua">Консервативна стоматологія</h3>
+                
+                <p class="service-text lang-pl">Leczenie próchnicy, wypełnienia kompozytowe, lakowanie zębów. Stosujemy najnowocześniejsze materiały zapewniające trwałość i estetykę uzupełnień.</p>
+                <p class="service-text lang-en">Treatment of caries, composite fillings, tooth sealing. We use the most modern materials ensuring durability and aesthetics of fillings.</p>
+                <p class="service-text lang-ua">Лікування карієсу, композитні пломби, запечатування зубів. Використовуємо найсучасніші матеріали, що забезпечують довговічність та естетику пломб.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3 class="service-title lang-pl">Endodoncja</h3>
+                <h3 class="service-title lang-en">Endodontics</h3>
+                <h3 class="service-title lang-ua">Ендодонтія</h3>
+                
+                <p class="service-text lang-pl">Leczenie kanałowe zębów z użyciem nowoczesnych technik i materiałów. Dzięki precyzyjnym narzędziom zapewniamy skuteczność i komfort podczas zabiegu.</p>
+                <p class="service-text lang-en">Root canal treatment using modern techniques and materials. Thanks to precision tools, we ensure effectiveness and comfort during the procedure.</p>
+                <p class="service-text lang-ua">Лікування кореневих каналів з використанням сучасних технік та матеріалів. Завдяки точним інструментам ми забезпечуємо ефективність та комфорт під час процедури.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌟</div>
+                <h3 class="service-title lang-pl">Periodontologia</h3>
+                <h3 class="service-title lang-en">Periodontology</h3>
+                <h3 class="service-title lang-ua">Пародонтологія</h3>
+                
+                <p class="service-text lang-pl">Leczenie chorób przyzębia, scaling, piaskowanie. Regularna profilaktyka i higiena jamy ustnej to podstawa zdrowia Twoich zębów.</p>
+                <p class="service-text lang-en">Treatment of periodontal diseases, scaling, sandblasting. Regular prevention and oral hygiene are the basis for your dental health.</p>
+                <p class="service-text lang-ua">Лікування захворювань пародонту, скейлінг, пісковіддування. Регулярна профілактика та гігієна ротової порожнини - основа здоров'я ваших зубів.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-section" id="why">
+        <div class="section-header">
+            <h2 class="section-title lang-pl">Dlaczego Nasz Dentysta?</h2>
+            <h2 class="section-title lang-en">Why Choose Nasz Dentysta?</h2>
+            <h2 class="section-title lang-ua">Чому Nasz Dentysta?</h2>
+            
+            <p class="section-subtitle lang-pl">Co nas wyróżnia na tle innych gabinetów stomatologicznych</p>
+            <p class="section-subtitle lang-en">What makes us stand out from other dental clinics</p>
+            <p class="section-subtitle lang-ua">Що нас відрізняє від інших стоматологічних клінік</p>
+        </div>
+
+        <div class="why-content">
+            <div class="why-text">
+                <div class="lang-pl">
+                    <p>
+                        W Nasz Dentysta priorytetem jest zadowolenie pacjenta. Dbamy o komfortowe i przyjazne warunki dla wszystkich naszych pacjentów. Dzięki nowoczesnemu wyposażeniu i zespołowi wysoko wykwalifikowanych dentystów, zapewniamy spersonalizowaną i skuteczną opiekę stomatologiczną.
+                    </p>
+                    <p>
+                        35 lat doświadczenia w branży stomatologicznej to gwarancja profesjonalizmu. Własne laboratorium protetyczne pozwala nam na szybką realizację nawet najbardziej skomplikowanych prac protetycznych, a nowoczesny sprzęt zapewnia komfort i bezpieczeństwo podczas zabiegów.
+                    </p>
+                </div>
+
+                <div class="lang-en">
+                    <p>
+                        At Nasz Dentysta, we prioritize patient satisfaction and strive to create a comfortable and friendly environment for all our patients. With our modern equipment and team of highly qualified dentists, we provide personalized and effective dental care.
+                    </p>
+                    <p>
+                        35 years of experience in the dental industry is a guarantee of professionalism. Our own prosthetic laboratory allows us to quickly complete even the most complicated prosthetic work, and modern equipment ensures comfort and safety during procedures.
+                    </p>
+                </div>
+
+                <div class="lang-ua">
+                    <p>
+                        У Nasz Dentysta ми пріоритетно ставимося до задоволення пацієнтів і прагнемо створити комфортне та дружнє середовище для всіх наших пацієнтів. Завдяки сучасному обладнанню та команді висококваліфікованих стоматологів, ми забезпечуємо персоналізовану та ефективну стоматологічну допомогу.
+                    </p>
+                    <p>
+                        35 років досвіду в стоматологічній галузі - це гарантія професіоналізму. Власна зуботехнічна лабораторія дозволяє нам швидко виконувати навіть найскладніші протезні роботи, а сучасне обладнання забезпечує комфорт і безпеку під час процедур.
+                    </p>
+                </div>
+            </div>
+
+            <div class="why-image">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=424,fit=crop/mjEP28QeP2T1bwE6/caroline-lm-m-4tymtlli-unsplash-d95DpEla0wuN6eO8.webp" alt="Dlaczego Nasz Dentysta">
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section" id="contact">
+        <h2 class="lang-pl">Umów się na wizytę już dziś!</h2>
+        <h2 class="lang-en">Book an Appointment Today!</h2>
+        <h2 class="lang-ua">Запишіться на прийом сьогодні!</h2>
+        
+        <p class="lang-pl">Skontaktuj się z nami telefonicznie lub odwiedź jeden z naszych gabinetów</p>
+        <p class="lang-en">Contact us by phone or visit one of our offices</p>
+        <p class="lang-ua">Зв'яжіться з нами по телефону або відвідайте один з наших кабінетів</p>
+
+        <div class="cta-buttons">
+            <a href="tel:+48683205066" class="cta-button">
+                <span class="lang-pl">📞 Morelowa: 68 320 50 66</span>
+                <span class="lang-en">📞 Morelowa: 68 320 50 66</span>
+                <span class="lang-ua">📞 Морелова: 68 320 50 66</span>
+            </a>
+            <a href="tel:+48683202396" class="cta-button">
+                <span class="lang-pl">📞 Drzewna: 68 320 23 96</span>
+                <span class="lang-en">📞 Drzewna: 68 320 23 96</span>
+                <span class="lang-ua">📞 Джевна: 68 320 23 96</span>
+            </a>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-button lang-pl">✉️ Napisz do nas</a>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-button lang-en">✉️ Email Us</a>
+            <a href="mailto:naszdentystazgora@gmail.com" class="cta-button lang-ua">✉️ Напишіть нам</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <img src="data:image/webp;base64,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" alt="Nasz Dentysta Logo" class="footer-logo">
+                <p class="footer-text lang-pl">
+                    Profesjonalny gabinet stomatologiczny w Zielonej Górze. Od 1989 roku dbamy o zdrowie i piękno Państwa zębów.
+                </p>
+                <p class="footer-text lang-en">
+                    Professional dental clinic in Zielona Góra. Since 1989, we've been taking care of the health and beauty of your teeth.
+                </p>
+                <p class="footer-text lang-ua">
+                    Професійна стоматологічна клініка в Зеленій Гурі. З 1989 року ми дбаємо про здоров'я та красу ваших зубів.
+                </p>
+                <div style="margin-top: 15px; font-size: 0.9em; color: #6B7280;">
+                    <p><strong>NIP:</strong> 9291794899</p>
+                    <p><strong>REGON:</strong> 081081188</p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-title lang-pl">Szybkie linki</h4>
+                <h4 class="footer-title lang-en">Quick Links</h4>
+                <h4 class="footer-title lang-ua">Швидкі посилання</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#about" class="lang-pl">O nas</a>
+                        <a href="#about" class="lang-en">About</a>
+                        <a href="#about" class="lang-ua">Про нас</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="lang-pl">Oferta</a>
+                        <a href="#services" class="lang-en">Services</a>
+                        <a href="#services" class="lang-ua">Послуги</a>
+                    </li>
+                    <li>
+                        <a href="#why" class="lang-pl">Dlaczego my</a>
+                        <a href="#why" class="lang-en">Why Us</a>
+                        <a href="#why" class="lang-ua">Чому ми</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="lang-pl">Kontakt</a>
+                        <a href="#contact" class="lang-en">Contact</a>
+                        <a href="#contact" class="lang-ua">Контакти</a>
+                    </li>
+                    <li>
+                        <a href="privacy-policy.html" class="lang-pl">Polityka Prywatności</a>
+                        <a href="privacy-policy.html" class="lang-en">Privacy Policy</a>
+                        <a href="privacy-policy.html" class="lang-ua">Політика Конфіденційності</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title lang-pl">Usługi</h4>
+                <h4 class="footer-title lang-en">Services</h4>
+                <h4 class="footer-title lang-ua">Послуги</h4>
+                <ul class="footer-links">
+                    <li class="lang-pl">Protetyka</li>
+                    <li class="lang-en">Prosthetics</li>
+                    <li class="lang-ua">Протезування</li>
+                    
+                    <li class="lang-pl">Chirurgia</li>
+                    <li class="lang-en">Surgery</li>
+                    <li class="lang-ua">Хірургія</li>
+                    
+                    <li class="lang-pl">Implantologia</li>
+                    <li class="lang-en">Implantology</li>
+                    <li class="lang-ua">Імплантологія</li>
+                    
+                    <li class="lang-pl">Endodoncja</li>
+                    <li class="lang-en">Endodontics</li>
+                    <li class="lang-ua">Ендодонтія</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title lang-pl">Nasze lokalizacje</h4>
+                <h4 class="footer-title lang-en">Our Locations</h4>
+                <h4 class="footer-title lang-ua">Наші локації</h4>
+                
+                <div class="location-item">
+                    <div class="location-name lang-pl">Gabinet Morelowa</div>
+                    <div class="location-name lang-en">Morelowa Clinic</div>
+                    <div class="location-name lang-ua">Клініка Морелова</div>
+                    <div class="location-address">
+                        ul. Morelowa 23<br>
+                        65-001 Zielona Góra<br>
+                        📞 68 320 50 66
+                    </div>
+                </div>
+
+                <div class="location-item">
+                    <div class="location-name lang-pl">Gabinet Drzewna</div>
+                    <div class="location-name lang-en">Drzewna Clinic</div>
+                    <div class="location-name lang-ua">Клініка Джевна</div>
+                    <div class="location-address">
+                        ul. Drzewna 35<br>
+                        65-001 Zielona Góra<br>
+                        📞 68 320 23 96
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="lang-pl">&copy; 2025 Nasz Dentysta. Wszelkie prawa zastrzeżone.</p>
+            <p class="lang-en">&copy; 2025 Nasz Dentysta. All rights reserved.</p>
+            <p class="lang-ua">&copy; 2025 Nasz Dentysta. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/48797707168" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3 class="lang-pl">🍪 Używamy plików cookie</h3>
+                <h3 class="lang-en">🍪 We use cookies</h3>
+                <h3 class="lang-ua">🍪 Ми використовуємо cookie</h3>
+                
+                <p class="lang-pl">
+                    Ta strona wykorzystuje pliki cookie w celu poprawy jakości usług oraz do celów analitycznych (Google Analytics).
+                    Kontynuując przeglądanie strony i akceptując cookies, wyrażasz zgodę na ich użycie.
+                    <a href="privacy-policy.html" style="color: #3b82f6; text-decoration: underline;">Dowiedz się więcej w Polityce Prywatności</a>
+                </p>
+                <p class="lang-en">
+                    This website uses cookies to improve service quality and for analytical purposes (Google Analytics).
+                    By continuing to browse the site and accepting cookies, you consent to their use.
+                    <a href="privacy-policy.html" style="color: #3b82f6; text-decoration: underline;">Learn more in our Privacy Policy</a>
+                </p>
+                <p class="lang-ua">
+                    Цей сайт використовує файли cookie для покращення якості послуг та в аналітичних цілях (Google Analytics).
+                    Продовжуючи перегляд сайту та приймаючи cookie, ви погоджуєтесь на їх використання.
+                    <a href="privacy-policy.html" style="color: #3b82f6; text-decoration: underline;">Дізнайтеся більше в Політиці Конфіденційності</a>
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">
+                    <span class="lang-pl">✓ Akceptuję</span>
+                    <span class="lang-en">✓ Accept</span>
+                    <span class="lang-ua">✓ Прийняти</span>
+                </button>
+                <button class="cookie-btn cookie-btn-decline" onclick="declineCookies()">
+                    <span class="lang-pl">✕ Odrzuć</span>
+                    <span class="lang-en">✕ Decline</span>
+                    <span class="lang-ua">✕ Відхилити</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Wait for DOM to be fully loaded - THIS FIXES THE LANGUAGE SWITCHING!
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language Switcher
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const html = document.documentElement;
+
+            // Load saved language or default to Polish
+            const savedLang = localStorage.getItem('language') || 'pl';
+            setLanguage(savedLang);
+
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang-switch');
+                    setLanguage(lang);
+                    localStorage.setItem('language', lang);
+                });
+            });
+
+            function setLanguage(lang) {
+                html.setAttribute('lang', lang);
+                
+                // Update active button
+                langButtons.forEach(btn => {
+                    if (btn.getAttribute('data-lang-switch') === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+
+                // Update page title
+                const titles = {
+                    'pl': 'Nasz Dentysta - Zielona Góra | Gabinet Dentystyczny od 1989',
+                    'en': 'Nasz Dentysta - Zielona Góra | Dental Clinic since 1989',
+                    'ua': 'Nasz Dentysta - Зелена Гура | Стоматологічна клініка з 1989'
+                };
+                document.title = titles[lang];
+            }
+
+            // Mobile menu toggle
+            window.toggleMobileMenu = function() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        const navLinks = document.querySelector('.nav-links');
+                        if (navLinks) {
+                            navLinks.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const navLinks = document.querySelector('.nav-links');
+                const mobileBtn = document.querySelector('.mobile-menu-btn');
+                
+                if (navLinks && mobileBtn && !navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Cookie Consent Functions with Google Analytics Integration
+            window.acceptCookies = function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                document.getElementById('cookieBanner').classList.remove('show');
+
+                // Update Google Consent Mode to allow analytics
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                    });
+                }
+
+                console.log('Cookies accepted - Analytics enabled');
+            }
+
+            window.declineCookies = function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                document.getElementById('cookieBanner').classList.remove('show');
+
+                // Keep analytics denied in Google Consent Mode
+                console.log('Cookies declined - Analytics disabled');
+            }
+
+            // Show cookie banner if not already accepted/declined
+            const cookieConsent = localStorage.getItem('cookieConsent');
+            if (!cookieConsent) {
+                setTimeout(function() {
+                    document.getElementById('cookieBanner').classList.add('show');
+                }, 1000); // Show after 1 second
+            } else if (cookieConsent === 'accepted') {
+                // If previously accepted, grant consent immediately
+                if (typeof gtag === 'function') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted'
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

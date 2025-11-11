@@ -1,0 +1,203 @@
+=====================================================
+POLISH COMPLIANCE CHECKLIST - NASZ DENTYSTA WEBSITE
+Data: 11 listopada 2025
+=====================================================
+
+ZMIANY WYKONANE / CHANGES COMPLETED:
+=====================================
+
+✅ 1. SITEMAP.XML
+   - Zaktualizowano daty (2025-11-11)
+   - Usunięto nieindeksowalne URL-e z fragmentami (#about, #services, etc.)
+   - Pozostawiono tylko rzeczywiste strony
+   Status: COMPLIANT
+
+✅ 2. ROBOTS.TXT
+   - Usunięto nieobsługiwaną dyrektywę Crawl-delay dla Googlebot
+   - Zachowano wspierające dyrektywy dla Bingbot
+   Status: OPTIMIZED
+
+✅ 3. POLITYKA PRYWATNOŚCI (privacy-policy.html)
+   - Utworzono kompletną stronę zgodną z RODO
+   - Zawiera wszystkie wymagane elementy:
+     * Dane administratora danych
+     * Cele przetwarzania danych
+     * Podstawy prawne
+     * Prawa użytkownika (dostęp, sprostowanie, usunięcie, itp.)
+     * Informacje o plikach cookie
+     * Okres przechowywania danych
+     * Dane kontaktowe UODO
+     * Bezpieczeństwo danych
+   - Wielojęzyczna (PL/EN/UA gotowe)
+   Status: CREATED - REQUIRES REVIEW
+
+✅ 4. COOKIE BANNER
+   - Dodano link do Polityki Prywatności w banerze cookie
+   - Banner zawiera opcje Accept/Decline
+   - Zgodny z wymogami RODO
+   Status: IMPROVED - COMPLIANT
+
+✅ 5. FOOTER - INFORMACJE BIZNESOWE
+   - Dodano pola NIP i REGON (wymagane prawnie w Polsce)
+   - Dodano link do Polityki Prywatności w menu
+   Status: STRUCTURE READY - REQUIRES DATA
+
+✅ 6. HTML FILE
+   - Wszystkie wymagane meta tagi obecne
+   - Prawidłowa struktura Schema.org dla lokalnego biznesu
+   - Multi-language support (PL/EN/UA)
+   - Accessibility features present
+   Status: COMPLIANT
+
+
+DO UZUPEŁNIENIA PRZEZ WŁAŚCICIELA / TO BE COMPLETED BY OWNER:
+=============================================================
+
+⚠️ KRYTYCZNE / CRITICAL (Wymagane prawnie / Legally Required):
+
+1. NIP (Numer Identyfikacji Podatkowej)
+   Lokalizacja: footer w pliku naszdentysta-fixed (2).html
+   Linia: ~1364
+   Zamień: [Do uzupełnienia]
+   Na: Twój numer NIP
+
+2. REGON (Numer Rejestrowy)
+   Lokalizacja: footer w pliku naszdentysta-fixed (2).html
+   Linia: ~1365
+   Zamień: [Do uzupełnienia]
+   Na: Twój numer REGON
+
+3. NIP i REGON w Polityce Prywatności
+   Lokalizacja: privacy-policy.html
+   Sekcja: "1. Administrator Danych Osobowych"
+   Zamień: [Do uzupełnienia przez właściciela]
+   Na: Rzeczywiste numery NIP i REGON
+
+
+📋 ZALECANE / RECOMMENDED:
+
+4. Przejrzyj i dostosuj Politykę Prywatności
+   - Sprawdź czy wszystkie informacje są aktualne
+   - Potwierdź okres przechowywania dokumentacji
+   - Dodaj informacje o IOD (jeśli dotyczy)
+
+5. Certyfikat SSL
+   - Upewnij się, że strona używa HTTPS
+   - Wymagane dla compliance z RODO
+
+6. Cookies - szczegółowa konfiguracja
+   - Jeśli używasz Google Analytics, dodaj to do polityki
+   - Rozważ narzędzie do zarządzania zgodami cookie (np. Cookiebot)
+
+7. Formularz kontaktowy (jeśli zostanie dodany)
+   - Dodaj checkbox zgody RODO
+   - Link do Polityki Prywatności przy formularzu
+
+8. Newsletter (jeśli dotyczy)
+   - Double opt-in
+   - Link do wypisania się w każdej wiadomości
+   - Zgoda RODO
+
+9. Accessibility - WCAG 2.1 Level AA
+   - Strona ma dobrą podstawę
+   - Rozważ test z narzędziami typu WAVE lub axe DevTools
+   - Dodaj skip navigation link
+
+
+DODATKOWE WYMOGI DLA GABINETÓW MEDYCZNYCH / ADDITIONAL MEDICAL REQUIREMENTS:
+============================================================================
+
+⚠️ Do rozważenia:
+
+1. Prawa Pacjenta
+   - Rozważ dodanie strony "Prawa Pacjenta"
+   - Link do informacji NFZ o prawach pacjenta
+
+2. Licencje i Uprawnienia
+   - Informacja o uprawnieniach lekarzy (jeśli wymagane)
+   - Numer wpisu do rejestru lekarzy
+
+3. Dokumentacja Medyczna
+   - Polityka Prywatności już zawiera informacje o przechowywaniu
+   - Upewnij się, że praktyka jest zgodna z zapisami
+
+4. Zgody Medyczne
+   - Formularze zgód medycznych (papierowe w gabinecie)
+   - Zgoda na przetwarzanie danych medycznych
+
+
+PLIKI W PAKIECIE / FILES IN PACKAGE:
+====================================
+
+1. sitemap.xml - Zaktualizowana mapa strony
+2. robots.txt - Zoptymalizowany plik robots
+3. naszdentysta-fixed (2).html - Główna strona z poprawkami
+4. privacy-policy.html - Nowa strona Polityki Prywatności
+5. POLISH_COMPLIANCE_CHECKLIST.txt - Ten dokument
+
+
+JAK WDROŻYĆ / HOW TO DEPLOY:
+============================
+
+1. Uzupełnij NIP i REGON w obu plikach HTML
+2. Przejrzyj privacy-policy.html i dostosuj jeśli potrzeba
+3. Zmień nazwę "naszdentysta-fixed (2).html" na "index.html"
+4. Upload wszystkich plików na serwer:
+   - index.html (strona główna)
+   - privacy-policy.html (polityka prywatności)
+   - sitemap.xml
+   - robots.txt
+5. Przetestuj wszystkie linki
+6. Sprawdź czy banner cookie działa poprawnie
+7. Zweryfikuj dostępność privacy-policy.html pod adresem:
+   https://www.naszdentystazgora.com/privacy-policy.html
+
+
+TESTY DO WYKONANIA / TESTS TO PERFORM:
+======================================
+
+✓ Sprawdź działanie bannera cookie
+✓ Kliknij "Dowiedz się więcej" w bannerze - sprawdź czy otwiera privacy-policy.html
+✓ Sprawdź link "Polityka Prywatności" w footerze
+✓ Przetestuj na urządzeniach mobilnych
+✓ Sprawdź przełączanie języków
+✓ Zweryfikuj sitemap.xml w Google Search Console
+✓ Test WCAG 2.1 (np. przez WAVE)
+
+
+KONTAKT W RAZIE PYTAŃ / CONTACT FOR QUESTIONS:
+==============================================
+
+Jeśli masz pytania dotyczące compliance lub potrzebujesz dalszej pomocy:
+- Skontaktuj się z prawnikiem specjalizującym się w RODO
+- UODO (Urząd Ochrony Danych Osobowych): www.uodo.gov.pl
+- Dla medycznych compliance: Okręgowa Izba Lekarska
+
+
+WAŻNE PRZYPOMNIENIE / IMPORTANT REMINDER:
+=========================================
+
+⚠️ Strona internetowa to tylko część compliance.
+Upewnij się również, że:
+- Dokumentacja medyczna w gabinecie jest zgodna z przepisami
+- Pacjenci podpisują zgody na przetwarzanie danych
+- Personel jest przeszkolony w zakresie RODO
+- Zabezpieczenia techniczne i organizacyjne są wdrożone
+- Rejestry czynności przetwarzania są prowadzone (jeśli wymagane)
+
+
+STATUS COMPLIANCE:
+==================
+
+RODO/GDPR: ✅ PODSTAWOWA STRUKTURA GOTOWA - wymaga uzupełnienia NIP/REGON
+Cookie Law: ✅ COMPLIANT
+SEO: ✅ OPTIMIZED
+Accessibility: ⚠️ DOBRA PODSTAWA - zalecany dodatkowy test
+Medical Regulations: ⚠️ CZĘŚCIOWO - wymaga przeglądu specjalisty medycznego
+
+
+=====================================================
+Dokument przygotowany: 11 listopada 2025
+Przygotował: Claude Code (AI Assistant)
+Do użytku: Nasz Dentysta - Gabinet Stomatologiczny
+=====================================================

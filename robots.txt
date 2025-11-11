@@ -1,0 +1,30 @@
+# robots.txt for Nasz Dentysta - Zielona Góra
+# Website: www.naszdentystazgora.com
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if they exist in the future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://www.naszdentystazgora.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+# Crawl-delay: 10
+
+# Specific rules for Google Bot
+User-agent: Googlebot
+Allow: /
+
+# Allow Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Bing Bot
+User-agent: bingbot
+Allow: /
+Crawl-delay: 5

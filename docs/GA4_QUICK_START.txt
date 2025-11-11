@@ -1,0 +1,106 @@
+╔═══════════════════════════════════════════════════════════╗
+║           GA4 QUICK START - NASZ DENTYSTA                ║
+║              3-Step Setup Guide                          ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ Everything is configured except your Measurement ID
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 3 STEPS TO GO LIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: GET YOUR MEASUREMENT ID
+================================
+
+1. Go to: https://analytics.google.com
+2. Sign in with Google Account
+3. Create Account: "Nasz Dentysta"
+4. Create Property: "Nasz Dentysta Website"
+   - Time Zone: Warsaw (GMT+1)
+   - Currency: PLN
+5. Create Web Stream:
+   - URL: https://www.naszdentystazgora.com
+   - Name: "Main Website"
+6. COPY your Measurement ID
+   Format: G-XXXXXXXXXX
+   Example: G-ABC123XYZ
+
+
+STEP 2: UPDATE YOUR WEBSITE
+============================
+
+File: naszdentysta-fixed (2).html
+
+Find and replace (2 places):
+
+❌ OLD: G-XXXXXXXXXX
+✅ NEW: Your actual ID (e.g., G-ABC123XYZ)
+
+Location 1 (around line 89):
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+Location 2 (around line 96):
+gtag('config', 'G-XXXXXXXXXX', {
+
+
+STEP 3: TEST IT WORKS
+=====================
+
+1. Upload updated file to server
+2. Open: https://www.naszdentystazgora.com
+3. Accept cookies when banner appears
+4. Open Google Analytics → Realtime report
+5. You should see yourself as 1 active user
+6. ✅ Done!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ WHAT'S ALREADY DONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ GA4 tracking code installed
+✓ Consent Mode configured (GDPR compliant)
+✓ Cookie banner updated
+✓ Privacy policies updated (PL/EN/UA)
+✓ IP anonymization enabled
+✓ 14-month data retention
+✓ Opt-out instructions provided
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 WHAT YOU'LL SEE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After 24-48 hours:
+
+✓ Number of visitors
+✓ Popular pages
+✓ Traffic sources (Google, direct, etc.)
+✓ Language preferences (PL/EN/UA)
+✓ Device types (mobile/desktop)
+✓ Geographic locations
+✓ Button clicks (phone, email, WhatsApp)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔒 PRIVACY COMPLIANT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ No tracking before consent
+✓ Easy opt-out
+✓ IP anonymized
+✓ GDPR/RODO compliant
+✓ Transparent data usage
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📚 NEED MORE HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Read these files:
+→ GOOGLE_ANALYTICS_SETUP_GUIDE.txt (detailed)
+→ GA4_OPTIMIZATION_SUMMARY.txt (complete overview)
+
+
+That's it! 3 simple steps and you're tracking! 🎉

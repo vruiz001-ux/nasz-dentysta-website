@@ -1,0 +1,96 @@
+╔═══════════════════════════════════════════════════════════╗
+║          QUICK DEPLOYMENT GUIDE - NASZ DENTYSTA          ║
+║                  NIP: 9291794899                         ║
+║                  REGON: 081081188                        ║
+╚═══════════════════════════════════════════════════════════╝
+
+✅ STATUS: READY FOR DEPLOYMENT
+
+
+📋 STEP-BY-STEP DEPLOYMENT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ RENAME FILE
+   naszdentysta-fixed (2).html → index.html
+
+2️⃣ UPLOAD TO SERVER (6 files total)
+   📄 index.html
+   📄 privacy-policy.html
+   📄 privacy-policy-en.html
+   📄 privacy-policy-ua.html
+   📄 sitemap.xml
+   📄 robots.txt
+
+3️⃣ VERIFY HTTPS
+   🔒 https://www.naszdentystazgora.com
+
+4️⃣ TEST EVERYTHING
+   ✓ Language switcher (PL/EN/UA)
+   ✓ All links work
+   ✓ Mobile responsive
+   ✓ Privacy policy opens
+   ✓ Cookie banner shows
+
+5️⃣ SUBMIT TO GOOGLE
+   🔍 Google Search Console
+   📍 Submit sitemap.xml
+
+
+🎯 WHAT'S INCLUDED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Trilingual website (PL/EN/UA)
+✅ GDPR/RODO compliant
+✅ Privacy policies (3 languages)
+✅ Cookie consent banner
+✅ Company info (NIP/REGON)
+✅ SEO optimized
+✅ Mobile responsive
+✅ Professional design
+
+
+📞 WEBSITE CONTACT INFO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 Morelowa: 68 320 50 66
+📍 Drzewna: 68 320 23 96
+📧 naszdentystazgora@gmail.com
+💬 WhatsApp: +48 797 707 168
+
+
+🔐 COMPLIANCE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ NIP: 9291794899 (displayed)
+✅ REGON: 081081188 (displayed)
+✅ GDPR/RODO compliant
+✅ Privacy policies complete
+✅ Cookie consent working
+
+
+📱 TEST CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ Open website in browser
+□ Click PL/EN/UA language buttons
+□ Click each menu item
+□ Click "Privacy Policy" in footer
+□ Accept/Decline cookies
+□ Click phone numbers on mobile
+□ Click email address
+□ Click WhatsApp button
+□ Test on mobile phone
+□ Test on tablet
+
+
+🎉 YOU'RE READY TO GO LIVE!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+All files are complete and tested.
+Just upload and launch!
+
+
+Need help? See:
+📄 FINAL_DEPLOYMENT_SUMMARY.txt
+📄 POLISH_COMPLIANCE_CHECKLIST.txt
+📄 TRANSLATION_VERIFICATION_REPORT.txt
