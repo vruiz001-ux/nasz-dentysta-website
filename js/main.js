@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     var titles = {
       'pl': 'Nasz Dentysta — Dentysta Zielona Góra | Od 1989 roku',
-      'ua': 'Nasz Dentysta — Стоматолог Зелена Гура | З 1989 року'
+      'ua': 'Nasz Dentysta — Стоматолог Зелена Гура | З 1989 року',
+      'en': 'Nasz Dentysta — Dentist Zielona Góra | Since 1989',
+      'fr': 'Nasz Dentysta — Dentiste Zielona Góra | Depuis 1989'
     };
     document.title = titles[lang] || titles['pl'];
   }

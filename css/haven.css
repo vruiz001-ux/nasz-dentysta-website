@@ -599,14 +599,19 @@ p { font-size: 1.0625rem; line-height: 1.75; }
 .ua-banner a { color: var(--white); text-decoration: underline; font-weight: 700; }
 
 /* --- Language visibility --- */
-.lang-pl, .lang-ua { display: none; }
+.lang-pl, .lang-ua, .lang-en, .lang-fr { display: none; }
 html[lang="pl"] .lang-pl { display: block; }
 html[lang="ua"] .lang-ua { display: block; }
-span.lang-pl, span.lang-ua, a.lang-pl, a.lang-ua { display: none; }
+html[lang="en"] .lang-en { display: block; }
+html[lang="fr"] .lang-fr { display: block; }
+span.lang-pl, span.lang-ua, span.lang-en, span.lang-fr,
+a.lang-pl, a.lang-ua, a.lang-en, a.lang-fr { display: none; }
 html[lang="pl"] span.lang-pl, html[lang="pl"] a.lang-pl { display: inline; }
 html[lang="ua"] span.lang-ua, html[lang="ua"] a.lang-ua { display: inline; }
+html[lang="en"] span.lang-en, html[lang="en"] a.lang-en { display: inline; }
+html[lang="fr"] span.lang-fr, html[lang="fr"] a.lang-fr { display: inline; }
 html[lang="pl"] .ua-banner { display: block; }
-html[lang="ua"] .ua-banner { display: none; }
+html[lang="ua"] .ua-banner, html[lang="en"] .ua-banner, html[lang="fr"] .ua-banner { display: none; }
 
 /* --- Animations --- */
 .fade-up {
