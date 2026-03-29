@@ -510,7 +510,7 @@ p { font-size: 1.0625rem; line-height: 1.75; }
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem; margin-bottom: 3rem;
 }
-.footer-logo { height: 60px; width: auto; margin-bottom: 1rem; filter: brightness(10); }
+.footer-logo { height: 60px; width: auto; margin-bottom: 1rem; }
 .footer-desc { font-size: 0.9375rem; line-height: 1.7; opacity: 0.75; margin-bottom: 1.5rem; }
 .footer h4 { color: var(--white); margin-bottom: 1.25rem; font-size: 1rem; }
 .footer-links { list-style: none; }
