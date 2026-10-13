@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { PageIntro } from "@/components/Sections";
@@ -26,9 +25,7 @@ export default async function Contact({ params }: { params: Promise<{ locale: Lo
           <div id="wizyta" className="card scroll-mt-28 p-6 sm:p-10 lg:col-span-7">
             <h2 className="text-2xl font-semibold sm:text-3xl">{t("form.title")}</h2>
             <p className="mt-2 mb-8 text-ink-muted">{t("form.intro")}</p>
-            <Suspense>
-              <ContactForm services={activeServices()} locations={clinic.locations.map((l) => ({ id: l.id, label: `${l.label} — ${l.street}` }))} />
-            </Suspense>
+            <ContactForm services={activeServices()} legalName={clinic.legalName ?? clinic.name} locations={clinic.locations.map((l) => ({ id: l.id, label: `${l.label} — ${l.street}` }))} />
           </div>
           <div className="lg:col-span-5">
             <ContactInfo />

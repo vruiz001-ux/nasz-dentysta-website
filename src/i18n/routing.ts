@@ -4,6 +4,8 @@ export const routing = defineRouting({
   locales: ["pl", "fr", "uk"],
   defaultLocale: "pl",
   localePrefix: "always",
+  // hreflang is emitted in <head> by generateMetadata (single source of truth).
+  alternateLinks: false,
   pathnames: {
     "/": "/",
     "/o-nas": { pl: "/o-nas", fr: "/a-propos", uk: "/pro-nas" },

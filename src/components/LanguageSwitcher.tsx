@@ -30,7 +30,7 @@ export function LanguageSwitcher({ tone = "dark", onSwitch }: { tone?: "dark" | 
             <button
               type="button"
               lang={l}
-              aria-label={LABELS[l].full}
+              aria-label={`${LABELS[l].short} — ${LABELS[l].full}`}
               aria-current={l === locale ? "true" : undefined}
               onClick={() =>
                 start(() => {

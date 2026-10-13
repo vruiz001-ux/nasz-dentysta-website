@@ -25,11 +25,11 @@ export async function Hero() {
 
       <div className="container-x grid items-center gap-14 py-12 sm:py-16 lg:min-h-[calc(100svh-5rem)] lg:grid-cols-12 lg:gap-10 lg:py-20">
         <div className="lg:col-span-6">
-          <p className="eyebrow animate-[fadeUp_0.7s_both]">{t("hero.eyebrow")}</p>
-          <h1 id="hero-title" className="h-display mt-5 animate-[fadeUp_0.8s_0.05s_both]">{t("hero.title")}</h1>
-          <p className="lead mt-6 max-w-xl animate-[fadeUp_0.8s_0.12s_both]">{t("hero.subtitle")}</p>
+          <p className="eyebrow">{t("hero.eyebrow")}</p>
+          <h1 id="hero-title" className="h-display mt-5">{t("hero.title")}</h1>
+          <p className="lead mt-6 max-w-xl">{t("hero.subtitle")}</p>
 
-          <div className="mt-9 flex flex-col gap-3 animate-[fadeUp_0.8s_0.2s_both] sm:flex-row sm:flex-wrap">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link href={{ pathname: "/kontakt", hash: "wizyta" }} className="btn-primary group sm:!min-h-14 sm:!px-8">
               {t("actions.book")}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
@@ -37,7 +37,7 @@ export async function Hero() {
             <Link href="/uslugi" className="btn-ghost sm:!min-h-14 sm:!px-8">{t("actions.exploreServices")}</Link>
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 animate-[fadeUp_0.8s_0.26s_both]">
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             {wa && (
               <TrackedLink event="whatsapp_click" source="hero" href={wa} target="_blank" rel="noopener noreferrer" aria-label={t("actions.whatsappAria")} className="inline-flex items-center gap-2 text-sm font-semibold text-[#17633e] underline-offset-4 hover:underline">
                 <WhatsAppIcon className="h-5 w-5" /> {t("actions.whatsappLong")}
@@ -54,7 +54,7 @@ export async function Hero() {
         </div>
 
         {/* Real team portraits — no stock imagery */}
-        <div className="relative lg:col-span-6 animate-[fadeUp_1s_0.15s_both]">
+        <div className="relative lg:col-span-6">
           <ul aria-label={t("hero.teamAlt")} className="grid grid-cols-3 gap-3 sm:gap-4">
             {doctors.map((d, i) => (
               <li

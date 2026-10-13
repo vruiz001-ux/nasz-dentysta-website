@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useSearchParams } from "next/navigation";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { track } from "@/lib/analytics";
@@ -14,12 +13,17 @@ const SELECT =
 type Errors = Partial<Record<"name" | "phone" | "email" | "consent" | "date", string>>;
 
 /** Submitted to Netlify Forms (registered via public/__forms.html). */
-export function ContactForm({ services, locations }: { services: ServiceId[]; locations: { id: string; label: string }[] }) {
+export function ContactForm({ services, locations, legalName }: { services: ServiceId[]; locations: { id: string; label: string }[]; legalName: string }) {
   const t = useTranslations("form");
   const ts = useTranslations("services.items");
   const locale = useLocale();
-  const params = useSearchParams();
-  const preselect = params.get("usluga") ?? "";
+  // Read the ?usluga= preselection after mount (no Suspense bailout → no layout shift).
+  const [preselect, setPreselect] = useState("general");
+  const sending = useRef(false);
+  useEffect(() => {
+    const u = new URLSearchParams(window.location.search).get("usluga");
+    if (u && services.includes(u as ServiceId)) setPreselect(u);
+  }, [services]);
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [errors, setErrors] = useState<Errors>({});
   const today = new Date().toISOString().slice(0, 10);
@@ -35,6 +39,7 @@ export function ContactForm({ services, locations }: { services: ServiceId[]; lo
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (sending.current) return; // guard against double submission
     const form = e.currentTarget;
     const f = new FormData(form);
     const data = {
@@ -55,8 +60,9 @@ export function ContactForm({ services, locations }: { services: ServiceId[]; lo
       form.querySelector<HTMLElement>(`[name="${Object.keys(errs)[0]}"]`)?.focus();
       return;
     }
-    f.set("consent", "tak");
+    f.set("consent", "zapoznano-z-informacja-o-danych");
     f.set("language", locale.toUpperCase());
+    sending.current = true;
     setStatus("sending");
     try {
       const res = await fetch("/__forms.html", {
@@ -69,6 +75,8 @@ export function ContactForm({ services, locations }: { services: ServiceId[]; lo
       setStatus("ok");
     } catch {
       setStatus("error");
+    } finally {
+      sending.current = false;
     }
   }
 
@@ -110,7 +118,7 @@ export function ContactForm({ services, locations }: { services: ServiceId[]; lo
       </div>
       <div>
         <label htmlFor="service" className="label">{t("service")}</label>
-        <select id="service" name="service" defaultValue={services.includes(preselect as ServiceId) ? preselect : "general"} className={SELECT}>
+        <select id="service" name="service" key={preselect} defaultValue={preselect} className={SELECT}>
           <option value="general">{t("serviceGeneral")}</option>
           {services.map((s) => (
             <option key={s} value={s}>{ts(`${s}.name`)}</option>
@@ -152,13 +160,15 @@ export function ContactForm({ services, locations }: { services: ServiceId[]; lo
         {err("consent")}
       </div>
 
+      <p className="text-xs leading-relaxed text-ink-muted">{t("notice", { legal: legalName })}</p>
+
       {status === "error" && (
         <p role="alert" className="flex items-center gap-2 rounded-xl bg-[#fbeaea] p-4 text-sm font-medium text-[#a12a2a]">
           <AlertCircle className="h-4 w-4" aria-hidden /> {t("error")}
         </p>
       )}
 
-      <button type="submit" disabled={status === "sending"} className="btn-primary w-full sm:w-auto sm:!px-10 disabled:opacity-70">
+      <button type="submit" disabled={status === "sending"} aria-disabled={status === "sending"} className="btn-primary w-full sm:w-auto sm:!px-10 disabled:opacity-70">
         {status === "sending" ? (<><Loader2 className="h-4 w-4 animate-spin" aria-hidden /> {t("sending")}</>) : t("submit")}
       </button>
     </form>

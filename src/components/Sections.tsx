@@ -76,9 +76,12 @@ export async function ServiceCard({ id, index, detailed = false }: { id: Service
         <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy text-sage">
           <Icon className="h-6 w-6" aria-hidden />
         </span>
-        <span aria-hidden className="text-sm font-semibold tabular-nums text-navy/30">{String(index + 1).padStart(2, "0")}</span>
+        <span aria-hidden className="text-sm font-semibold tabular-nums text-ink-muted">{String(index + 1).padStart(2, "0")}</span>
       </div>
-      <h3 className="relative mt-8 text-xl font-semibold sm:text-2xl">{t(`items.${id}.name`)}</h3>
+      {(() => {
+        const H = detailed ? "h2" : "h3";
+        return <H className="relative mt-8 text-xl font-semibold sm:text-2xl">{t(`items.${id}.name`)}</H>;
+      })()}
       <p className="relative mt-3 flex-1 leading-relaxed text-ink-muted">
         {detailed ? t(`items.${id}.long`) : t(`items.${id}.short`)}
       </p>
@@ -198,7 +201,7 @@ function TeamGrid({ title, intro, members, locale, small = false }: { title: str
               {m.photo ? (
                 <Image src={m.photo} alt={m.name} fill sizes={small ? "(min-width:1024px) 20vw, 50vw" : "(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"} className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
               ) : (
-                <span aria-hidden className="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-teal-dark/60">{initials(m.name)}</span>
+                <span aria-hidden className="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-teal-dark">{initials(m.name)}</span>
               )}
             </div>
             <div className={small ? "p-4" : "p-4 sm:p-6"}>
@@ -311,9 +314,9 @@ export function PageIntro({ eyebrow, title, intro }: { eyebrow: string; title: s
     <section className="relative overflow-hidden pb-14 pt-10 sm:pb-20 sm:pt-16">
       <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[30rem] w-[30rem] rounded-full bg-sage/70 blur-3xl" />
       <div className="container-x">
-        <p className="eyebrow animate-[fadeUp_0.6s_both]">{eyebrow}</p>
-        <h1 className="h-display mt-5 max-w-4xl animate-[fadeUp_0.7s_0.05s_both]">{title}</h1>
-        {intro && <p className="lead mt-6 max-w-2xl animate-[fadeUp_0.7s_0.1s_both]">{intro}</p>}
+        <p className="eyebrow">{eyebrow}</p>
+        <h1 className="h-display mt-5 max-w-4xl">{title}</h1>
+        {intro && <p className="lead mt-6 max-w-2xl">{intro}</p>}
       </div>
     </section>
   );
