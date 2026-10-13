@@ -1,15 +1,67 @@
+# Netlify auto-detects Next.js and uses the official Next.js runtime.
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = ".next"
 
+[build.environment]
+  NODE_VERSION = "22"
+
+# Deploy previews and branch deploys show the preview banner and are not indexed.
+[context.deploy-preview.environment]
+  NEXT_PUBLIC_PREVIEW = "1"
+[context.branch-deploy.environment]
+  NEXT_PUBLIC_PREVIEW = "1"
+
+# 301s from the old naszdentysta.pl (Hostinger) URLs and the previous static draft
+[[redirects]]
+  from = "/oferta"
+  to = "/pl/uslugi"
+  status = 301
+[[redirects]]
+  from = "/certifykaty"
+  to = "/pl/o-nas"
+  status = 301
+[[redirects]]
+  from = "/uk/oferta"
+  to = "/uk/poslugy"
+  status = 301
+[[redirects]]
+  from = "/uk/o-nas"
+  to = "/uk/pro-nas"
+  status = 301
+[[redirects]]
+  from = "/uk/kontakt"
+  to = "/uk/kontakty"
+  status = 301
+[[redirects]]
+  from = "/uk/certifykaty"
+  to = "/uk/pro-nas"
+  status = 301
+[[redirects]]
+  from = "/fr/a-propos-fr"
+  to = "/fr/a-propos"
+  status = 301
+[[redirects]]
+  from = "/fr/fr-nos-offres"
+  to = "/fr/soins"
+  status = 301
+[[redirects]]
+  from = "/fr/frcontact"
+  to = "/fr/contact"
+  status = 301
+[[redirects]]
+  from = "/fr/certifykaty"
+  to = "/fr/a-propos"
+  status = 301
+[[redirects]]
+  from = "/fr/polityka-prywatnosci"
+  to = "/fr/politique-de-confidentialite"
+  status = 301
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/pl/polityka-prywatnosci"
+  status = 301
 [[redirects]]
   from = "/ua/*"
-  to = "/index.html"
-  status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+  to = "/uk/:splat"
+  status = 301
