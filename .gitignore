@@ -1,56 +1,42 @@
-# Operating System Files
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-*~
+*.pem
 
-# Editor Files
-*.swp
-*.swo
-*~
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# Backup Files
-*.bak
-*.backup
-*-backup.*
-
-# Log Files
-*.log
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# Environment Variables
-.env
-.env.local
-.env.*.local
+# env files (can opt-in for committing if needed)
+.env*
 
-# Build/Distribution
-dist/
-build/
-*.min.js
-*.min.css
+# vercel
+.vercel
 
-# Dependencies (if you add any)
-node_modules/
-vendor/
-
-# Temporary Files
-tmp/
-temp/
-*.tmp
-
-# Personal Notes (optional)
-notes.txt
-TODO.txt
-
-# Local Netlify folder
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 .netlify

@@ -1,253 +1,76 @@
-# Nasz Dentysta - Official Website
+# naszdentysta.pl: the new website
 
-Professional dental clinic website for Nasz Dentysta in Zielona Góra, Poland.
+This is a trilingual site (Polish, French and Ukrainian) built with Next.js 15 (App Router), TypeScript, Tailwind CSS 4, next-intl and Lucide icons. The font, Manrope, is self-hosted, so no Google Fonts requests are made. The site is ready to deploy on Netlify.
 
-## 🦷 About
+## Pages and URLs
 
-Nasz Dentysta is a professional dental clinic operating since 1989, providing comprehensive dental services in Zielona Góra, Poland. This repository contains the official website with full trilingual support.
+| | PL (default) | FR | UK |
+|---|---|---|---|
+| Home | `/pl` | `/fr` | `/uk` |
+| About | `/pl/o-nas` | `/fr/a-propos` | `/uk/pro-nas` |
+| Services | `/pl/uslugi` | `/fr/soins` | `/uk/poslugy` |
+| Pricing | `/pl/cennik` | `/fr/tarifs` | `/uk/tsiny` |
+| Contact and booking | `/pl/kontakt` | `/fr/contact` | `/uk/kontakty` |
+| Privacy policy | `/pl/polityka-prywatnosci` | `/fr/politique-de-confidentialite` | `/uk/polityka-konfidentsiinosti` |
 
-## 🌐 Website Features
+The root `/` redirects each visitor based on their browser language, with Polish as the fallback. The language switcher keeps the visitor on the same page in the new language.
 
-- ✅ **Trilingual Support**: Polish, English, and Ukrainian
-- ✅ **Responsive Design**: Mobile, tablet, and desktop optimized
-- ✅ **GDPR/RODO Compliant**: Full privacy compliance
-- ✅ **Google Analytics 4**: Integrated with consent mode
-- ✅ **SEO Optimized**: Meta tags, sitemap, robots.txt
-- ✅ **Accessibility**: WCAG 2.1 compliant
-- ✅ **Cookie Consent**: GDPR-compliant cookie banner
-- ✅ **Privacy Policies**: Complete policies in 3 languages
+## Updating content (no coding needed)
 
-## 📁 Repository Structure
+**Everything about the clinic lives in one file: `src/content/clinic.ts`.** It covers both clinics (Morelowa and Drzewna), opening hours, WhatsApp, the team with photos, services, prices, and the NFZ and Mediraty partner logos. Lines marked `CONFIRM` came from the previous draft site and should be checked.
 
+- Any field left as `null`, or any list left empty, is **not shown** anywhere on the site. Nothing is made up or shown as a placeholder.
+- Once you fill a field in, it appears everywhere it belongs: header, footer, contact page, WhatsApp buttons, mobile action bar, Google structured data and the map.
+
+| What | Field |
+|---|---|
+| Clinics (address, phone) | `locations: [...]`, phone written as `"+48683205066"` |
+| WhatsApp | `whatsapp` |
+| Opening hours | `openingHours: [{ day: 1, open: "09:00", close: "18:00" }, …]` (1 = Monday) |
+| Services offered | `services: ["zachowawcza", "higienizacja", …]`; only list what you really offer |
+| Price list | `prices: [{ service: "higienizacja", name: { pl, fr, uk }, price: "od 250 zł" }]` |
+| Team | `team: [{ name, role: { pl, fr, uk }, bio?, photo: "/images/team/x.jpg" }]` |
+| Photos | Put files in `public/images/` and set `images.hero` / `images.about` |
+| Legal details | `legalName`, `nip`, `regon`, `krs`; these appear in the footer and privacy policy |
+
+The wording for every service, button and message is in `messages/pl.json`, `fr.json` and `uk.json`. All three files use the same structure, so a change to one should be made in the other two as well.
+
+## Appointment form (Netlify Forms)
+
+The form posts to **Netlify Forms**. It's registered through `public/__forms.html`, and the field names there must match `src/components/ContactForm.tsx` exactly.
+
+- **Viewing requests:** open the Netlify dashboard, choose **nasz-dentysta**, then **Forms**, then **wizyta**.
+- **Email alerts:** go to **Forms → Form notifications → Add notification → Email** and enter `naszdentystazgora@gmail.com`.
+- **Spam protection:** there is a honeypot field, and Netlify's Akismet filter screens every request. If a real request seems to be missing, look in the **Spam** list first.
+- **What the visitor sees:** after sending, they are told the request was received and that **no appointment is confirmed yet**.
+- **Medical details:** the form never asks for them.
+
+## GDPR
+
+- The cookie banner offers two choices: "Accept" and "Necessary only". Google Tag Manager (`NEXT_PUBLIC_GTM_ID`) loads only after the visitor accepts.
+- Google Maps loads only after the visitor clicks, or after they have accepted analytics.
+- Clicks on WhatsApp, phone and booking links are tracked through `dataLayer` events, but only with consent.
+- The privacy policy text covers the form, cookies and WhatsApp. **It should be reviewed by your data-protection advisor**, and the controller details come from `clinic.ts`.
+
+## Development
+
+```bash
+npm install
+npm run dev                          # http://localhost:3000
+NEXT_PUBLIC_PREVIEW=1 npm run dev    # design preview: all service categories + banner
+npm run lint && npx tsc --noEmit && npm run build
 ```
-├── index.html                    # Main website (trilingual)
-├── privacy-policy.html           # Privacy policy (Polish)
-├── privacy-policy-en.html        # Privacy policy (English)
-├── privacy-policy-ua.html        # Privacy policy (Ukrainian)
-├── sitemap.xml                   # SEO sitemap
-├── robots.txt                    # Search engine directives
-├── README.md                     # This file
-└── docs/
-    ├── GOOGLE_ANALYTICS_SETUP_GUIDE.txt
-    ├── GA4_OPTIMIZATION_SUMMARY.txt
-    ├── GA4_QUICK_START.txt
-    ├── POLISH_COMPLIANCE_CHECKLIST.txt
-    ├── TRANSLATION_VERIFICATION_REPORT.txt
-    └── FINAL_DEPLOYMENT_SUMMARY.txt
-```
 
-## 🚀 Quick Start
+## Domain and indexing
 
-### Option 1: View Locally
+While the site is served from `*.netlify.app`, it is hidden from search engines (`noindex`). This stops it competing with naszdentysta.pl in Google. Once **naszdentysta.pl** is pointed at this Netlify project, set `NEXT_PUBLIC_SITE_URL=https://naszdentysta.pl` in Netlify and redeploy. Indexing, canonical URLs, hreflang and the sitemap then switch over to the real domain automatically.
 
-1. Download the repository
-2. Open `index.html` in your browser
-3. That's it! No build process needed.
+## Deploying to Netlify
 
-### Option 2: Deploy to Web Server
+1. Push this folder to a GitHub repository.
+2. In Netlify, choose **Add new site → Import from Git** and pick the repository. Netlify detects Next.js and reads `netlify.toml` automatically.
+3. Add the environment variables from `.env.example`.
+4. Under **Domain management**, point `naszdentysta.pl` to Netlify.
+5. In Google Search Console, submit `https://naszdentysta.pl/sitemap.xml`.
 
-1. Upload all `.html`, `.xml`, and `.txt` files to your server
-2. Ensure HTTPS is enabled
-3. Update Google Analytics Measurement ID (see below)
-4. Test the website
-
-### Option 3: Deploy with GitHub Pages
-
-1. Go to Settings → Pages
-2. Select branch: `main` (or `master`)
-3. Select folder: `/` (root)
-4. Save
-5. Your site will be available at: `https://[username].github.io/[repo-name]/`
-
-## ⚙️ Configuration
-
-### Google Analytics Setup
-
-The website includes Google Analytics 4 integration. To enable:
-
-1. Create a GA4 property at https://analytics.google.com
-2. Get your Measurement ID (format: `G-XXXXXXXXXX`)
-3. Replace `G-XXXXXXXXXX` in `index.html` (appears 2 times):
-   - Line ~89: `<script async src="...?id=G-XXXXXXXXXX">`
-   - Line ~96: `gtag('config', 'G-XXXXXXXXXX', {`
-4. Upload the updated file
-
-📖 See `docs/GA4_QUICK_START.txt` for detailed instructions.
-
-### Company Information
-
-Update these values in all privacy policy files:
-- **NIP**: 9291794899 (already filled)
-- **REGON**: 081081188 (already filled)
-
-## 📞 Contact Information
-
-**Locations:**
-- **Morelowa**: ul. Morelowa 23, 65-001 Zielona Góra | ☎️ 68 320 50 66
-- **Drzewna**: ul. Drzewna 35, 65-001 Zielona Góra | ☎️ 68 320 23 96
-
-**Contact:**
-- 📧 Email: naszdentystazgora@gmail.com
-- 💬 WhatsApp: +48 797 707 168
-- 🌐 Website: https://www.naszdentystazgora.com
-
-## 🔒 Privacy & Compliance
-
-### GDPR/RODO Compliance
-
-- ✅ Cookie consent banner
-- ✅ Privacy policies (PL/EN/UA)
-- ✅ Google Consent Mode V2
-- ✅ IP anonymization
-- ✅ 14-month data retention
-- ✅ Easy opt-out mechanism
-- ✅ User rights documented
-
-### Polish Legal Requirements
-
-- ✅ NIP displayed: 9291794899
-- ✅ REGON displayed: 081081188
-- ✅ Privacy policy in Polish
-- ✅ Medical data protection
-- ✅ UODO compliant
-
-## 🌍 Languages
-
-The website automatically detects and switches between:
-- 🇵🇱 **Polski** (Polish) - Default
-- 🇬🇧 **English**
-- 🇺🇦 **Українська** (Ukrainian)
-
-Language preference is saved in browser localStorage.
-
-## 🎨 Technology Stack
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom styling, responsive design
-- **JavaScript**: Vanilla JS (no frameworks)
-- **Google Fonts**: Plus Jakarta Sans
-- **Google Analytics 4**: Web analytics
-- **Schema.org**: Structured data for SEO
-
-## 📊 Features in Detail
-
-### Sections
-
-1. **Hero**: Eye-catching introduction with CTAs
-2. **About**: Company history and expertise
-3. **Services**: 6 dental specialties
-4. **Why Us**: Unique selling points
-5. **Contact**: Contact information and CTAs
-6. **Footer**: Quick links, services, locations
-
-### Services Offered
-
-- 🦷 Prosthetics (Protetyka)
-- 💉 Surgery (Chirurgia)
-- 🔬 Implantology (Implantologia)
-- ✨ Conservative Dentistry (Stomatologia Zachowawcza)
-- 🩺 Endodontics (Endodoncja)
-- 🌟 Periodontology (Periodontologia)
-
-### SEO Features
-
-- ✅ Meta tags (title, description, keywords)
-- ✅ Open Graph tags
-- ✅ Schema.org structured data (Local Business)
-- ✅ Sitemap.xml
-- ✅ Robots.txt
-- ✅ Canonical URLs
-- ✅ Language alternates (hreflang)
-
-## 📱 Browser Compatibility
-
-Tested and working on:
-- ✅ Chrome/Edge (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Mobile browsers (iOS/Android)
-
-## 🛠️ Development
-
-### Making Changes
-
-1. Edit `index.html` for main website
-2. Edit privacy policy files for legal text
-3. Test locally before deploying
-4. Commit changes with descriptive messages
-
-### Adding New Features
-
-See documentation files in `docs/` folder for:
-- Adding custom analytics events
-- Modifying SEO settings
-- Updating privacy policies
-- Compliance guidelines
-
-## 📝 Documentation
-
-Comprehensive documentation available in `docs/` folder:
-
-1. **FINAL_DEPLOYMENT_SUMMARY.txt**: Complete deployment guide
-2. **GA4_QUICK_START.txt**: 3-step Google Analytics setup
-3. **GOOGLE_ANALYTICS_SETUP_GUIDE.txt**: Detailed GA4 guide
-4. **POLISH_COMPLIANCE_CHECKLIST.txt**: Legal compliance
-5. **TRANSLATION_VERIFICATION_REPORT.txt**: Language quality report
-6. **GA4_OPTIMIZATION_SUMMARY.txt**: Analytics technical docs
-
-## 🔄 Updates & Maintenance
-
-### Regular Updates
-- Update copyright year annually
-- Review privacy policy for legal changes
-- Check for broken links quarterly
-- Update contact information as needed
-
-### Security
-- Use HTTPS only (SSL certificate required)
-- Keep server software updated
-- Regular security audits
-- Monitor for vulnerabilities
-
-## 📄 License
-
-Copyright © 2025 Nasz Dentysta. All rights reserved.
-
-**NIP**: 9291794899
-**REGON**: 081081188
-
-## 🤝 Support
-
-For technical support or questions:
-- Review documentation in `docs/` folder
-- Check privacy policies for compliance questions
-- Contact via email: naszdentystazgora@gmail.com
-
-## 🎯 Project Status
-
-- ✅ **Website**: Production ready
-- ✅ **Translations**: Complete (PL/EN/UA)
-- ✅ **GDPR Compliance**: Complete
-- ✅ **SEO**: Optimized
-- ✅ **Analytics**: Configured (needs Measurement ID)
-- ✅ **Mobile**: Fully responsive
-- ✅ **Documentation**: Complete
-
-## 📈 Analytics & Tracking
-
-Once Google Analytics is configured:
-- Track visitor behavior
-- Monitor traffic sources
-- Analyze language preferences
-- Measure engagement
-- Track conversions (phone/email clicks)
-
-All tracking respects user privacy and GDPR/RODO requirements.
-
----
-
-**Last Updated**: November 11, 2025
-**Version**: 1.0
-**Status**: ✅ Production Ready
-
-Made with ❤️ for Nasz Dentysta
+Deploy previews automatically show the preview banner and are hidden from search engines (`noindex`).

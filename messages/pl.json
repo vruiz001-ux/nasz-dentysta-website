@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "siteTitle": "Nasz Dentysta — dentysta Zielona Góra",
+    "homeTitle": "Dentysta Zielona Góra — Nasz Dentysta, od 1989 roku",
+    "homeDescription": "Dwa gabinety stomatologiczne w Zielonej Górze (ul. Morelowa 23 i ul. Drzewna 35) i własne laboratorium protetyczne. Protetyka, implanty, chirurgia, endodoncja, ortodoncja, leczenie dzieci. NFZ i prywatnie.",
+    "aboutTitle": "O nas",
+    "aboutDescription": "Poznaj gabinet Nasz Dentysta i zespół, który zadba o Twój uśmiech.",
+    "servicesTitle": "Usługi stomatologiczne",
+    "servicesDescription": "Zakres leczenia w gabinecie Nasz Dentysta — od profilaktyki po protetykę.",
+    "pricingTitle": "Cennik",
+    "pricingDescription": "Orientacyjne ceny usług stomatologicznych w gabinecie Nasz Dentysta.",
+    "contactTitle": "Kontakt i umówienie wizyty",
+    "contactDescription": "Adres, godziny otwarcia i formularz zgłoszenia wizyty w gabinecie Nasz Dentysta.",
+    "privacyTitle": "Polityka prywatności",
+    "privacyDescription": "Zasady przetwarzania danych osobowych przez gabinet Nasz Dentysta."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "pricing": "Cennik",
+    "contact": "Kontakt",
+    "book": "Umów wizytę",
+    "menu": "Menu",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu",
+    "skip": "Przejdź do treści",
+    "language": "Wybierz język",
+    "mainNav": "Nawigacja główna"
+  },
+  "actions": {
+    "book": "Umów wizytę",
+    "call": "Zadzwoń",
+    "whatsapp": "WhatsApp",
+    "whatsappLong": "Napisz na WhatsApp",
+    "whatsappAria": "Napisz do gabinetu na WhatsApp (otwiera się w nowej karcie)",
+    "exploreServices": "Poznaj nasze usługi",
+    "learnMore": "Dowiedz się więcej",
+    "directions": "Wyznacz trasę",
+    "seePricing": "Zobacz cennik",
+    "email": "Napisz e-mail"
+  },
+  "whatsappMessage": "Dzień dobry, chciałbym/chciałabym umówić wizytę w Państwa gabinecie. Proszę o informację o dostępnych terminach.",
+  "hero": {
+    "eyebrow": "Gabinety stomatologiczne · Zielona Góra",
+    "title": "Twój uśmiech. Nasza pasja.",
+    "subtitle": "Dwa gabinety w Zielonej Górze, własne laboratorium protetyczne i zespół, który dba o uśmiechy pacjentów od 1989 roku.",
+    "since": "Od 1989 roku",
+    "sinceText": "2 gabinety · własne laboratorium",
+    "teamAlt": "Lekarze zespołu Nasz Dentysta"
+  },
+  "why": {
+    "eyebrow": "Dlaczego my",
+    "title": "Doświadczenie, któremu możesz zaufać",
+    "items": {
+      "since": {
+        "title": "Od 1989 roku",
+        "text": "Zaczynaliśmy jako pracownia protetyczna. Dziś łączymy doświadczenie lekarzy i techników w jednym miejscu."
+      },
+      "lab": {
+        "title": "Własne laboratorium protetyczne",
+        "text": "Lekarz współpracuje bezpośrednio z technikiem, co pozwala na szybkie konsultacje z pacjentem."
+      },
+      "locations": {
+        "title": "Dwa gabinety w Zielonej Górze",
+        "text": "Przy ul. Morelowej 23 i ul. Drzewnej 35 — wybierz gabinet, który jest Ci bliżej."
+      },
+      "languages": {
+        "title": "Mówimy po polsku i ukraińsku",
+        "text": "W naszym zespole są lekarze mówiący po ukraińsku — łatwiej opisać, czego potrzebujesz."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Usługi",
+    "title": "Kompleksowa opieka nad uśmiechem",
+    "intro": "Zakres leczenia, który oferujemy w obu gabinetach. Szczegóły i plan leczenia omawiamy podczas wizyty.",
+    "empty": "Pełną listę usług przygotowujemy. Zadzwoń lub napisz — chętnie odpowiemy na pytania.",
+    "bookThis": "Umów wizytę",
+    "items": {
+      "zachowawcza": {
+        "name": "Stomatologia zachowawcza",
+        "short": "Leczenie próchnicy i odbudowa zębów estetycznymi wypełnieniami.",
+        "long": "Wczesne wykrycie i leczenie próchnicy pozwala zachować jak najwięcej zdrowej tkanki zęba. Ubytki odbudowujemy materiałami dobranymi kolorem do naturalnych zębów."
+      },
+      "higienizacja": {
+        "name": "Higienizacja i profilaktyka",
+        "short": "Usuwanie kamienia i osadu oraz instruktaż higieny.",
+        "long": "Regularna higienizacja to podstawa zdrowych zębów i dziąseł. Obejmuje usunięcie kamienia i osadu, polerowanie oraz wskazówki dotyczące codziennej higieny."
+      },
+      "endodoncja": {
+        "name": "Endodoncja",
+        "short": "Leczenie kanałowe, które pozwala uratować ząb.",
+        "long": "Gdy stan zapalny obejmuje miazgę zęba, leczenie kanałowe pozwala usunąć przyczynę bólu i zachować własny ząb."
+      },
+      "protetyka": {
+        "name": "Protetyka",
+        "short": "Korony, mosty i protezy z własnego laboratorium.",
+        "long": "Korony, mosty i protezy wykonujemy we współpracy z naszym własnym laboratorium protetycznym. Lekarz konsultuje pracę bezpośrednio z technikiem, a Ty nie musisz czekać na zewnętrzną pracownię."
+      },
+      "implantologia": {
+        "name": "Implantologia",
+        "short": "Trwałe uzupełnienie brakujących zębów.",
+        "long": "Implant zastępuje korzeń utraconego zęba i stanowi podparcie dla korony, mostu lub protezy. Kwalifikacja odbywa się po konsultacji i diagnostyce."
+      },
+      "estetyczna": {
+        "name": "Stomatologia estetyczna",
+        "short": "Wybielanie i poprawa kształtu oraz koloru zębów.",
+        "long": "Zabiegi estetyczne pomagają poprawić kolor i kształt zębów. Zakres i możliwe efekty omawiamy indywidualnie."
+      },
+      "chirurgia": {
+        "name": "Chirurgia stomatologiczna",
+        "short": "Ekstrakcje, w tym zębów mądrości, i drobne zabiegi.",
+        "long": "Wykonujemy zabiegi chirurgiczne w znieczuleniu miejscowym, z dokładnym omówieniem zaleceń po zabiegu."
+      },
+      "dziecieca": {
+        "name": "Stomatologia dziecięca",
+        "short": "Łagodne leczenie i profilaktyka dla najmłodszych.",
+        "long": "Pierwsze wizyty pomagają dziecku oswoić się z gabinetem. Stawiamy na cierpliwość, profilaktykę i spokojną atmosferę."
+      },
+      "ortodoncja": {
+        "name": "Ortodoncja",
+        "short": "Korekta wad zgryzu u dzieci i dorosłych.",
+        "long": "Leczenie ortodontyczne poprawia ustawienie zębów i zgryz. Rodzaj aparatu dobieramy po konsultacji i diagnostyce."
+      },
+      "periodontologia": {
+        "name": "Periodontologia",
+        "short": "Leczenie chorób dziąseł i przyzębia.",
+        "long": "Krwawienie dziąseł czy ich cofanie się to sygnały, których nie warto lekceważyć. Diagnozujemy i leczymy choroby przyzębia."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "Od pracowni protetycznej do dwóch gabinetów",
+    "text1": "Nasz Dentysta rozpoczął działalność w 1989 roku jako pracownia wykonująca prace dla gabinetów stomatologicznych. Dziś prowadzimy dwa gabinety w Zielonej Górze oraz laboratorium protetyczne o standardzie europejskim.",
+    "text2": "Do Twojej dyspozycji jest zespół lekarzy dentystów, techników dentystycznych i asystentek. Własne laboratorium umożliwia bezpośrednią współpracę lekarza z technikiem i szybkie konsultacje z pacjentem.",
+    "teamTitle": "Nasz zespół",
+    "languagesTitle": "Rozmawiamy w językach",
+    "highlightsTitle": "W gabinecie",
+    "values": {
+      "individual": "Indywidualne podejście",
+      "comfort": "Komfort pacjenta",
+      "quality": "Jakość usług"
+    },
+    "doctorsTitle": "Lekarze",
+    "staffTitle": "Technik i asystentki",
+    "teamIntro": "Poznaj osoby, które zadbają o Ciebie w naszych gabinetach.",
+    "meetTeam": "Poznaj zespół"
+  },
+  "journey": {
+    "eyebrow": "Jak to działa",
+    "title": "Trzy proste kroki",
+    "steps": {
+      "1": {
+        "title": "Skontaktuj się z nami",
+        "text": "Telefonicznie, przez WhatsApp lub formularz."
+      },
+      "2": {
+        "title": "Umów dogodny termin",
+        "text": "Zaproponujemy godzinę dopasowaną do Ciebie."
+      },
+      "3": {
+        "title": "Zadbaj o swój uśmiech",
+        "text": "Resztą zajmiemy się razem — spokojnie i bez pośpiechu."
+      }
+    }
+  },
+  "cta": {
+    "title": "Zrób pierwszy krok do zdrowego uśmiechu.",
+    "text": "Zostaw zgłoszenie lub skontaktuj się bezpośrednio — odpowiemy najszybciej, jak to możliwe."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Nasze gabinety",
+    "address": "Adres",
+    "hours": "Godziny otwarcia",
+    "phone": "Telefon",
+    "email": "E-mail",
+    "closed": "nieczynne",
+    "pending": "Dane kontaktowe są w trakcie aktualizacji.",
+    "mapTitle": "Mapa dojazdu do gabinetu",
+    "mapConsent": "Mapa Google zostanie wczytana po kliknięciu. Google może przetwarzać Twoje dane.",
+    "mapLoad": "Pokaż mapę",
+    "days": {
+      "1": "Poniedziałek",
+      "2": "Wtorek",
+      "3": "Środa",
+      "4": "Czwartek",
+      "5": "Piątek",
+      "6": "Sobota",
+      "7": "Niedziela"
+    },
+    "clinic": "Gabinet",
+    "hoursNote": "Godziny pracy obu gabinetów. W nagłych przypadkach zadzwoń.",
+    "social": "Obserwuj nas",
+    "chooseClinic": "Wybierz gabinet"
+  },
+  "form": {
+    "title": "Zgłoszenie wizyty",
+    "intro": "Wypełnij formularz, a skontaktujemy się z Tobą, aby potwierdzić termin.",
+    "name": "Imię i nazwisko",
+    "phone": "Telefon",
+    "email": "E-mail (opcjonalnie)",
+    "service": "Rodzaj wizyty",
+    "serviceGeneral": "Konsultacja / przegląd",
+    "serviceOther": "Inne",
+    "date": "Preferowany termin (opcjonalnie)",
+    "message": "Wiadomość (opcjonalnie)",
+    "messageHint": "Prosimy nie podawać szczegółowych informacji o stanie zdrowia.",
+    "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu kontaktu w sprawie wizyty. Zapoznałem/-am się z",
+    "consentLink": "polityką prywatności",
+    "submit": "Wyślij zgłoszenie",
+    "sending": "Wysyłanie…",
+    "success": "Dziękujemy! Otrzymaliśmy zgłoszenie. Skontaktujemy się, aby potwierdzić termin — wizyta nie jest jeszcze zarezerwowana.",
+    "error": "Nie udało się wysłać zgłoszenia. Spróbuj ponownie lub zadzwoń do nas.",
+    "required": "Pole wymagane",
+    "errors": {
+      "name": "Podaj imię i nazwisko (min. 2 znaki).",
+      "phone": "Podaj poprawny numer telefonu.",
+      "email": "Podaj poprawny adres e-mail.",
+      "consent": "Zgoda jest wymagana, abyśmy mogli się skontaktować.",
+      "date": "Wybierz datę w przyszłości."
+    },
+    "location": "Gabinet",
+    "locationAny": "Bez znaczenia"
+  },
+  "pricing": {
+    "eyebrow": "Cennik",
+    "title": "Przejrzyste ceny",
+    "intro": "Podane ceny mają charakter orientacyjny. Dokładny koszt leczenia ustalamy po badaniu i omawiamy przed rozpoczęciem zabiegu.",
+    "empty": "Koszt leczenia zależy od zakresu zabiegu i ustalamy go po badaniu. Zadzwoń do wybranego gabinetu — podamy orientacyjną cenę.",
+    "service": "Usługa",
+    "price": "Cena"
+  },
+  "footer": {
+    "tagline": "Gabinety stomatologiczne w Zielonej Górze. Od 1989 roku.",
+    "privacy": "Polityka prywatności",
+    "cookies": "Ustawienia cookies",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "nav": "Strony",
+    "contact": "Kontakt"
+  },
+  "cookie": {
+    "text": "Używamy niezbędnych plików cookies. Za Twoją zgodą możemy też używać analitycznych cookies, aby ulepszać stronę.",
+    "accept": "Akceptuję",
+    "reject": "Tylko niezbędne",
+    "label": "Zgoda na pliki cookies"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "updated": "Ostatnia aktualizacja",
+    "controller": "Administrator danych",
+    "controllerPending": "Dane administratora zostaną uzupełnione.",
+    "sections": {
+      "scope": {
+        "h": "Jakie dane zbieramy",
+        "p": "Przez formularz zgłoszenia wizyty zbieramy imię i nazwisko, numer telefonu, opcjonalnie adres e-mail, preferowany termin i treść wiadomości. Nie prosimy o szczegółowe informacje o stanie zdrowia."
+      },
+      "purpose": {
+        "h": "Cel i podstawa przetwarzania",
+        "p": "Dane przetwarzamy wyłącznie w celu kontaktu w sprawie umówienia wizyty, na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO) oraz działań przed zawarciem umowy (art. 6 ust. 1 lit. b RODO)."
+      },
+      "retention": {
+        "h": "Jak długo przechowujemy dane",
+        "p": "Dane ze zgłoszeń przechowujemy nie dłużej niż 12 miesięcy od ostatniego kontaktu, chyba że zostaniesz naszym pacjentem — wtedy obowiązują przepisy o dokumentacji medycznej."
+      },
+      "rights": {
+        "h": "Twoje prawa",
+        "p": "Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz cofnięcia zgody w dowolnym momencie. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych."
+      },
+      "recipients": {
+        "h": "Odbiorcy danych",
+        "p": "Dane mogą być przekazywane wyłącznie dostawcom usług technicznych (hosting, obsługa poczty), którzy przetwarzają je na nasze zlecenie."
+      },
+      "cookies": {
+        "h": "Pliki cookies",
+        "p": "Strona używa niezbędnych plików cookies. Cookies analityczne i mapy Google są wczytywane wyłącznie po wyrażeniu zgody."
+      },
+      "whatsapp": {
+        "h": "WhatsApp",
+        "p": "Kontakt przez WhatsApp odbywa się na zasadach określonych przez WhatsApp (Meta). Korzystanie z tego kanału jest dobrowolne."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "text": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+    "back": "Wróć na stronę główną"
+  },
+  "partners": {
+    "title": "Współpracujemy z NFZ i Mediraty",
+    "text": "Oferujemy leczenie w ramach NFZ oraz prywatnie. Zapytaj, które świadczenia są dostępne w ramach NFZ."
+  },
+  "faq": {
+    "title": "Najczęstsze pytania",
+    "items": {
+      "nfz": {
+        "q": "Czy przyjmujecie pacjentów w ramach NFZ?",
+        "a": "Tak. Oferujemy zarówno świadczenia w ramach NFZ, jak i leczenie prywatne. Zadzwoń, aby dowiedzieć się, które usługi są dostępne w ramach NFZ."
+      },
+      "uk": {
+        "q": "Czy mogę porozmawiać z lekarzem po ukraińsku?",
+        "a": "Tak. W naszym zespole są lekarze mówiący po ukraińsku."
+      },
+      "where": {
+        "q": "Gdzie znajdują się gabinety?",
+        "a": "W Zielonej Górze, przy ul. Morelowej 23 oraz przy ul. Drzewnej 35."
+      },
+      "lab": {
+        "q": "Czy wykonujecie protezy i korony na miejscu?",
+        "a": "Prace protetyczne powstają w naszym własnym laboratorium, we współpracy lekarza z technikiem."
+      }
+    }
+  }
+}

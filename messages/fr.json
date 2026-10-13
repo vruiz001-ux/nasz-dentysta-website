@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "siteTitle": "Nasz Dentysta — dentiste à Zielona Góra",
+    "homeTitle": "Dentiste à Zielona Góra — Nasz Dentysta, depuis 1989",
+    "homeDescription": "Deux cabinets dentaires à Zielona Góra (ul. Morelowa 23 et ul. Drzewna 35) et un laboratoire de prothèse intégré. Prothèses, implants, chirurgie, endodontie, orthodontie, soins pour enfants.",
+    "aboutTitle": "À propos",
+    "aboutDescription": "Découvrez le cabinet Nasz Dentysta et l'équipe qui prendra soin de votre sourire.",
+    "servicesTitle": "Soins dentaires",
+    "servicesDescription": "Les soins proposés au cabinet Nasz Dentysta, de la prévention à la prothèse.",
+    "pricingTitle": "Tarifs",
+    "pricingDescription": "Tarifs indicatifs des soins dentaires au cabinet Nasz Dentysta.",
+    "contactTitle": "Contact et prise de rendez-vous",
+    "contactDescription": "Adresse, horaires et formulaire de demande de rendez-vous du cabinet Nasz Dentysta.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyDescription": "Comment le cabinet Nasz Dentysta traite vos données personnelles."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Soins",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "book": "Prendre rendez-vous",
+    "menu": "Menu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skip": "Aller au contenu",
+    "language": "Choisir la langue",
+    "mainNav": "Navigation principale"
+  },
+  "actions": {
+    "book": "Prendre rendez-vous",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "whatsappLong": "Écrire sur WhatsApp",
+    "whatsappAria": "Écrire au cabinet sur WhatsApp (s'ouvre dans un nouvel onglet)",
+    "exploreServices": "Découvrir nos soins",
+    "learnMore": "En savoir plus",
+    "directions": "Itinéraire",
+    "seePricing": "Voir les tarifs",
+    "email": "Écrire un e-mail"
+  },
+  "whatsappMessage": "Bonjour, je souhaiterais prendre rendez-vous dans votre cabinet. Pourriez-vous m'indiquer vos disponibilités ? Merci.",
+  "hero": {
+    "eyebrow": "Cabinets dentaires · Zielona Góra",
+    "title": "Votre sourire, notre passion.",
+    "subtitle": "Deux cabinets à Zielona Góra, notre propre laboratoire de prothèse et une équipe qui prend soin des sourires depuis 1989.",
+    "since": "Depuis 1989",
+    "sinceText": "2 cabinets · laboratoire intégré",
+    "teamAlt": "Les dentistes de l'équipe Nasz Dentysta"
+  },
+  "why": {
+    "eyebrow": "Pourquoi nous",
+    "title": "Une expérience en laquelle vous pouvez avoir confiance",
+    "items": {
+      "since": {
+        "title": "Depuis 1989",
+        "text": "Nous avons commencé comme laboratoire de prothèse. Aujourd'hui, dentistes et prothésistes travaillent sous le même toit."
+      },
+      "lab": {
+        "title": "Laboratoire de prothèse intégré",
+        "text": "Le dentiste travaille directement avec le prothésiste, ce qui permet des échanges rapides avec le patient."
+      },
+      "locations": {
+        "title": "Deux cabinets à Zielona Góra",
+        "text": "Rue Morelowa 23 et rue Drzewna 35 : choisissez le cabinet le plus proche de chez vous."
+      },
+      "languages": {
+        "title": "Nous parlons polonais et ukrainien",
+        "text": "Plusieurs dentistes de l'équipe parlent ukrainien."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Soins",
+    "title": "Une prise en charge complète de votre sourire",
+    "intro": "Les soins proposés dans nos deux cabinets. Le plan de traitement est discuté lors de la consultation.",
+    "empty": "La liste complète des soins est en préparation. Appelez-nous ou écrivez-nous, nous répondrons volontiers à vos questions.",
+    "bookThis": "Prendre rendez-vous",
+    "items": {
+      "zachowawcza": {
+        "name": "Soins conservateurs",
+        "short": "Traitement des caries et obturations esthétiques.",
+        "long": "Détecter et traiter une carie tôt permet de préserver un maximum de tissu sain. Les dents sont restaurées avec des matériaux de la teinte de vos dents."
+      },
+      "higienizacja": {
+        "name": "Hygiène et prévention",
+        "short": "Détartrage, polissage et conseils d'hygiène.",
+        "long": "Un détartrage régulier est la base de dents et de gencives saines : élimination du tartre et des taches, polissage et conseils pour l'hygiène quotidienne."
+      },
+      "endodoncja": {
+        "name": "Endodontie",
+        "short": "Traitement de canal pour conserver la dent.",
+        "long": "Lorsque l'inflammation atteint la pulpe, le traitement de canal élimine la cause de la douleur tout en conservant votre propre dent."
+      },
+      "protetyka": {
+        "name": "Prothèse dentaire",
+        "short": "Couronnes, bridges et prothèses de notre propre laboratoire.",
+        "long": "Couronnes, bridges et prothèses sont réalisés avec notre propre laboratoire. Le dentiste échange directement avec le prothésiste, sans passer par un laboratoire extérieur."
+      },
+      "implantologia": {
+        "name": "Implantologie",
+        "short": "Remplacement durable des dents manquantes.",
+        "long": "L'implant remplace la racine de la dent perdue et soutient une couronne, un bridge ou une prothèse. L'indication est posée après consultation et examens."
+      },
+      "estetyczna": {
+        "name": "Dentisterie esthétique",
+        "short": "Blanchiment et amélioration de la forme et de la teinte.",
+        "long": "Les soins esthétiques améliorent la teinte et la forme des dents. Les possibilités et les résultats attendus sont discutés individuellement."
+      },
+      "chirurgia": {
+        "name": "Chirurgie dentaire",
+        "short": "Extractions, dont dents de sagesse, et petites interventions.",
+        "long": "Les interventions sont réalisées sous anesthésie locale, avec des consignes post-opératoires détaillées."
+      },
+      "dziecieca": {
+        "name": "Soins pour enfants",
+        "short": "Soins doux et prévention pour les plus jeunes.",
+        "long": "Les premières visites aident l'enfant à se familiariser avec le cabinet. Patience, prévention et sérénité avant tout."
+      },
+      "ortodoncja": {
+        "name": "Orthodontie",
+        "short": "Correction de l'alignement chez l'enfant et l'adulte.",
+        "long": "Le traitement orthodontique améliore l'alignement des dents et l'occlusion. L'appareil est choisi après consultation et examens."
+      },
+      "periodontologia": {
+        "name": "Parodontologie",
+        "short": "Traitement des maladies des gencives.",
+        "long": "Saignements ou rétraction des gencives sont des signaux à ne pas négliger. Nous diagnostiquons et traitons les maladies parodontales."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "D'un laboratoire de prothèse à deux cabinets",
+    "text1": "Nasz Dentysta a ouvert ses portes en 1989 comme laboratoire travaillant pour les cabinets dentaires. Aujourd'hui, nous avons deux cabinets à Zielona Góra et un laboratoire de prothèse aux normes européennes.",
+    "text2": "Une équipe de dentistes, de prothésistes et d'assistantes est à votre disposition. Notre laboratoire permet une collaboration directe entre le dentiste et le prothésiste, et des consultations rapides avec le patient.",
+    "teamTitle": "Notre équipe",
+    "languagesTitle": "Langues parlées",
+    "highlightsTitle": "Au cabinet",
+    "values": {
+      "individual": "Approche personnalisée",
+      "comfort": "Confort du patient",
+      "quality": "Qualité des soins"
+    },
+    "doctorsTitle": "Dentistes",
+    "staffTitle": "Prothésiste et assistantes",
+    "teamIntro": "Découvrez les personnes qui prendront soin de vous.",
+    "meetTeam": "Découvrir l'équipe"
+  },
+  "journey": {
+    "eyebrow": "Comment ça marche",
+    "title": "Trois étapes simples",
+    "steps": {
+      "1": {
+        "title": "Contactez-nous",
+        "text": "Par téléphone, WhatsApp ou formulaire."
+      },
+      "2": {
+        "title": "Choisissez un créneau",
+        "text": "Nous vous proposons un horaire qui vous convient."
+      },
+      "3": {
+        "title": "Prenez soin de votre sourire",
+        "text": "Nous nous occupons du reste, ensemble et sans précipitation."
+      }
+    }
+  },
+  "cta": {
+    "title": "Faites le premier pas vers un sourire en bonne santé.",
+    "text": "Laissez une demande ou contactez-nous directement : nous vous répondrons dans les meilleurs délais."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Nos cabinets",
+    "address": "Adresse",
+    "hours": "Horaires",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "closed": "fermé",
+    "pending": "Les coordonnées sont en cours de mise à jour.",
+    "mapTitle": "Plan d'accès au cabinet",
+    "mapConsent": "La carte Google se charge après votre clic. Google peut traiter vos données.",
+    "mapLoad": "Afficher la carte",
+    "days": {
+      "1": "Lundi",
+      "2": "Mardi",
+      "3": "Mercredi",
+      "4": "Jeudi",
+      "5": "Vendredi",
+      "6": "Samedi",
+      "7": "Dimanche"
+    },
+    "clinic": "Cabinet",
+    "hoursNote": "Horaires des deux cabinets. En cas d'urgence, appelez-nous.",
+    "social": "Suivez-nous",
+    "chooseClinic": "Choisissez un cabinet"
+  },
+  "form": {
+    "title": "Demande de rendez-vous",
+    "intro": "Remplissez le formulaire : nous vous recontacterons pour confirmer le rendez-vous.",
+    "name": "Prénom et nom",
+    "phone": "Téléphone",
+    "email": "E-mail (facultatif)",
+    "service": "Motif de la visite",
+    "serviceGeneral": "Consultation / contrôle",
+    "serviceOther": "Autre",
+    "date": "Date souhaitée (facultatif)",
+    "message": "Message (facultatif)",
+    "messageHint": "Merci de ne pas indiquer d'informations médicales détaillées.",
+    "consent": "J'accepte que mes données soient utilisées pour me recontacter au sujet du rendez-vous. J'ai pris connaissance de la",
+    "consentLink": "politique de confidentialité",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi…",
+    "success": "Merci ! Votre demande a bien été reçue. Nous vous recontacterons pour confirmer : le rendez-vous n'est pas encore réservé.",
+    "error": "L'envoi a échoué. Veuillez réessayer ou nous appeler.",
+    "required": "Champ obligatoire",
+    "errors": {
+      "name": "Indiquez votre prénom et votre nom (2 caractères min.).",
+      "phone": "Indiquez un numéro de téléphone valide.",
+      "email": "Indiquez une adresse e-mail valide.",
+      "consent": "Votre accord est nécessaire pour que nous puissions vous recontacter.",
+      "date": "Choisissez une date à venir."
+    },
+    "location": "Cabinet",
+    "locationAny": "Indifférent"
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Des tarifs transparents",
+    "intro": "Les prix sont donnés à titre indicatif. Le coût exact est établi après examen et vous est présenté avant le début des soins.",
+    "empty": "Le coût dépend du traitement et est établi après examen. Appelez le cabinet de votre choix pour une estimation.",
+    "service": "Soin",
+    "price": "Prix"
+  },
+  "footer": {
+    "tagline": "Cabinets dentaires à Zielona Góra. Depuis 1989.",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Paramètres des cookies",
+    "rights": "Tous droits réservés.",
+    "nav": "Pages",
+    "contact": "Contact"
+  },
+  "cookie": {
+    "text": "Nous utilisons des cookies nécessaires. Avec votre accord, nous pouvons aussi utiliser des cookies de mesure d'audience pour améliorer le site.",
+    "accept": "Accepter",
+    "reject": "Nécessaires uniquement",
+    "label": "Consentement aux cookies"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "updated": "Dernière mise à jour",
+    "controller": "Responsable du traitement",
+    "controllerPending": "Les coordonnées du responsable seront complétées.",
+    "sections": {
+      "scope": {
+        "h": "Données collectées",
+        "p": "Via le formulaire de demande de rendez-vous, nous collectons vos nom et prénom, votre numéro de téléphone et, facultativement, votre e-mail, la date souhaitée et votre message. Nous ne demandons pas d'informations médicales détaillées."
+      },
+      "purpose": {
+        "h": "Finalité et base légale",
+        "p": "Vos données servent uniquement à vous recontacter pour organiser un rendez-vous, sur la base de votre consentement (art. 6, par. 1, a) du RGPD) et de mesures précontractuelles (art. 6, par. 1, b) du RGPD)."
+      },
+      "retention": {
+        "h": "Durée de conservation",
+        "p": "Les données des demandes sont conservées au maximum 12 mois après le dernier contact, sauf si vous devenez patient : les règles relatives au dossier médical s'appliquent alors."
+      },
+      "rights": {
+        "h": "Vos droits",
+        "p": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et du droit de retirer votre consentement à tout moment. Vous pouvez aussi saisir l'autorité polonaise de protection des données (UODO)."
+      },
+      "recipients": {
+        "h": "Destinataires",
+        "p": "Les données peuvent être transmises uniquement à nos prestataires techniques (hébergement, messagerie), qui les traitent pour notre compte."
+      },
+      "cookies": {
+        "h": "Cookies",
+        "p": "Le site utilise des cookies nécessaires. Les cookies de mesure d'audience et Google Maps ne sont chargés qu'avec votre accord."
+      },
+      "whatsapp": {
+        "h": "WhatsApp",
+        "p": "Les échanges via WhatsApp sont soumis aux conditions de WhatsApp (Meta). L'utilisation de ce canal est facultative."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
+  },
+  "partners": {
+    "title": "Partenaires NFZ et Mediraty",
+    "text": "Nous proposons des soins pris en charge par le NFZ (assurance maladie polonaise) et des soins privés. Demandez-nous lesquels sont couverts."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": {
+      "nfz": {
+        "q": "Acceptez-vous les patients du NFZ ?",
+        "a": "Oui. Nous proposons des soins pris en charge par le NFZ (assurance maladie polonaise) ainsi que des soins privés. Appelez-nous pour savoir lesquels sont couverts."
+      },
+      "uk": {
+        "q": "Puis-je parler à un dentiste en ukrainien ?",
+        "a": "Oui. Plusieurs dentistes de l'équipe parlent ukrainien."
+      },
+      "where": {
+        "q": "Où se trouvent les cabinets ?",
+        "a": "À Zielona Góra, rue Morelowa 23 et rue Drzewna 35."
+      },
+      "lab": {
+        "q": "Réalisez-vous les prothèses et couronnes sur place ?",
+        "a": "Les travaux prothétiques sont réalisés dans notre propre laboratoire, en collaboration directe entre dentiste et prothésiste."
+      }
+    }
+  }
+}
