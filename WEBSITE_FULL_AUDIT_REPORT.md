@@ -187,7 +187,7 @@ Run the tests locally with `npm run build && npm run test:e2e`. Form submissions
 
 1. **Approve deployment.** Merge PR `audit-rodo-2026` into `main` to publish.
 2. **Confirm facts:**
-   - opening hours Mon–Fri 8:00–20:00 for both clinics
+   - ~~opening hours~~ (confirmed: Mon–Fri 9:00–17:00)
    - WhatsApp number +48 797 707 168
    - that Nasz Dentysta Sp. z o.o. runs both clinics
 3. **Email (GDPR):** replace the consumer Gmail account with a provider that signs a processor agreement, and update the Netlify Forms notification.

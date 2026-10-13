@@ -94,13 +94,13 @@ export const clinic = {
   email: "naszdentystazgora@gmail.com" as string | null,
   /** Netlify Forms sends notifications — set the recipient in Netlify → Forms → Notifications */
 
-  /** CONFIRM — Mon–Fri 8:00–20:00 (both clinics), from the previous redesign */
+  /** Mon–Fri 9:00–17:00 (both clinics) — confirmed by the owner 2026-10-13 */
   openingHours: [
-    { day: 1, open: "08:00", close: "20:00" },
-    { day: 2, open: "08:00", close: "20:00" },
-    { day: 3, open: "08:00", close: "20:00" },
-    { day: 4, open: "08:00", close: "20:00" },
-    { day: 5, open: "08:00", close: "20:00" },
+    { day: 1, open: "09:00", close: "17:00" },
+    { day: 2, open: "09:00", close: "17:00" },
+    { day: 3, open: "09:00", close: "17:00" },
+    { day: 4, open: "09:00", close: "17:00" },
+    { day: 5, open: "09:00", close: "17:00" },
     { day: 6, open: null, close: null },
     { day: 7, open: null, close: null },
   ] as OpeningHours[],
@@ -137,7 +137,10 @@ export const clinic = {
   images: {
     logo: "/images/logo.png" as string | null,
     /** Real clinic interior photos go here. Stock photos are deliberately not used. */
-    hero: null as string | null,
+    /** Must be a licensed file (no watermark). Shown decoratively, never presented as a real patient or doctor. */
+    hero: "/images/hero-usmiech.jpg" as string | null,
+    /** CSS object-position for the hero crop, e.g. "65% 30%" */
+    heroFocus: null as string | null,
     about: null as string | null,
   },
 
