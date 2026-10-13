@@ -97,20 +97,21 @@ export async function ContactInfo() {
           <WhatsAppIcon /> {t("actions.whatsappLong")}
         </TrackedLink>
       )}
+      {wa && <p className="px-2 text-center text-xs text-ink-muted">{t("contact.whatsappNote")}</p>}
     </div>
   );
 }
 
 function Row({ icon: Icon, label, children }: { icon: typeof MapPin; label: string; children: React.ReactNode }) {
   return (
-    <div className="flex gap-4 p-6">
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage text-teal-dark">
-        <Icon className="h-4 w-4" aria-hidden />
-      </span>
-      <div className="min-w-0 flex-1">
-        <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">{label}</dt>
-        <dd className="mt-1.5">{children}</dd>
-      </div>
+    <div className="p-6">
+        <dt className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink-muted">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage text-teal-dark">
+            <Icon className="h-4 w-4" aria-hidden />
+          </span>
+          {label}
+        </dt>
+        <dd className="mt-3">{children}</dd>
     </div>
   );
 }

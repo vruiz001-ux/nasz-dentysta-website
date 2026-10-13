@@ -33,7 +33,7 @@
     "call": "Appeler",
     "whatsapp": "WhatsApp",
     "whatsappLong": "Écrire sur WhatsApp",
-    "whatsappAria": "Écrire au cabinet sur WhatsApp (s'ouvre dans un nouvel onglet)",
+    "whatsappAria": "Écrire sur WhatsApp (s'ouvre dans un nouvel onglet)",
     "exploreServices": "Découvrir nos soins",
     "learnMore": "En savoir plus",
     "directions": "Itinéraire",
@@ -194,7 +194,8 @@
     "clinic": "Cabinet",
     "hoursNote": "Horaires des deux cabinets. En cas d'urgence, appelez-nous.",
     "social": "Suivez-nous",
-    "chooseClinic": "Choisissez un cabinet"
+    "chooseClinic": "Choisissez un cabinet",
+    "whatsappNote": "N'envoyez pas de résultats d'examens ni d'informations médicales par WhatsApp."
   },
   "form": {
     "title": "Demande de rendez-vous",
@@ -208,7 +209,7 @@
     "date": "Date souhaitée (facultatif)",
     "message": "Message (facultatif)",
     "messageHint": "Merci de ne pas indiquer d'informations médicales détaillées.",
-    "consent": "J'accepte que mes données soient utilisées pour me recontacter au sujet du rendez-vous. J'ai pris connaissance de la",
+    "consent": "J'ai pris connaissance des informations sur le traitement de mes données figurant dans la",
     "consentLink": "politique de confidentialité",
     "submit": "Envoyer la demande",
     "sending": "Envoi…",
@@ -219,11 +220,12 @@
       "name": "Indiquez votre prénom et votre nom (2 caractères min.).",
       "phone": "Indiquez un numéro de téléphone valide.",
       "email": "Indiquez une adresse e-mail valide.",
-      "consent": "Votre accord est nécessaire pour que nous puissions vous recontacter.",
+      "consent": "Veuillez confirmer avoir pris connaissance des informations sur vos données.",
       "date": "Choisissez une date à venir."
     },
     "location": "Cabinet",
-    "locationAny": "Indifférent"
+    "locationAny": "Indifférent",
+    "notice": "Le responsable du traitement est {legal}. Les données du formulaire servent uniquement à vous recontacter au sujet du rendez-vous."
   },
   "pricing": {
     "eyebrow": "Tarifs",
@@ -242,44 +244,77 @@
     "contact": "Contact"
   },
   "cookie": {
-    "text": "Nous utilisons des cookies nécessaires. Avec votre accord, nous pouvons aussi utiliser des cookies de mesure d'audience pour améliorer le site.",
-    "accept": "Accepter",
-    "reject": "Nécessaires uniquement",
-    "label": "Consentement aux cookies"
+    "label": "Paramètres de confidentialité",
+    "title": "Nous respectons votre vie privée",
+    "text": "Nous utilisons uniquement les technologies nécessaires au fonctionnement du site. Google Maps (et d'éventuelles statistiques) ne sont activés qu'avec votre accord, modifiable à tout moment depuis le pied de page.",
+    "accept": "Tout accepter",
+    "reject": "Refuser les options",
+    "settings": "Paramètres",
+    "settingsTitle": "Paramètres de confidentialité",
+    "settingsIntro": "Choisissez ce que vous acceptez. Les catégories facultatives sont désactivées par défaut.",
+    "save": "Enregistrer mon choix",
+    "alwaysOn": "toujours actif",
+    "necessary": {
+      "title": "Nécessaires",
+      "text": "Mémoriser votre choix de confidentialité (stockage du navigateur). Sans cela, le site ne pourrait pas respecter votre décision."
+    },
+    "maps": {
+      "title": "Google Maps",
+      "text": "Affichage des plans d'accès aux cabinets. Une fois activé, Google (Google Ireland Ltd.) reçoit notamment votre adresse IP et peut déposer des cookies."
+    },
+    "analytics": {
+      "title": "Statistiques",
+      "text": "Statistiques de visite anonymes (Google Tag Manager / Google Analytics) pour améliorer le site.",
+      "notUsed": "Nous n'utilisons actuellement aucun outil de statistiques."
+    },
+    "marketing": "Nous n'utilisons aucun cookie marketing ou publicitaire."
   },
   "privacy": {
     "title": "Politique de confidentialité",
     "updated": "Dernière mise à jour",
     "controller": "Responsable du traitement",
-    "controllerPending": "Les coordonnées du responsable seront complétées.",
+    "intro": "Nous expliquons ci-dessous comment nous traitons les données personnelles des visiteurs du site et des personnes qui contactent nos cabinets, conformément au RGPD (règlement UE 2016/679).",
+    "contactLine": "Pour toute question relative à vos données, écrivez à {email} ou appelez le cabinet.",
     "sections": {
-      "scope": {
-        "h": "Données collectées",
-        "p": "Via le formulaire de demande de rendez-vous, nous collectons vos nom et prénom, votre numéro de téléphone et, facultativement, votre e-mail, la date souhaitée et votre message. Nous ne demandons pas d'informations médicales détaillées."
+      "form": {
+        "h": "Formulaire de demande de rendez-vous",
+        "p": "Nous collectons : prénom et nom, numéro de téléphone, et facultativement e-mail, date souhaitée, motif de la visite, cabinet choisi et message. Le nom et le téléphone sont nécessaires pour vous rappeler ; sans eux, nous ne pouvons pas traiter la demande. Les autres champs sont facultatifs. Merci de ne pas indiquer d'informations médicales détaillées."
       },
       "purpose": {
-        "h": "Finalité et base légale",
-        "p": "Vos données servent uniquement à vous recontacter pour organiser un rendez-vous, sur la base de votre consentement (art. 6, par. 1, a) du RGPD) et de mesures précontractuelles (art. 6, par. 1, b) du RGPD)."
+        "h": "Finalités et bases légales",
+        "p": "Les données du formulaire, des appels et des messages sont traitées pour répondre à votre demande et organiser un rendez-vous, à votre demande et avant la conclusion d'un contrat de soins (art. 6, par. 1, b) du RGPD). Si vous nous communiquez des informations de santé, elles sont traitées aux fins de la prise en charge médicale par des professionnels soumis au secret (art. 9, par. 2, h) et par. 3 du RGPD). Nous pouvons également traiter les données pour constater, exercer ou défendre des droits en justice et assurer la sécurité du site, sur la base de notre intérêt légitime (art. 6, par. 1, f) du RGPD)."
       },
-      "retention": {
-        "h": "Durée de conservation",
-        "p": "Les données des demandes sont conservées au maximum 12 mois après le dernier contact, sauf si vous devenez patient : les règles relatives au dossier médical s'appliquent alors."
+      "whatsapp": {
+        "h": "Téléphone, e-mail et WhatsApp",
+        "p": "En nous contactant par téléphone, e-mail ou WhatsApp, vous nous transmettez les données nécessaires pour vous répondre. WhatsApp est un service de WhatsApp Ireland Ltd., qui traite les données selon ses propres conditions. L'utilisation de WhatsApp est facultative : n'y envoyez pas de résultats d'examens, de radiographies ni d'autres informations médicales ; pour cela, appelez-nous ou venez au cabinet."
       },
-      "rights": {
-        "h": "Vos droits",
-        "p": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et du droit de retirer votre consentement à tout moment. Vous pouvez aussi saisir l'autorité polonaise de protection des données (UODO)."
+      "cookies": {
+        "h": "Cookies et technologies similaires",
+        "p": "Sans votre accord, nous n'enregistrons dans votre navigateur que votre choix de confidentialité. Google Maps n'est chargé qu'après votre accord ou un clic sur « Afficher la carte » (art. 6, par. 1, a) du RGPD et législation polonaise sur les communications électroniques). Nous n'utilisons aucun cookie marketing. Vous pouvez modifier ou retirer votre accord à tout moment via « Paramètres des cookies » en pied de page, sans remettre en cause la licéité du traitement antérieur."
       },
       "recipients": {
         "h": "Destinataires",
-        "p": "Les données peuvent être transmises uniquement à nos prestataires techniques (hébergement, messagerie), qui les traitent pour notre compte."
+        "p": "Les données peuvent être confiées à nos sous-traitants : Netlify, Inc. (hébergement du site et stockage des demandes du formulaire) et notre fournisseur de messagerie. Si vous acceptez les cartes : Google Ireland Ltd. Nous ne communiquons des données aux autorités publiques que lorsque la loi l'exige."
       },
-      "cookies": {
-        "h": "Cookies",
-        "p": "Le site utilise des cookies nécessaires. Les cookies de mesure d'audience et Google Maps ne sont chargés qu'avec votre accord."
+      "transfers": {
+        "h": "Transferts hors de l'EEE",
+        "p": "Netlify, Inc. est établie aux États-Unis. Le transfert repose sur la décision de la Commission européenne relative au cadre de protection des données UE–États-Unis (EU-US Data Privacy Framework) et, à défaut, sur les clauses contractuelles types. Google peut également transférer des données aux États-Unis sur cette base."
       },
-      "whatsapp": {
-        "h": "WhatsApp",
-        "p": "Les échanges via WhatsApp sont soumis aux conditions de WhatsApp (Meta). L'utilisation de ce canal est facultative."
+      "retention": {
+        "h": "Durée de conservation",
+        "p": "Les données des demandes sont conservées le temps nécessaire pour traiter la demande et organiser le rendez-vous, puis supprimées, sauf si elles sont nécessaires à la défense de droits (jusqu'à la prescription). Si vous devenez patient, le dossier médical est conservé pendant la durée imposée par la loi polonaise sur les droits du patient. Votre choix de confidentialité reste enregistré dans votre navigateur jusqu'à sa modification ou suppression."
+      },
+      "logs": {
+        "h": "Données techniques",
+        "p": "À chaque visite, les serveurs de l'hébergeur enregistrent automatiquement des données techniques (adresse IP, type de navigateur, heure de la visite) pour la sécurité et le bon fonctionnement du site (art. 6, par. 1, f) du RGPD)."
+      },
+      "rights": {
+        "h": "Vos droits",
+        "p": "Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité et d'opposition au traitement fondé sur l'intérêt légitime. Lorsque le traitement repose sur votre consentement, vous pouvez le retirer à tout moment. Vous pouvez introduire une réclamation auprès de l'autorité polonaise de protection des données (Prezes Urzędu Ochrony Danych Osobowych, ul. Stawki 2, 00-193 Varsovie)."
+      },
+      "automated": {
+        "h": "Profilage",
+        "p": "Nous ne prenons aucune décision automatisée vous concernant et ne procédons à aucun profilage."
       }
     }
   },

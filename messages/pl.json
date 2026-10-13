@@ -33,7 +33,7 @@
     "call": "Zadzwoń",
     "whatsapp": "WhatsApp",
     "whatsappLong": "Napisz na WhatsApp",
-    "whatsappAria": "Napisz do gabinetu na WhatsApp (otwiera się w nowej karcie)",
+    "whatsappAria": "Napisz na WhatsApp (otwiera się w nowej karcie)",
     "exploreServices": "Poznaj nasze usługi",
     "learnMore": "Dowiedz się więcej",
     "directions": "Wyznacz trasę",
@@ -194,7 +194,8 @@
     "clinic": "Gabinet",
     "hoursNote": "Godziny pracy obu gabinetów. W nagłych przypadkach zadzwoń.",
     "social": "Obserwuj nas",
-    "chooseClinic": "Wybierz gabinet"
+    "chooseClinic": "Wybierz gabinet",
+    "whatsappNote": "Nie przesyłaj przez WhatsApp wyników badań ani informacji o zdrowiu."
   },
   "form": {
     "title": "Zgłoszenie wizyty",
@@ -208,8 +209,8 @@
     "date": "Preferowany termin (opcjonalnie)",
     "message": "Wiadomość (opcjonalnie)",
     "messageHint": "Prosimy nie podawać szczegółowych informacji o stanie zdrowia.",
-    "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu kontaktu w sprawie wizyty. Zapoznałem/-am się z",
-    "consentLink": "polityką prywatności",
+    "consent": "Zapoznałem/-am się z informacją o przetwarzaniu danych osobowych zawartą w",
+    "consentLink": "polityce prywatności",
     "submit": "Wyślij zgłoszenie",
     "sending": "Wysyłanie…",
     "success": "Dziękujemy! Otrzymaliśmy zgłoszenie. Skontaktujemy się, aby potwierdzić termin — wizyta nie jest jeszcze zarezerwowana.",
@@ -219,11 +220,12 @@
       "name": "Podaj imię i nazwisko (min. 2 znaki).",
       "phone": "Podaj poprawny numer telefonu.",
       "email": "Podaj poprawny adres e-mail.",
-      "consent": "Zgoda jest wymagana, abyśmy mogli się skontaktować.",
+      "consent": "Potwierdź, że zapoznałeś/-aś się z informacją o danych osobowych.",
       "date": "Wybierz datę w przyszłości."
     },
     "location": "Gabinet",
-    "locationAny": "Bez znaczenia"
+    "locationAny": "Bez znaczenia",
+    "notice": "Administratorem danych jest {legal}. Dane z formularza wykorzystamy wyłącznie do kontaktu w sprawie wizyty."
   },
   "pricing": {
     "eyebrow": "Cennik",
@@ -242,44 +244,77 @@
     "contact": "Kontakt"
   },
   "cookie": {
-    "text": "Używamy niezbędnych plików cookies. Za Twoją zgodą możemy też używać analitycznych cookies, aby ulepszać stronę.",
-    "accept": "Akceptuję",
-    "reject": "Tylko niezbędne",
-    "label": "Zgoda na pliki cookies"
+    "label": "Ustawienia prywatności",
+    "title": "Szanujemy Twoją prywatność",
+    "text": "Używamy wyłącznie niezbędnych mechanizmów, aby strona działała. Mapy Google (oraz ewentualnie statystyki) włączymy tylko za Twoją zgodą. Możesz ją w każdej chwili zmienić w stopce strony.",
+    "accept": "Akceptuję wszystkie",
+    "reject": "Odrzucam opcjonalne",
+    "settings": "Ustawienia",
+    "settingsTitle": "Ustawienia prywatności",
+    "settingsIntro": "Wybierz, na co się zgadzasz. Kategorie opcjonalne są domyślnie wyłączone.",
+    "save": "Zapisz wybór",
+    "alwaysOn": "zawsze aktywne",
+    "necessary": {
+      "title": "Niezbędne",
+      "text": "Zapamiętanie Twojego wyboru dotyczącego prywatności (pamięć przeglądarki). Bez tego strona nie mogłaby respektować Twojej decyzji."
+    },
+    "maps": {
+      "title": "Mapy Google",
+      "text": "Wyświetlanie map dojazdu do gabinetów. Po włączeniu Google (Google Ireland Ltd.) otrzymuje m.in. Twój adres IP i może zapisywać pliki cookies."
+    },
+    "analytics": {
+      "title": "Statystyki",
+      "text": "Anonimowe statystyki odwiedzin (Google Tag Manager / Google Analytics), które pomagają nam ulepszać stronę.",
+      "notUsed": "Obecnie nie używamy narzędzi analitycznych."
+    },
+    "marketing": "Nie używamy plików cookies marketingowych ani reklamowych."
   },
   "privacy": {
     "title": "Polityka prywatności",
     "updated": "Ostatnia aktualizacja",
     "controller": "Administrator danych",
-    "controllerPending": "Dane administratora zostaną uzupełnione.",
+    "intro": "Poniżej wyjaśniamy, jak przetwarzamy dane osobowe osób odwiedzających stronę i kontaktujących się z naszymi gabinetami, zgodnie z RODO (rozporządzenie UE 2016/679).",
+    "contactLine": "W sprawach dotyczących danych osobowych napisz na adres: {email} lub zadzwoń do gabinetu.",
     "sections": {
-      "scope": {
-        "h": "Jakie dane zbieramy",
-        "p": "Przez formularz zgłoszenia wizyty zbieramy imię i nazwisko, numer telefonu, opcjonalnie adres e-mail, preferowany termin i treść wiadomości. Nie prosimy o szczegółowe informacje o stanie zdrowia."
+      "form": {
+        "h": "Formularz zgłoszenia wizyty",
+        "p": "Zbieramy: imię i nazwisko, numer telefonu, opcjonalnie e-mail, preferowany termin, rodzaj wizyty, wybrany gabinet i treść wiadomości. Imię i numer telefonu są potrzebne, abyśmy mogli oddzwonić — bez nich nie obsłużymy zgłoszenia. Pozostałe pola są dobrowolne. Prosimy nie wpisywać szczegółowych informacji o stanie zdrowia."
       },
       "purpose": {
-        "h": "Cel i podstawa przetwarzania",
-        "p": "Dane przetwarzamy wyłącznie w celu kontaktu w sprawie umówienia wizyty, na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO) oraz działań przed zawarciem umowy (art. 6 ust. 1 lit. b RODO)."
+        "h": "Cele i podstawy prawne",
+        "p": "Dane z formularza, rozmów telefonicznych i wiadomości przetwarzamy, aby odpowiedzieć na Twoje zgłoszenie i umówić wizytę — na Twoje żądanie, przed zawarciem umowy o świadczenie usług (art. 6 ust. 1 lit. b RODO). Jeżeli w zgłoszeniu przekażesz informacje o zdrowiu, przetwarzamy je w celu zapewnienia opieki zdrowotnej przez osoby objęte tajemnicą zawodową (art. 9 ust. 2 lit. h i ust. 3 RODO). Możemy też przetwarzać dane w celu ustalenia, dochodzenia lub obrony roszczeń oraz zapewnienia bezpieczeństwa strony, co stanowi nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO)."
       },
-      "retention": {
-        "h": "Jak długo przechowujemy dane",
-        "p": "Dane ze zgłoszeń przechowujemy nie dłużej niż 12 miesięcy od ostatniego kontaktu, chyba że zostaniesz naszym pacjentem — wtedy obowiązują przepisy o dokumentacji medycznej."
+      "whatsapp": {
+        "h": "Telefon, e-mail i WhatsApp",
+        "p": "Kontaktując się z nami telefonicznie, e-mailowo lub przez WhatsApp, przekazujesz nam dane potrzebne do odpowiedzi. WhatsApp jest usługą WhatsApp Ireland Ltd., która przetwarza dane na własnych zasadach. Korzystanie z WhatsApp jest dobrowolne — nie przesyłaj tą drogą wyników badań, zdjęć RTG ani innych informacji medycznych; w tych sprawach zadzwoń lub przyjdź do gabinetu."
       },
-      "rights": {
-        "h": "Twoje prawa",
-        "p": "Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz cofnięcia zgody w dowolnym momencie. Możesz też złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych."
+      "cookies": {
+        "h": "Pliki cookies i podobne technologie",
+        "p": "Bez Twojej zgody zapisujemy w przeglądarce wyłącznie informację o Twoim wyborze dotyczącym prywatności. Mapy Google wczytujemy dopiero po Twojej zgodzie lub kliknięciu „Pokaż mapę” (art. 6 ust. 1 lit. a RODO w zw. z art. 399 Prawa komunikacji elektronicznej). Nie używamy plików cookies marketingowych. Zgodę możesz w każdej chwili zmienić lub wycofać, klikając „Ustawienia cookies” w stopce — wycofanie nie wpływa na zgodność z prawem wcześniejszego przetwarzania."
       },
       "recipients": {
         "h": "Odbiorcy danych",
-        "p": "Dane mogą być przekazywane wyłącznie dostawcom usług technicznych (hosting, obsługa poczty), którzy przetwarzają je na nasze zlecenie."
+        "p": "Dane mogą otrzymać podmioty przetwarzające je na nasze zlecenie: Netlify, Inc. (hosting strony i przechowywanie zgłoszeń z formularza) oraz dostawca naszej poczty elektronicznej. Po wyrażeniu zgody na mapy — Google Ireland Ltd. Dane udostępniamy organom publicznym tylko wtedy, gdy wymaga tego prawo."
       },
-      "cookies": {
-        "h": "Pliki cookies",
-        "p": "Strona używa niezbędnych plików cookies. Cookies analityczne i mapy Google są wczytywane wyłącznie po wyrażeniu zgody."
+      "transfers": {
+        "h": "Przekazywanie danych poza EOG",
+        "p": "Netlify, Inc. ma siedzibę w USA. Przekazanie danych odbywa się na podstawie decyzji Komisji Europejskiej w sprawie ramowego porozumienia o ochronie danych UE–USA (EU-US Data Privacy Framework), a w razie jej braku — standardowych klauzul umownych. Google również może przekazywać dane do USA na podstawie tego porozumienia."
       },
-      "whatsapp": {
-        "h": "WhatsApp",
-        "p": "Kontakt przez WhatsApp odbywa się na zasadach określonych przez WhatsApp (Meta). Korzystanie z tego kanału jest dobrowolne."
+      "retention": {
+        "h": "Jak długo przechowujemy dane",
+        "p": "Dane ze zgłoszeń przechowujemy przez czas potrzebny do obsługi zgłoszenia i umówienia wizyty, a następnie je usuwamy — chyba że są potrzebne do ustalenia lub obrony roszczeń (do upływu okresu przedawnienia). Jeżeli zostaniesz naszym pacjentem, dokumentację medyczną przechowujemy przez okres wymagany ustawą o prawach pacjenta i Rzeczniku Praw Pacjenta. Informację o wyborze dotyczącym prywatności przechowujemy w Twojej przeglądarce do czasu jej zmiany lub usunięcia."
+      },
+      "logs": {
+        "h": "Dane techniczne",
+        "p": "Przy każdej wizycie serwery dostawcy hostingu automatycznie zapisują dane techniczne, takie jak adres IP, rodzaj przeglądarki i czas wizyty. Służą one bezpieczeństwu i prawidłowemu działaniu strony (art. 6 ust. 1 lit. f RODO)."
+      },
+      "rights": {
+        "h": "Twoje prawa",
+        "p": "Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia oraz do wniesienia sprzeciwu wobec przetwarzania opartego na prawnie uzasadnionym interesie. Jeżeli przetwarzanie odbywa się na podstawie zgody, możesz ją w każdej chwili wycofać. Przysługuje Ci także prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa)."
+      },
+      "automated": {
+        "h": "Profilowanie",
+        "p": "Nie podejmujemy wobec Ciebie decyzji w sposób zautomatyzowany i nie profilujemy Cię."
       }
     }
   },

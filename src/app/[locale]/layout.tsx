@@ -11,6 +11,7 @@ import { RevealObserver } from "@/components/Reveal";
 import { ClinicJsonLd } from "@/components/JsonLd";
 import { isPreview } from "@/lib/site";
 import { clinic } from "@/content/clinic";
+import { CONSENT_VERSION } from "@/lib/consent-version";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -36,7 +37,15 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const t = await getTranslations("nav");
 
   return (
-    <html lang={locale} className="js">
+    <html lang={locale} className="js" suppressHydrationWarning>
+      <head>
+        {/* Hide the server-rendered consent banner before first paint if a valid choice exists. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var c=JSON.parse(localStorage.getItem("nd-consent")||"null");if(c&&c.version==="${CONSENT_VERSION}")document.documentElement.setAttribute("data-consent","1")}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-dvh">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-navy focus:px-5 focus:py-3 focus:text-ivory">
           {t("skip")}
