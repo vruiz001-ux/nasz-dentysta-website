@@ -144,9 +144,9 @@ export async function AboutSection({ full = false }: { full?: boolean }) {
   const values = ["individual", "comfort", "quality"] as const;
 
   return (
-    <section aria-labelledby="about-title" className="py-24 sm:py-32">
+    <section aria-labelledby="about-title" className={full ? "pb-24 sm:pb-32" : "py-24 sm:py-32"}>
       <div className="container-x grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-5">
+        <div className={full ? "sr-only" : "lg:col-span-5"}>
           <SectionHeading id="about-title" eyebrow={t("eyebrow")} title={t("title")} />
           {!full && (
             <Link href="/o-nas" data-reveal className="btn-ghost mt-10 hidden lg:inline-flex">
@@ -154,7 +154,7 @@ export async function AboutSection({ full = false }: { full?: boolean }) {
             </Link>
           )}
         </div>
-        <div className="lg:col-span-7">
+        <div className={full ? "lg:col-span-12 max-w-3xl" : "lg:col-span-7"}>
           <div data-reveal className="space-y-5 text-lg leading-relaxed text-navy-soft">
             <p>{t("text1")}</p>
             <p>{t("text2")}</p>
@@ -194,19 +194,15 @@ function TeamGrid({ title, intro, members, locale, small = false }: { title: str
     <div>
       <h2 className="h-section" data-reveal>{title}</h2>
       {intro && <p className="lead mt-4" data-reveal>{intro}</p>}
-      <ul className={`mt-10 grid gap-5 ${small ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" : "grid-cols-2 lg:grid-cols-3"}`}>
+      <ul className={`mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`}>
         {members.map((m, i) => (
-          <li key={m.name} data-reveal style={{ transitionDelay: `${(i % 3) * 70}ms` }} className="card group overflow-hidden">
-            <div className="relative aspect-[4/5] overflow-hidden bg-sage">
-              {m.photo ? (
-                <Image src={m.photo} alt={m.name} fill sizes={small ? "(min-width:1024px) 20vw, 50vw" : "(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"} className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
-              ) : (
-                <span aria-hidden className="absolute inset-0 flex items-center justify-center text-4xl font-semibold text-teal-dark">{initials(m.name)}</span>
-              )}
-            </div>
-            <div className={small ? "p-4" : "p-4 sm:p-6"}>
-              <h3 className={small ? "font-semibold" : "font-semibold sm:text-xl"}>{m.name}</h3>
-              <p className={`mt-1 text-sm text-teal-dark ${small ? "" : "sm:text-base sm:font-medium"}`}>{m.role[locale]}</p>
+          <li key={m.name} data-reveal style={{ transitionDelay: `${(i % 3) * 70}ms` }} className="card flex items-center gap-4 p-5 sm:p-6">
+            <span aria-hidden className={`flex shrink-0 items-center justify-center rounded-full bg-sage font-semibold text-teal-dark ${small ? "h-11 w-11 text-sm" : "h-14 w-14 text-lg"}`}>
+              {initials(m.name)}
+            </span>
+            <div className="min-w-0">
+              <h3 className={small ? "font-semibold" : "font-semibold sm:text-lg"}>{m.name}</h3>
+              <p className="mt-0.5 text-sm text-teal-dark">{m.role[locale]}</p>
             </div>
           </li>
         ))}

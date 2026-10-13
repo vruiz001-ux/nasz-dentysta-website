@@ -29,7 +29,7 @@ The root `/` redirects each visitor based on their browser language, with Polish
 | Opening hours | `openingHours: [{ day: 1, open: "09:00", close: "18:00" }, …]` (1 = Monday) |
 | Services offered | `services: ["zachowawcza", "higienizacja", …]`; only list what you really offer |
 | Price list | `prices: [{ service: "higienizacja", name: { pl, fr, uk }, price: "od 250 zł" }]` |
-| Team | `team: [{ name, role: { pl, fr, uk }, bio?, photo: "/images/team/x.jpg" }]` |
+| Team | `team: [{ name, role: { pl, fr, uk }, bio? }]` |
 | Photos | Put files in `public/images/` and set `images.hero` / `images.about` |
 | Legal details | `legalName`, `nip`, `regon`, `krs`; these appear in the footer and privacy policy |
 

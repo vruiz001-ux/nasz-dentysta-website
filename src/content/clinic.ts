@@ -31,7 +31,6 @@ export type PriceItem = { service: ServiceId; name: Localized; price: string };
 export type TeamMember = {
   name: string;
   role: Localized;
-  photo?: string;
   group: "doctor" | "staff";
 };
 
@@ -112,16 +111,16 @@ export const clinic = {
   prices: [] as PriceItem[],
 
   team: [
-    { group: "doctor", name: "Ewa Witkowska", photo: "/images/team/ewa-witkowska.jpg", role: { pl: "Lekarz dentysta, specjalista II stopnia protetyki stomatologicznej", fr: "Chirurgien-dentiste, spécialiste en prothèse dentaire", uk: "Лікар-стоматолог, спеціаліст ІІ ступеня з ортопедичної стоматології" } },
-    { group: "doctor", name: "Yulia Stetska", photo: "/images/team/yulia-stetska.jpg", role: DOCTOR },
-    { group: "doctor", name: "Hanna Zhbankova", photo: "/images/team/hanna-zhbankova.jpg", role: DOCTOR },
-    { group: "doctor", name: "Oleksandyr Brodyk", photo: "/images/team/oleksandyr-brodyk.jpg", role: DOCTOR },
-    { group: "doctor", name: "Radoslav Pasichnyuk", photo: "/images/team/radoslav-pasichnyuk.jpg", role: DOCTOR },
-    { group: "doctor", name: "Halina Kolodiichak", photo: "/images/team/halina-kolodiichak.jpg", role: DOCTOR },
-    { group: "staff", name: "Marysia Gil", photo: "/images/team/marysia-gil.jpg", role: { pl: "Technik dentystyczny", fr: "Prothésiste dentaire", uk: "Зубний технік" } },
-    { group: "staff", name: "Renata Bajda", photo: "/images/team/renata-bajda.jpg", role: ASSISTANT },
-    { group: "staff", name: "Joanna Lubowiecka", photo: "/images/team/joanna-lubowiecka.jpg", role: ASSISTANT },
-    { group: "staff", name: "Mariana Borysova", photo: "/images/team/mariana-borysova.jpg", role: ASSISTANT },
+    { group: "doctor", name: "Ewa Witkowska", role: { pl: "Lekarz dentysta, specjalista II stopnia protetyki stomatologicznej", fr: "Chirurgien-dentiste, spécialiste en prothèse dentaire", uk: "Лікар-стоматолог, спеціаліст ІІ ступеня з ортопедичної стоматології" } },
+    { group: "doctor", name: "Yulia Stetska", role: DOCTOR },
+    { group: "doctor", name: "Hanna Zhbankova", role: DOCTOR },
+    { group: "doctor", name: "Oleksandyr Brodyk", role: DOCTOR },
+    { group: "doctor", name: "Radoslav Pasichnyuk", role: DOCTOR },
+    { group: "doctor", name: "Halina Kolodiichak", role: DOCTOR },
+    { group: "staff", name: "Marysia Gil", role: { pl: "Technik dentystyczny", fr: "Prothésiste dentaire", uk: "Зубний технік" } },
+    { group: "staff", name: "Renata Bajda", role: ASSISTANT },
+    { group: "staff", name: "Joanna Lubowiecka", role: ASSISTANT },
+    { group: "staff", name: "Mariana Borysova", role: ASSISTANT },
     { group: "staff", name: "Tetiana Dehtiar", role: ASSISTANT },
   ] as TeamMember[],
 

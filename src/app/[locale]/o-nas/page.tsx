@@ -15,7 +15,7 @@ export default async function About({ params }: { params: Promise<{ locale: Loca
   return (
     <>
       <BreadcrumbJsonLd locale={locale} items={[{ name: t("nav.home"), href: "/" }, { name: t("nav.about"), href: "/o-nas" }]} />
-      <PageIntro eyebrow={t("about.eyebrow")} title={t("about.title")} intro={t("about.text1")} />
+      <PageIntro eyebrow={t("about.eyebrow")} title={t("about.title")} />
       <AboutSection full />
       <Journey />
       <AppointmentCTA />
