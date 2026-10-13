@@ -347,5 +347,68 @@
         "a": "Prace protetyczne powstają w naszym własnym laboratorium, we współpracy lekarza z technikiem."
       }
     }
+  },
+  "aboutPage": {
+    "eyebrow": "Nasz zespół, Twoje zdrowie",
+    "title": "Profesjonalna opieka na każdym etapie",
+    "lead": "Lekarze dentyści, technik dentystyczny i asystentki pracują razem w dwóch gabinetach w Zielonej Górze. Od 1989 roku dbamy o zdrowie i piękny uśmiech naszych pacjentów.",
+    "points": {
+      "team": {
+        "t": "Zgrany zespół",
+        "d": "lekarze, technik i asystentki"
+      },
+      "individual": {
+        "t": "Indywidualne podejście",
+        "d": "do każdego pacjenta"
+      },
+      "languages": {
+        "t": "Mówimy po polsku",
+        "d": "i po ukraińsku"
+      }
+    },
+    "badge": "Od 1989 roku",
+    "badgeText": "2 gabinety · własne laboratorium",
+    "servicesEyebrow": "W czym możemy Ci pomóc?",
+    "servicesTitle": "Kompleksowa opieka stomatologiczna",
+    "servicesIntro": "Oferujemy szeroki zakres leczenia, dzięki czemu zadbamy o Twój uśmiech na każdym etapie życia.",
+    "consultTitle": "Nie wiesz, od czego zacząć?",
+    "consultText": "Umów wizytę — podczas konsultacji zaproponujemy plan leczenia.",
+    "trustEyebrow": "Dlaczego warto nam zaufać?",
+    "trustTitle": "Doświadczenie i troska o Twój komfort",
+    "trustText": "Zaczynaliśmy jako pracownia protetyczna. Dziś łączymy wiedzę lekarzy i techników w jednym miejscu, aby leczenie było wygodne, przemyślane i dopasowane do Ciebie.",
+    "trust": {
+      "lab": {
+        "t": "Własne laboratorium protetyczne",
+        "d": "Lekarz współpracuje bezpośrednio z technikiem, co pozwala na szybkie konsultacje z pacjentem."
+      },
+      "individual": {
+        "t": "Indywidualne podejście",
+        "d": "Plan leczenia omawiamy z Tobą i dopasowujemy do Twoich potrzeb."
+      },
+      "comfort": {
+        "t": "Komfort pacjenta",
+        "d": "Spokojna atmosfera i czas na rozmowę, zwłaszcza gdy wizyta budzi obawy."
+      },
+      "quality": {
+        "t": "Jakość usług",
+        "d": "Doświadczony zespół i dbałość o każdy etap leczenia."
+      }
+    },
+    "stats": {
+      "since": {
+        "t": "Od 1989 roku",
+        "d": "doświadczenia w stomatologii i protetyce"
+      },
+      "range": {
+        "t": "{count} dziedzin leczenia",
+        "d": "w jednym miejscu"
+      },
+      "places": {
+        "t": "2 gabinety",
+        "d": "w Zielonej Górze — Morelowa i Drzewna"
+      }
+    },
+    "ctaTitle": "Zadbaj o swój uśmiech już dziś",
+    "ctaText": "Umów się na wizytę i przekonaj się, jak możemy Ci pomóc."
   }
 }

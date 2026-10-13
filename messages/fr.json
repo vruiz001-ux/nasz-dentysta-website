@@ -347,5 +347,68 @@
         "a": "Les travaux prothétiques sont réalisés dans notre propre laboratoire, en collaboration directe entre dentiste et prothésiste."
       }
     }
+  },
+  "aboutPage": {
+    "eyebrow": "Notre équipe, votre santé",
+    "title": "Des soins professionnels à chaque étape",
+    "lead": "Dentistes, prothésiste et assistantes travaillent ensemble dans deux cabinets à Zielona Góra. Depuis 1989, nous prenons soin de la santé et du sourire de nos patients.",
+    "points": {
+      "team": {
+        "t": "Une équipe soudée",
+        "d": "dentistes, prothésiste et assistantes"
+      },
+      "individual": {
+        "t": "Une approche personnalisée",
+        "d": "pour chaque patient"
+      },
+      "languages": {
+        "t": "Nous parlons polonais",
+        "d": "et ukrainien"
+      }
+    },
+    "badge": "Depuis 1989",
+    "badgeText": "2 cabinets · laboratoire intégré",
+    "servicesEyebrow": "Comment pouvons-nous vous aider ?",
+    "servicesTitle": "Des soins dentaires complets",
+    "servicesIntro": "Un large éventail de soins pour prendre soin de votre sourire à chaque étape de la vie.",
+    "consultTitle": "Vous ne savez pas par où commencer ?",
+    "consultText": "Prenez rendez-vous : lors de la consultation, nous vous proposerons un plan de traitement.",
+    "trustEyebrow": "Pourquoi nous faire confiance ?",
+    "trustTitle": "L'expérience au service de votre confort",
+    "trustText": "Nous avons commencé comme laboratoire de prothèse. Aujourd'hui, dentistes et prothésistes réunissent leur savoir-faire sous un même toit pour des soins confortables, réfléchis et adaptés à vous.",
+    "trust": {
+      "lab": {
+        "t": "Laboratoire de prothèse intégré",
+        "d": "Le dentiste travaille directement avec le prothésiste, ce qui permet des échanges rapides avec le patient."
+      },
+      "individual": {
+        "t": "Approche personnalisée",
+        "d": "Le plan de traitement est discuté avec vous et adapté à vos besoins."
+      },
+      "comfort": {
+        "t": "Confort du patient",
+        "d": "Une atmosphère calme et du temps pour échanger, surtout si la visite vous inquiète."
+      },
+      "quality": {
+        "t": "Qualité des soins",
+        "d": "Une équipe expérimentée, attentive à chaque étape du traitement."
+      }
+    },
+    "stats": {
+      "since": {
+        "t": "Depuis 1989",
+        "d": "d'expérience en dentisterie et prothèse"
+      },
+      "range": {
+        "t": "{count} domaines de soins",
+        "d": "au même endroit"
+      },
+      "places": {
+        "t": "2 cabinets",
+        "d": "à Zielona Góra — Morelowa et Drzewna"
+      }
+    },
+    "ctaTitle": "Prenez soin de votre sourire dès aujourd'hui",
+    "ctaText": "Prenez rendez-vous et découvrez comment nous pouvons vous aider."
   }
 }

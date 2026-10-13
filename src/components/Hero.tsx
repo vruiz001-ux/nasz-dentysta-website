@@ -81,7 +81,7 @@ export async function Hero() {
 }
 
 /** Neutral brand graphic (logo blue + navy smile arc) — no photography. */
-function HeroArtwork() {
+export function HeroArtwork() {
   return (
     <svg viewBox="0 0 500 600" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full" aria-hidden="true">
       <defs>
