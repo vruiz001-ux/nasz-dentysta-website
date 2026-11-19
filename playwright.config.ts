@@ -8,17 +8,21 @@ export default defineConfig({
   fullyParallel: true,
   reporter: [["list"]],
   use: {
-    baseURL: `http://localhost:${PORT}`,
+    // BASE_URL lets the suite run against a Netlify deploy preview (the only place the
+    // Netlify redirect/edge layer can be verified). Without it, a local `next start` is used.
+    baseURL: process.env.BASE_URL ?? `http://localhost:${PORT}`,
     launchOptions: process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : {},
   },
   // Tests run against the production build. Form submissions are always mocked —
   // no real appointment request ever reaches the clinic.
-  webServer: {
-    command: `npx next start -p ${PORT}`,
-    url: `http://localhost:${PORT}/pl`,
-    reuseExistingServer: true,
-    timeout: 60_000,
-  },
+  webServer: process.env.BASE_URL
+    ? undefined
+    : {
+        command: `npx next start -p ${PORT}`,
+        url: `http://localhost:${PORT}/pl`,
+        reuseExistingServer: true,
+        timeout: 60_000,
+      },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 900 } } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
