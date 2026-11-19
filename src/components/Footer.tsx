@@ -27,13 +27,13 @@ export async function Footer() {
             <p className="mt-5 max-w-xs text-ivory/70">{t("footer.tagline")}</p>
             <div className="mt-6 flex gap-3">
               {clinic.social.facebook && (
-                <a href={clinic.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-ivory/20 hover:bg-ivory/10">
-                  <FacebookIcon className="h-5 w-5" aria-hidden />
+                <a href={clinic.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full transition-transform hover:scale-110">
+                  <FacebookIcon className="h-9 w-9" />
                 </a>
               )}
               {clinic.social.instagram && (
-                <a href={clinic.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full ring-1 ring-ivory/20 hover:bg-ivory/10">
-                  <InstagramIcon className="h-5 w-5" aria-hidden />
+                <a href={clinic.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full transition-transform hover:scale-110">
+                  <InstagramIcon className="h-9 w-9" />
                 </a>
               )}
             </div>

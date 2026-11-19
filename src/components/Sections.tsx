@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { getTranslations, getLocale } from "next-intl/server";
-import { ArrowUpRight, History, FlaskConical, MapPinned, Languages, Phone, CalendarCheck, Smile, Check, Plus } from "lucide-react";
+import { getTranslations } from "next-intl/server";
+import { ArrowUpRight, History, FlaskConical, MapPinned, Languages, Phone, CalendarCheck, Smile, Check, Plus, Users } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { clinic, whatsappLink, formatPhone, nfzLocationsFor, type ServiceId } from "@/content/clinic";
 import { activeServices } from "@/lib/site";
@@ -8,7 +8,6 @@ import { SectionHeading } from "./SectionHeading";
 import { SERVICE_ICONS } from "./ServiceIcon";
 import { TrackedLink } from "./TrackedLink";
 import { WhatsAppIcon } from "./icons";
-import type { Locale } from "@/i18n/routing";
 
 /* ── Why choose us ───────────────────────────────────── */
 export async function WhyUs() {
@@ -138,9 +137,6 @@ export async function ServicesGrid({ detailed = false, withHeading = true }: { d
 /* ── About + team ────────────────────────────────────── */
 export async function AboutSection({ full = false }: { full?: boolean }) {
   const t = await getTranslations("about");
-  const l = (await getLocale()) as Locale;
-  const doctors = clinic.team.filter((m) => m.group === "doctor");
-  const staff = clinic.team.filter((m) => m.group === "staff");
   const values = ["individual", "comfort", "quality"] as const;
 
   return (
@@ -175,38 +171,23 @@ export async function AboutSection({ full = false }: { full?: boolean }) {
       </div>
 
       {full && (
-        <div className="container-x mt-24 space-y-20">
-          <TeamGrid title={t("doctorsTitle")} members={doctors} locale={l} intro={t("teamIntro")} />
-          <TeamGrid title={t("staffTitle")} members={staff} locale={l} small />
+        <div className="container-x mt-16">
+          <TeamStatement />
         </div>
       )}
     </section>
   );
 }
 
-function initials(name: string) {
-  return name.split(" ").map((p) => p[0]).join("").slice(0, 2);
-}
-
-export function TeamGrid({ title, intro, members, locale, small = false }: { title: string; intro?: string; members: typeof clinic.team; locale: Locale; small?: boolean }) {
-  if (!members.length) return null;
+/** Team statement shown instead of individual names (owner's request, Nov 2026). */
+export async function TeamStatement() {
+  const t = await getTranslations("teamPreview");
   return (
-    <div>
-      <h2 className="h-section">{title}</h2>
-      {intro && <p className="lead mt-4">{intro}</p>}
-      <ul className={`mt-10 grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`}>
-        {members.map((m) => (
-          <li key={m.name} className="card flex items-center gap-4 p-5 sm:p-6">
-            <span aria-hidden className={`flex shrink-0 items-center justify-center rounded-full bg-sage font-semibold text-teal-dark ${small ? "h-11 w-11 text-sm" : "h-14 w-14 text-lg"}`}>
-              {initials(m.name)}
-            </span>
-            <div className="min-w-0">
-              <h3 className={small ? "font-semibold" : "font-semibold sm:text-lg"}>{m.name}</h3>
-              <p className="mt-0.5 text-sm text-teal-dark">{m.role[locale]}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <div className="card flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:p-8">
+      <span aria-hidden className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-sage text-teal-dark">
+        <Users className="h-7 w-7" />
+      </span>
+      <p className="text-lg leading-relaxed text-navy sm:text-xl">{t("text")}</p>
     </div>
   );
 }
@@ -318,54 +299,9 @@ export function PageIntro({ eyebrow, title, intro }: { eyebrow: string; title: s
   );
 }
 
-/* ── NFZ / private / not sure (Direction A) ─────────── */
-export async function CareChoice() {
-  const t = await getTranslations();
-  const nfzPlaces = clinic.locations.filter((l) => l.nfz);
-  if (!nfzPlaces.length) return null;
-  const first = nfzPlaces[0];
-  const card = "card flex h-full flex-col p-6 sm:p-7";
-  return (
-    <section aria-labelledby="care-title" className="py-16 sm:py-20">
-      <div className="container-x">
-        <SectionHeading id="care-title" eyebrow={t("care.eyebrow")} title={t("care.title")} />
-        <ul className="mt-10 grid gap-5 md:grid-cols-3">
-          <li className={`${card} ring-2 ring-nfz/25`}>
-            <span className="badge-nfz self-start">NFZ</span>
-            <h3 className="mt-4 text-xl font-semibold">{t("care.nfz.title")}</h3>
-            <p className="mt-2 flex-1 leading-relaxed text-ink-muted">{t("care.nfz.text")}</p>
-            <Link href="/nfz" className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-semibold text-nfz hover:underline">
-              {t("care.nfz.cta")} <ArrowUpRight className="h-4 w-4" aria-hidden />
-            </Link>
-          </li>
-          <li className={card}>
-            <span className="self-start rounded-full bg-sage px-2.5 py-0.5 text-xs font-bold tracking-wide text-teal-dark">{t("hero.privateChip")}</span>
-            <h3 className="mt-4 text-xl font-semibold">{t("care.private.title")}</h3>
-            <p className="mt-2 flex-1 leading-relaxed text-ink-muted">{t("care.private.text")}</p>
-            <Link href="/uslugi" className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal-dark hover:underline">
-              {t("care.private.cta")} <ArrowUpRight className="h-4 w-4" aria-hidden />
-            </Link>
-          </li>
-          <li className={card}>
-            <span className="self-start rounded-full bg-sand px-2.5 py-0.5 text-xs font-bold tracking-wide text-navy-soft">?</span>
-            <h3 className="mt-4 text-xl font-semibold">{t("care.unsure.title")}</h3>
-            <p className="mt-2 flex-1 leading-relaxed text-ink-muted">{t("care.unsure.text")}</p>
-            <TrackedLink event="phone_click" source="care-unsure" href={`tel:${first.phone}`} className="mt-6 inline-flex min-h-11 items-center gap-1.5 font-semibold text-teal-dark hover:underline">
-              <Phone className="h-4 w-4" aria-hidden /> {t("care.unsure.cta")}: {first.label} <span className="tabular-nums">{formatPhone(first.phone)}</span>
-            </TrackedLink>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 /* ── Doctors preview on the home page ────────────────── */
 export async function TeamPreview() {
   const t = await getTranslations("teamPreview");
-  const l = (await getLocale()) as Locale;
-  const doctors = clinic.team.filter((m) => m.group === "doctor");
-  if (!doctors.length) return null;
   return (
     <section aria-labelledby="team-title" className="py-16 sm:py-24">
       <div className="container-x">
@@ -375,19 +311,7 @@ export async function TeamPreview() {
             {t("all")} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {doctors.map((m) => (
-            <li key={m.name} className="card flex items-center gap-4 p-5">
-              <span aria-hidden className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-sage text-lg font-semibold text-teal-dark">
-                {initials(m.name)}
-              </span>
-              <div className="min-w-0">
-                <h3 className="font-semibold sm:text-lg">{m.name}</h3>
-                <p className="mt-0.5 text-sm text-teal-dark">{m.role[l]}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-10"><TeamStatement /></div>
       </div>
     </section>
   );

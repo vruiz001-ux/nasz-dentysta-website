@@ -18,20 +18,32 @@ export function BrandMark({ className = "h-9 w-9" }: { className?: string }) {
   );
 }
 
+/** Facebook logo in its brand colour (#0866FF). */
 export function FacebookIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
-      <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4a20 20 0 0 0-2.2-.1c-2.2 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3Z" />
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+      <circle cx="12" cy="12" r="12" fill="#0866FF" />
+      <path fill="#fff" d="M15.12 15.47 15.65 12h-3.33V9.75c0-.95.47-1.88 1.96-1.88h1.51V4.92s-1.37-.23-2.69-.23c-2.74 0-4.53 1.66-4.53 4.66V12H5.52v3.47h3.05V24a12.1 12.1 0 0 0 3.75 0v-8.53h2.8Z" />
     </svg>
   );
 }
 
+/** Instagram logo in its brand gradient. */
 export function InstagramIcon({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+      <defs>
+        <radialGradient id="ig-grad" cx="0.3" cy="1.07" r="1.3">
+          <stop offset="0" stopColor="#FFDD55" />
+          <stop offset="0.1" stopColor="#FFDD55" />
+          <stop offset="0.5" stopColor="#FF543E" />
+          <stop offset="1" stopColor="#C837AB" />
+        </radialGradient>
+      </defs>
+      <rect width="24" height="24" rx="6" fill="url(#ig-grad)" />
+      <rect x="5" y="5" width="14" height="14" rx="4" fill="none" stroke="#fff" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="3.4" fill="none" stroke="#fff" strokeWidth="1.7" />
+      <circle cx="16.3" cy="7.7" r="1" fill="#fff" />
     </svg>
   );
 }

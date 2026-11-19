@@ -9,7 +9,6 @@ import clsx from "clsx";
 
 const LABELS: Record<Locale, { short: string; full: string }> = {
   pl: { short: "PL", full: "Polski" },
-  fr: { short: "FR", full: "Français" },
   uk: { short: "УКР", full: "Українська" },
 };
 

@@ -8,7 +8,7 @@ export const appointmentSchema = z.object({
   date: z.union([z.literal(""), z.string().regex(/^\d{4}-\d{2}-\d{2}$/)]),
   message: z.string().max(1000),
   consent: z.literal(true),
-  locale: z.enum(["pl", "fr", "uk"]),
+  locale: z.enum(["pl", "uk"]),
   // spam protection
   website: z.string().max(200), // honeypot — must be empty, checked in the route
   startedAt: z.number(),

@@ -82,13 +82,13 @@ export async function ContactInfo() {
           <Row icon={Users} label={t("contact.social")}>
             <div className="flex gap-4">
               {clinic.social.facebook && (
-                <a href={clinic.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold hover:text-teal-dark">
-                  <FacebookIcon className="h-4 w-4" aria-hidden /> Facebook
+                <a href={clinic.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-semibold hover:text-teal-dark">
+                  <FacebookIcon className="h-6 w-6" /> Facebook
                 </a>
               )}
               {clinic.social.instagram && (
-                <a href={clinic.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold hover:text-teal-dark">
-                  <InstagramIcon className="h-4 w-4" aria-hidden /> Instagram
+                <a href={clinic.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 font-semibold hover:text-teal-dark">
+                  <InstagramIcon className="h-6 w-6" /> Instagram
                 </a>
               )}
             </div>

@@ -57,19 +57,19 @@ test.describe("Scenario B — Ukrainian visitor", () => {
   });
 });
 
-test.describe("Scenario C — French visitor, contact links", () => {
+test.describe("Scenario C — contact links", () => {
   test("menu navigation and tel/WhatsApp links", async ({ page }) => {
     await rejectOptional(page);
-    await page.goto("/fr");
+    await page.goto("/uk");
     await openMenuIfMobile(page);
-    await page.getByRole("link", { name: "Contact", exact: true }).first().click();
-    await expect(page).toHaveURL(/\/fr\/contact$/);
+    await page.getByRole("link", { name: "Контакти", exact: true }).first().click();
+    await expect(page).toHaveURL(/\/uk\/kontakty$/);
     await expect(page.locator('a[href="tel:+48683205066"]').first()).toBeAttached();
     await expect(page.locator('a[href="tel:+48683202396"]').first()).toBeAttached();
     const wa = page.locator('a[href^="https://wa.me/48797707168"]').first();
     await expect(wa).toHaveAttribute("target", "_blank");
     const href = (await wa.getAttribute("href"))!;
-    expect(decodeURIComponent(href)).toContain("Bonjour");
+    expect(decodeURIComponent(href)).toContain("Добрий день");
     await expect(page.locator('a[href="mailto:naszdentystazgora@gmail.com"]').first()).toBeAttached();
   });
 });
@@ -138,8 +138,8 @@ test.describe("Scenario F — error handling", () => {
   });
 
   test("unknown page returns 404 in the right language", async ({ page }) => {
-    const r = await page.goto("/fr/nexiste-pas");
+    const r = await page.goto("/uk/nemaie-takoi");
     expect(r?.status()).toBe(404);
-    await expect(page.getByRole("heading", { name: "Page introuvable" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Сторінку не знайдено" })).toBeVisible();
   });
 });

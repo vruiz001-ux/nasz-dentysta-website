@@ -10,15 +10,14 @@ import { test, expect } from "@playwright/test";
  */
 
 const pages = [
-  "/pl", "/fr", "/uk",
-  "/pl/o-nas", "/fr/a-propos", "/uk/pro-nas",
-  "/pl/uslugi", "/fr/soins", "/uk/poslugy",
-  "/pl/cennik", "/fr/tarifs", "/uk/tsiny",
-  "/pl/kontakt", "/fr/contact", "/uk/kontakty",
-  "/pl/polityka-prywatnosci", "/fr/politique-de-confidentialite", "/uk/polityka-konfidentsiinosti",
-  "/pl/nfz", "/fr/nfz", "/uk/nfz",
-  "/pl/zespol", "/fr/equipe", "/uk/komanda",
-  "/pl/uslugi/protetyka", "/fr/soins/protetyka", "/uk/poslugy/protetyka",
+  "/pl", "/uk",
+  "/pl/o-nas", "/uk/pro-nas",
+  "/pl/uslugi", "/uk/poslugy",
+  "/pl/cennik", "/uk/tsiny",
+  "/pl/kontakt", "/uk/kontakty",
+  "/pl/polityka-prywatnosci", "/uk/polityka-konfidentsiinosti",
+  "/pl/zespol", "/uk/komanda",
+  "/pl/uslugi/protetyka", "/uk/poslugy/protetyka",
 ];
 
 const legacy: [string, string][] = [
@@ -38,10 +37,22 @@ const legacy: [string, string][] = [
   ["/uk/kontakt", "/uk/kontakty"],
   ["/uk/certifykaty", "/uk/pro-nas"],
   ["/ua/oferta", "/uk/poslugy"],
-  ["/fr/a-propos-fr", "/fr/a-propos"],
-  ["/fr/fr-nos-offres", "/fr/soins"],
-  ["/fr/frcontact", "/fr/contact"],
-  ["/fr/polityka-prywatnosci", "/fr/politique-de-confidentialite"],
+  // French version removed (19 Nov 2026) → Polish equivalents
+  ["/fr", "/pl"],
+  ["/fr/a-propos", "/pl/o-nas"],
+  ["/fr/soins", "/pl/uslugi"],
+  ["/fr/soins/protetyka", "/pl/uslugi/protetyka"],
+  ["/fr/equipe", "/pl/zespol"],
+  ["/fr/contact", "/pl/kontakt"],
+  ["/fr/politique-de-confidentialite", "/pl/polityka-prywatnosci"],
+  ["/fr/a-propos-fr", "/pl/o-nas"],
+  ["/fr/fr-nos-offres", "/pl/uslugi"],
+  ["/fr/frcontact", "/pl/kontakt"],
+  ["/fr/polityka-prywatnosci", "/pl/polityka-prywatnosci"],
+  ["/fr/cokolwiek", "/pl"],
+  // NFZ page removed (19 Nov 2026)
+  ["/pl/nfz", "/pl/kontakt"],
+  ["/uk/nfz", "/uk/kontakty"],
 ];
 
 test.describe("redirects", () => {

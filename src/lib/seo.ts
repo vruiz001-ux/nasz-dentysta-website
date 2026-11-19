@@ -7,7 +7,7 @@ import { clinic } from "@/content/clinic";
 /** The netlify.app address must not compete with naszdentysta.pl in Google. */
 export const noIndex = clinic.siteUrl.includes(".netlify.app") || process.env.NEXT_PUBLIC_PREVIEW === "1";
 
-const HREFLANG: Record<Locale, string> = { pl: "pl-PL", fr: "fr", uk: "uk" };
+const HREFLANG: Record<Locale, string> = { pl: "pl-PL", uk: "uk" };
 
 /** Any link target the router accepts, including dynamic routes ({ pathname, params }). */
 export type Href = Parameters<typeof getPathname>[0]["href"];
@@ -38,7 +38,7 @@ export async function pageMetadata(
       title,
       description,
       url: absoluteUrl(locale, href),
-      locale: { pl: "pl_PL", fr: "fr_FR", uk: "uk_UA" }[locale],
+      locale: { pl: "pl_PL", uk: "uk_UA" }[locale],
       images: [{ url: clinic.siteUrl + "/images/og.jpg", width: 1200, height: 630 }],
     },
     robots: noIndex ? { index: false, follow: true } : undefined,

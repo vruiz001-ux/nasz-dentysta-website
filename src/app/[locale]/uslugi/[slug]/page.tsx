@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowLeft, ArrowUpRight, Phone } from "lucide-react";
+import { ArrowLeft, Phone } from "lucide-react";
 import { routing, type Locale } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { clinic, formatPhone, nfzLocationsFor, type ServiceId } from "@/content/clinic";
@@ -115,9 +115,6 @@ export default async function ServicePage({ params }: { params: Promise<Params> 
                     {t("servicePage.nfzWhere", { places: nfzAt.map((l) => l.street).join(", ") })}
                   </p>
                   <p className="mt-3 text-[0.95rem] text-ink-muted">{t("servicePage.privateAlso")}</p>
-                  <Link href="/nfz" className="mt-3 inline-flex min-h-11 items-center gap-1 font-semibold text-nfz hover:underline">
-                    {t("care.nfz.cta")} <ArrowUpRight className="h-4 w-4" aria-hidden />
-                  </Link>
                 </>
               ) : (
                 <p className="text-[0.95rem] leading-relaxed">{t("servicePage.privateOnly")}</p>

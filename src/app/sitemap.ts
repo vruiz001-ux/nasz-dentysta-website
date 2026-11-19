@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { href: "/", priority: 1 },
     { href: "/uslugi", priority: 0.9 },
     ...activeServices().map((slug) => ({ href: { pathname: "/uslugi/[slug]", params: { slug } } as Href, priority: 0.8 })),
-    ...(clinic.locations.some((l) => l.nfz) ? [{ href: "/nfz" as Href, priority: 0.9 }] : []),
     { href: "/zespol", priority: 0.7 },
     ...(clinic.prices.length ? [{ href: "/cennik" as Href, priority: 0.7 }] : []),
     { href: "/o-nas", priority: 0.6 },

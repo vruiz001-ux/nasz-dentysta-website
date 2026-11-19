@@ -2,7 +2,7 @@
   "meta": {
     "siteTitle": "Nasz Dentysta — dentysta Zielona Góra",
     "homeTitle": "Dentysta Zielona Góra — NFZ i prywatnie | Nasz Dentysta",
-    "homeDescription": "Dwa gabinety stomatologiczne w Zielonej Górze: ul. Morelowa 23 (także NFZ) i ul. Drzewna 35. Własne laboratorium protetyczne. Protetyka, implanty, chirurgia, leczenie kanałowe, ortodoncja, leczenie dzieci. Mówimy po polsku i ukraińsku.",
+    "homeDescription": "Dwa gabinety stomatologiczne w Zielonej Górze: ul. Morelowa 23 (także NFZ) i ul. Drzewna 35. Współpraca z uznanymi laboratoriami protetycznymi. Protetyka, implanty, chirurgia, leczenie kanałowe, ortodoncja, leczenie dzieci. Mówimy po polsku i ukraińsku.",
     "aboutTitle": "O nas",
     "aboutDescription": "Poznaj gabinet Nasz Dentysta i zespół, który zadba o Twój uśmiech.",
     "servicesTitle": "Usługi stomatologiczne",
@@ -13,10 +13,8 @@
     "contactDescription": "Adres, godziny otwarcia i formularz zgłoszenia wizyty w gabinecie Nasz Dentysta.",
     "privacyTitle": "Polityka prywatności",
     "privacyDescription": "Zasady przetwarzania danych osobowych przez gabinet Nasz Dentysta.",
-    "nfzTitle": "Dentysta na NFZ w Zielonej Górze",
-    "nfzDescription": "Leczenie stomatologiczne i protetyka w ramach NFZ w gabinecie Nasz Dentysta przy ul. Morelowej 23 w Zielonej Górze. Jak się umówić i co zabrać.",
     "teamTitle": "Nasz zespół",
-    "teamDescription": "Lekarze dentyści, technik dentystyczny i asystentki gabinetów Nasz Dentysta w Zielonej Górze.",
+    "teamDescription": "Wykwalifikowani i doświadczeni lekarze dentyści oraz asystentki gabinetów Nasz Dentysta w Zielonej Górze.",
     "serviceTitle": "{name} Zielona Góra | Nasz Dentysta"
   },
   "nav": {
@@ -32,7 +30,6 @@
     "skip": "Przejdź do treści",
     "language": "Wybierz język",
     "mainNav": "Nawigacja główna",
-    "nfz": "NFZ",
     "team": "Zespół"
   },
   "actions": {
@@ -51,9 +48,9 @@
   "hero": {
     "eyebrow": "Gabinety stomatologiczne · Zielona Góra",
     "title": "Dentysta w Zielonej Górze — leczenie na NFZ i prywatnie",
-    "subtitle": "Dwa gabinety, własne laboratorium protetyczne i zespół, który mówi po polsku i ukraińsku.",
+    "subtitle": "Dwa gabinety, sprawdzone laboratoria partnerskie i zespół, który mówi po polsku i ukraińsku.",
     "since": "Od 1989 roku",
-    "sinceText": "2 gabinety · własne laboratorium",
+    "sinceText": "2 gabinety · otwarte także w soboty",
     "teamAlt": "Lekarze zespołu Nasz Dentysta",
     "callTitle": "Zadzwoń do gabinetu",
     "nfzChip": "NFZ i prywatnie",
@@ -65,11 +62,11 @@
     "items": {
       "since": {
         "title": "Od 1989 roku",
-        "text": "Zaczynaliśmy jako pracownia protetyczna. Dziś łączymy doświadczenie lekarzy i techników w jednym miejscu."
+        "text": "Od lat dbamy o zdrowie i uśmiech pacjentów z Zielonej Góry i okolic."
       },
       "lab": {
-        "title": "Własne laboratorium protetyczne",
-        "text": "Lekarz współpracuje bezpośrednio z technikiem, co pozwala na szybkie konsultacje z pacjentem."
+        "title": "Uznane laboratoria partnerskie",
+        "text": "Prace protetyczne wykonują sprawdzone laboratoria, z którymi współpracujemy od lat."
       },
       "locations": {
         "title": "Dwa gabinety w Zielonej Górze",
@@ -105,8 +102,8 @@
       },
       "protetyka": {
         "name": "Protetyka",
-        "short": "Korony, mosty i protezy z własnego laboratorium.",
-        "long": "Korony, mosty i protezy wykonujemy we współpracy z naszym własnym laboratorium protetycznym. Lekarz konsultuje pracę bezpośrednio z technikiem, a Ty nie musisz czekać na zewnętrzną pracownię."
+        "short": "Korony, mosty i protezy wykonywane przez uznane laboratoria partnerskie.",
+        "long": "Korony, mosty i protezy wykonujemy we współpracy z uznanymi laboratoriami protetycznymi. Lekarz dobiera rozwiązanie i nadzoruje każdy etap pracy."
       },
       "implantologia": {
         "name": "Implantologia",
@@ -144,9 +141,9 @@
   },
   "about": {
     "eyebrow": "O nas",
-    "title": "Od pracowni protetycznej do dwóch gabinetów",
-    "text1": "Nasz Dentysta rozpoczął działalność w 1989 roku jako pracownia wykonująca prace dla gabinetów stomatologicznych. Dziś prowadzimy dwa gabinety w Zielonej Górze oraz laboratorium protetyczne o standardzie europejskim.",
-    "text2": "Do Twojej dyspozycji jest zespół lekarzy dentystów, techników dentystycznych i asystentek. Własne laboratorium umożliwia bezpośrednią współpracę lekarza z technikiem i szybkie konsultacje z pacjentem.",
+    "title": "Dwa gabinety w Zielonej Górze",
+    "text1": "Nasz Dentysta działa od 1989 roku. Dziś prowadzimy dwa gabinety w Zielonej Górze i współpracujemy z uznanymi laboratoriami protetycznymi.",
+    "text2": "Opiekuje się Tobą zespół wykwalifikowanych i doświadczonych lekarzy dentystów oraz asystentek, którzy mówią w kilku językach.",
     "teamTitle": "Nasz zespół",
     "languagesTitle": "Rozmawiamy w językach",
     "highlightsTitle": "W gabinecie",
@@ -155,9 +152,7 @@
       "comfort": "Komfort pacjenta",
       "quality": "Jakość usług"
     },
-    "doctorsTitle": "Lekarze",
-    "staffTitle": "Technik i asystentki",
-    "teamIntro": "Poznaj osoby, które zadbają o Ciebie w naszych gabinetach.",
+    "staffTitle": "Asystentki",
     "meetTeam": "Poznaj zespół"
   },
   "journey": {
@@ -356,19 +351,19 @@
         "a": "W Zielonej Górze, przy ul. Morelowej 23 oraz przy ul. Drzewnej 35."
       },
       "lab": {
-        "q": "Czy wykonujecie protezy i korony na miejscu?",
-        "a": "Prace protetyczne powstają w naszym własnym laboratorium, we współpracy lekarza z technikiem."
+        "q": "Kto wykonuje korony, mosty i protezy?",
+        "a": "Prace protetyczne wykonują uznane laboratoria partnerskie, z którymi współpracujemy. Lekarz nadzoruje każdy etap."
       }
     }
   },
   "aboutPage": {
     "eyebrow": "Nasz zespół, Twoje zdrowie",
     "title": "Profesjonalna opieka na każdym etapie",
-    "lead": "Lekarze dentyści, technik dentystyczny i asystentki pracują razem w dwóch gabinetach w Zielonej Górze. Od 1989 roku dbamy o zdrowie i piękny uśmiech naszych pacjentów.",
+    "lead": "Lekarze dentyści i asystentki pracują razem w dwóch gabinetach w Zielonej Górze. Od 1989 roku dbamy o zdrowie i piękny uśmiech naszych pacjentów.",
     "points": {
       "team": {
         "t": "Zgrany zespół",
-        "d": "lekarze, technik i asystentki"
+        "d": "lekarze i asystentki"
       },
       "individual": {
         "t": "Indywidualne podejście",
@@ -380,7 +375,7 @@
       }
     },
     "badge": "Od 1989 roku",
-    "badgeText": "2 gabinety · własne laboratorium",
+    "badgeText": "2 gabinety · laboratoria partnerskie",
     "servicesEyebrow": "W czym możemy Ci pomóc?",
     "servicesTitle": "Kompleksowa opieka stomatologiczna",
     "servicesIntro": "Oferujemy szeroki zakres leczenia, dzięki czemu zadbamy o Twój uśmiech na każdym etapie życia.",
@@ -388,11 +383,11 @@
     "consultText": "Umów wizytę — podczas konsultacji zaproponujemy plan leczenia.",
     "trustEyebrow": "Dlaczego warto nam zaufać?",
     "trustTitle": "Doświadczenie i troska o Twój komfort",
-    "trustText": "Zaczynaliśmy jako pracownia protetyczna. Dziś łączymy wiedzę lekarzy i techników w jednym miejscu, aby leczenie było wygodne, przemyślane i dopasowane do Ciebie.",
+    "trustText": "Łączymy doświadczenie naszych lekarzy z pracą uznanych laboratoriów partnerskich, aby leczenie było wygodne, przemyślane i dopasowane do Ciebie.",
     "trust": {
       "lab": {
-        "t": "Własne laboratorium protetyczne",
-        "d": "Lekarz współpracuje bezpośrednio z technikiem, co pozwala na szybkie konsultacje z pacjentem."
+        "t": "Uznane laboratoria partnerskie",
+        "d": "Prace protetyczne wykonują sprawdzone laboratoria, z którymi współpracujemy od lat."
       },
       "individual": {
         "t": "Indywidualne podejście",
@@ -424,63 +419,19 @@
     "ctaTitle": "Zadbaj o swój uśmiech już dziś",
     "ctaText": "Umów się na wizytę i przekonaj się, jak możemy Ci pomóc."
   },
-  "care": {
-    "eyebrow": "Jak chcesz się leczyć?",
-    "title": "NFZ czy prywatnie — wybierz, co Ci odpowiada",
-    "nfz": {
-      "title": "Na NFZ",
-      "text": "W gabinecie przy ul. Morelowej 23: leczenie stomatologiczne i protetyka w zakresie finansowanym przez NFZ. Zwykle wystarczy dokument tożsamości.",
-      "cta": "Jak skorzystać z NFZ"
-    },
-    "private": {
-      "title": "Prywatnie",
-      "text": "W obu gabinetach, pełen zakres leczenia: implanty, leczenie kanałowe, ortodoncja, protetyka z własnego laboratorium.",
-      "cta": "Zobacz usługi"
-    },
-    "unsure": {
-      "title": "Nie wiesz?",
-      "text": "Zadzwoń — podpowiemy, co możesz wykonać na NFZ, a co prywatnie, i do którego gabinetu się zgłosić.",
-      "cta": "Zadzwoń"
-    }
-  },
   "teamPreview": {
     "eyebrow": "Zespół",
-    "title": "Lekarze, którzy Cię przyjmą",
-    "all": "Cały zespół"
+    "title": "Nasz zespół",
+    "all": "Poznaj zespół",
+    "text": "Nasz wspaniały zespół wysoko wykwalifikowanych i doświadczonych lekarzy dentystów oraz asystentek, mówiących w kilku językach, z radością się Tobą zaopiekuje."
   },
   "teamPage": {
     "eyebrow": "Zespół",
     "title": "Poznaj nasz zespół",
-    "intro": "Lekarze dentyści, technik dentystyczny i asystentki pracujący w naszych gabinetach w Zielonej Górze."
+    "intro": "Nasz wspaniały zespół wysoko wykwalifikowanych i doświadczonych lekarzy dentystów oraz asystentek, mówiących w kilku językach, z radością się Tobą zaopiekuje."
   },
   "topbar": {
     "call": "Zadzwoń"
-  },
-  "nfzPage": {
-    "eyebrow": "NFZ",
-    "title": "Leczenie stomatologiczne na NFZ w Zielonej Górze",
-    "intro": "Umowę z Narodowym Funduszem Zdrowia ma nasz gabinet przy ul. Morelowej 23. Poniżej wyjaśniamy, jak skorzystać z leczenia w ramach NFZ.",
-    "where": {
-      "h": "Gdzie przyjmujemy na NFZ",
-      "p": "Świadczenia w ramach NFZ realizujemy w gabinecie przy ul. Morelowej 23 (poradnia stomatologiczna i poradnia protetyki stomatologicznej). W gabinecie przy ul. Drzewnej 35 przyjmujemy prywatnie."
-    },
-    "covers": {
-      "h": "Co obejmuje NFZ",
-      "p": "Zakres bezpłatnego leczenia stomatologicznego — w tym rodzaje wypełnień i protez oraz to, jak często można je otrzymać — określa NFZ. Część zabiegów i materiałów nie jest finansowana; wtedy przed leczeniem przedstawimy koszt leczenia prywatnego."
-    },
-    "bring": {
-      "h": "Co zabrać",
-      "p": "Dokument tożsamości. Twoje prawo do świadczeń sprawdzamy w systemie eWUŚ. Jeśli masz pytania o uprawnienia (np. numer PESEL ze statusem UKR), zapytaj w rejestracji."
-    },
-    "book": {
-      "h": "Jak się umówić",
-      "p": "Na wizytę w ramach NFZ umówisz się telefonicznie w gabinecie przy ul. Morelowej. Na leczenie protetyczne w ramach NFZ może obowiązywać kolejka — termin podamy w rejestracji."
-    },
-    "private": {
-      "h": "Leczenie prywatne",
-      "p": "W obu gabinetach możesz leczyć się prywatnie — także zabiegi, których NFZ nie finansuje, np. implanty. Koszt omawiamy przed rozpoczęciem leczenia."
-    },
-    "queue": "Sprawdź aktualne terminy oczekiwania w serwisie NFZ"
   },
   "servicePage": {
     "what": "Na czym polega",
@@ -513,9 +464,9 @@
       "after": "Przez kilka dni ząb może być tkliwy przy nagryzaniu. Do czasu ostatecznej odbudowy unikaj gryzienia twardych pokarmów leczonym zębem. Jeśli pojawi się obrzęk lub silny ból, zadzwoń do gabinetu."
     },
     "protetyka": {
-      "what": "Protetyka to uzupełnianie brakujących zębów i odbudowa zębów mocno zniszczonych: korony, mosty, protezy częściowe i całkowite. Prace wykonuje nasze własne laboratorium protetyczne, a lekarz konsultuje je bezpośrednio z technikiem.",
+      "what": "Protetyka to uzupełnianie brakujących zębów i odbudowa zębów mocno zniszczonych: korony, mosty, protezy częściowe i całkowite. Prace wykonują uznane laboratoria partnerskie, a lekarz nadzoruje każdy etap.",
       "when": "Gdy brakuje jednego lub kilku zębów, gdy ząb jest bardzo zniszczony lub po leczeniu kanałowym, a także gdy dotychczasowa proteza przestała dobrze przylegać.",
-      "visit": "Na pierwszej wizycie lekarz bada zęby, omawia możliwe rozwiązania i ich koszt. Następnie pobiera wyciski, a laboratorium wykonuje pracę. Zwykle potrzebnych jest kilka wizyt, w tym przymiarki.",
+      "visit": "Na pierwszej wizycie lekarz bada zęby, omawia możliwe rozwiązania i ich koszt. Następnie pobiera wyciski, a laboratorium partnerskie wykonuje pracę. Zwykle potrzebnych jest kilka wizyt, w tym przymiarki.",
       "after": "Do nowej protezy trzeba się przyzwyczaić — jeśli w pierwszych dniach uwiera, zgłoś się do korekty. Korony, mosty i protezy wymagają starannej higieny i regularnych kontroli."
     },
     "implantologia": {
