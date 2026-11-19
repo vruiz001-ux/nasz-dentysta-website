@@ -6,7 +6,9 @@ test.describe("Scenario A — new Polish visitor books a visit", () => {
     await rejectOptional(page);
     const calls = await mockForms(page);
     await page.goto("/pl");
-    await expect(page.locator("h1")).toHaveText("Dentysta w Zielonej Górze — leczenie na NFZ i prywatnie");
+    // "NFZ" is the official logo (alt="NFZ"), so check the accessible name, not the text content.
+    await expect(page.getByRole("heading", { level: 1, name: "Dentysta w Zielonej Górze - leczenie na NFZ i prywatnie" })).toBeVisible();
+    await expect(page.locator("h1 img[alt='NFZ']")).toBeVisible();
     await expect(page.locator("html")).toHaveAttribute("lang", "pl");
 
     await page.getByRole("link", { name: "Poznaj nasze usługi" }).first().click();

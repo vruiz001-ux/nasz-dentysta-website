@@ -21,7 +21,21 @@ export async function Hero() {
       <div className="container-x grid items-center gap-10 pb-14 pt-6 sm:pt-10 lg:grid-cols-12 lg:gap-12 lg:pb-20">
         <div className="lg:col-span-7">
           <p className="eyebrow">{t("hero.eyebrow")}</p>
-          <h1 id="hero-title" className="h-display mt-4 max-w-3xl">{t("hero.title")}</h1>
+          <h1 id="hero-title" className="h-display mt-4 max-w-3xl">
+            {t.rich("hero.title", {
+              // Official NFZ logo in place of the letters; alt keeps "NFZ" in the heading for screen readers and SEO.
+              nfz: () => (
+                <Image
+                  src="/images/nfz.png"
+                  alt="NFZ"
+                  width={1024}
+                  height={388}
+                  priority
+                  className="inline-block h-[0.95em] w-auto -translate-y-[0.06em] align-baseline"
+                />
+              ),
+            })}
+          </h1>
           <p className="lead mt-5 max-w-2xl">{t("hero.subtitle")}</p>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
