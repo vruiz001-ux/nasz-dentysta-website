@@ -75,11 +75,14 @@ test.describe("Scenario C — French visitor, contact links", () => {
 });
 
 test.describe("Scenario D — privacy-conscious visitor", () => {
-  test("no third-party requests before consent; choices can be changed", async ({ page }) => {
+  test("no third-party requests before consent; choices can be changed", async ({ page, baseURL }) => {
+    // First-party = the host under test (localhost, or a deploy preview when BASE_URL is set).
+    const firstParty = new Set(["localhost", "127.0.0.1", new URL(baseURL ?? "http://localhost").hostname]);
     const external: string[] = [];
     page.on("request", (r) => {
       const u = new URL(r.url());
-      if (!["localhost", "127.0.0.1"].includes(u.hostname)) external.push(u.hostname);
+      if (!u.protocol.startsWith("http")) return;
+      if (!firstParty.has(u.hostname)) external.push(u.hostname);
     });
     await page.goto("/pl/kontakt");
     const banner = page.getByRole("region", { name: "Ustawienia prywatności" });
