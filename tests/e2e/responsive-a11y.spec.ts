@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { rejectOptional } from "./helpers";
 
-const PAGES = ["/pl", "/pl/o-nas", "/pl/uslugi", "/pl/uslugi/protetyka", "/pl/nfz", "/pl/zespol", "/pl/cennik", "/pl/kontakt", "/pl/polityka-prywatnosci", "/fr", "/fr/contact", "/fr/soins/implantologia", "/uk", "/uk/poslugy", "/uk/nfz", "/uk/komanda"];
+const PAGES = ["/pl", "/pl/o-nas", "/pl/uslugi", "/pl/uslugi/protetyka", "/pl/zespol", "/pl/cennik", "/pl/kontakt", "/pl/polityka-prywatnosci", "/uk", "/uk/poslugy", "/uk/poslugy/implantologia", "/uk/komanda", "/uk/kontakty"];
 const WIDTHS = [320, 375, 414, 480, 768, 1024, 1280, 1920];
 
 test.describe("Scenario E — responsive layout", () => {
@@ -63,11 +63,11 @@ test.describe("Scenario G — accessibility (axe, WCAG 2.2 AA)", () => {
 
 test.describe("SEO", () => {
   test("hreflang, canonical and lang per locale", async ({ page }) => {
-    for (const [p, lang] of [["/pl/kontakt", "pl"], ["/fr/contact", "fr"], ["/uk/kontakty", "uk"]] as const) {
+    for (const [p, lang] of [["/pl/kontakt", "pl"], ["/uk/kontakty", "uk"]] as const) {
       await page.goto(p);
       await expect(page.locator("html")).toHaveAttribute("lang", lang);
       await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", new RegExp(`${p}$`));
-      await expect(page.locator('link[rel="alternate"][hreflang]')).toHaveCount(4);
+      await expect(page.locator('link[rel="alternate"][hreflang]')).toHaveCount(3); // pl, uk, x-default
       await expect(page.locator("h1")).toHaveCount(1);
     }
   });

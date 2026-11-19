@@ -1,7 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { Hero } from "@/components/Hero";
-import { CareChoice, ServicesGrid, TeamPreview, WhyUs, AppointmentCTA, FAQ } from "@/components/Sections";
+import { ServicesGrid, TeamPreview, WhyUs, AppointmentCTA, FAQ } from "@/components/Sections";
 import { ContactInfo, Locations } from "@/components/Contact";
 import { SectionHeading } from "@/components/SectionHeading";
 import { pageMetadata } from "@/lib/seo";
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: L
 
 /**
  * Home (Direction A, Nov 2026). Order answers the patient's questions in turn:
- * who/where/how to book (hero) → NFZ or private → services → doctors → facts →
+ * who/where/how to book (hero) → services → doctors → facts →
  * clinics & hours → FAQ → book.
  */
 export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
@@ -23,7 +23,6 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
   return (
     <>
       <Hero />
-      <CareChoice />
       <ServicesGrid />
       <TeamPreview />
       <WhyUs />

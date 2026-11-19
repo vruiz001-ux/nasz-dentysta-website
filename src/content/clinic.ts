@@ -12,7 +12,7 @@
  * ─────────────────────────────────────────────────────────────
  */
 
-export type Localized = { pl: string; fr: string; uk: string };
+export type Localized = { pl: string; uk: string };
 
 export type ServiceId =
   | "zachowawcza"
@@ -56,8 +56,6 @@ export type Location = {
   nfz: { services: ServiceId[] } | null;
 };
 
-const DOCTOR: Localized = { pl: "Lekarz dentysta", fr: "Chirurgien-dentiste", uk: "Лікар-стоматолог" };
-const ASSISTANT: Localized = { pl: "Asystentka stomatologiczna", fr: "Assistante dentaire", uk: "Асистентка стоматолога" };
 
 export const clinic = {
   name: "Nasz Dentysta",
@@ -112,14 +110,14 @@ export const clinic = {
   email: "naszdentystazgora@gmail.com" as string | null,
   /** Netlify Forms sends notifications — set the recipient in Netlify → Forms → Notifications */
 
-  /** Mon–Fri 9:00–17:00 (both clinics) — confirmed by the owner 2026-10-13 */
+  /** Mon–Sat 9:00–17:00 (both clinics) — Mon–Fri confirmed 2026-10-13, Saturday added by the owner 2026-11-19 */
   openingHours: [
     { day: 1, open: "09:00", close: "17:00" },
     { day: 2, open: "09:00", close: "17:00" },
     { day: 3, open: "09:00", close: "17:00" },
     { day: 4, open: "09:00", close: "17:00" },
     { day: 5, open: "09:00", close: "17:00" },
-    { day: 6, open: null, close: null },
+    { day: 6, open: "09:00", close: "17:00" },
     { day: 7, open: null, close: null },
   ] as OpeningHours[],
 
@@ -129,19 +127,8 @@ export const clinic = {
   /** No prices published yet — add rows here to fill the Cennik page */
   prices: [] as PriceItem[],
 
-  team: [
-    { group: "doctor", name: "Ewa Witkowska", role: { pl: "Lekarz dentysta, specjalista II stopnia protetyki stomatologicznej", fr: "Chirurgien-dentiste, spécialiste en prothèse dentaire", uk: "Лікар-стоматолог, спеціаліст ІІ ступеня з ортопедичної стоматології" } },
-    { group: "doctor", name: "Yulia Stetska", role: DOCTOR },
-    { group: "doctor", name: "Hanna Zhbankova", role: DOCTOR },
-    { group: "doctor", name: "Oleksandyr Brodyk", role: DOCTOR },
-    { group: "doctor", name: "Radoslav Pasichnyuk", role: DOCTOR },
-    { group: "doctor", name: "Halina Kolodiichak", role: DOCTOR },
-    { group: "staff", name: "Marysia Gil", role: { pl: "Technik dentystyczny", fr: "Prothésiste dentaire", uk: "Зубний технік" } },
-    { group: "staff", name: "Renata Bajda", role: ASSISTANT },
-    { group: "staff", name: "Joanna Lubowiecka", role: ASSISTANT },
-    { group: "staff", name: "Mariana Borysova", role: ASSISTANT },
-    { group: "staff", name: "Tetiana Dehtiar", role: ASSISTANT },
-  ] as TeamMember[],
+  /** Individual names are not published (owner's decision, 2026-11-19). */
+  team: [] as TeamMember[],
 
   /** Languages spoken in the clinic */
   spokenLanguages: ["pl", "uk"] as ("pl" | "fr" | "uk" | "en")[],

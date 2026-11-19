@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { rejectOptional, openMenuIfMobile } from "./helpers";
 
-/** Direction A (Nov 2026): NFZ clarity, service pages, team page, honest navigation. */
+/** Direction A (Nov 2026) + owner's content update of 19 Nov 2026. */
 
 test.describe("Home answers who / where / NFZ / how to book above the fold", () => {
   test("hero shows both clinics with phone and NFZ status, and the booking action", async ({ page }) => {
@@ -19,12 +19,11 @@ test.describe("Home answers who / where / NFZ / how to book above the fold", () 
     await expect(drzewna.getByText("NFZ")).toHaveCount(0);
   });
 
-  test("NFZ / private / unsure choice links to the NFZ page", async ({ page }) => {
+  test("no NFZ section on the home page and no NFZ page link", async ({ page }) => {
     await rejectOptional(page);
     await page.goto("/pl");
-    await page.getByRole("link", { name: "Jak skorzystać z NFZ" }).click();
-    await expect(page).toHaveURL(/\/pl\/nfz$/);
-    await expect(page.locator("h1")).toHaveText("Leczenie stomatologiczne na NFZ w Zielonej Górze");
+    await expect(page.locator("#care-title")).toHaveCount(0);
+    await expect(page.locator('a[href$="/nfz"]')).toHaveCount(0);
   });
 });
 
@@ -71,29 +70,32 @@ test.describe("Service pages", () => {
 });
 
 test.describe("Navigation", () => {
-  test("NFZ and team are in the menu; empty price list is not", async ({ page }) => {
+  test("team is in the menu; NFZ and an empty price list are not", async ({ page }) => {
     await rejectOptional(page);
     await page.goto("/pl");
     await openMenuIfMobile(page);
     const nav = page.getByRole("navigation", { name: "Nawigacja główna" }).filter({ visible: true }).first();
-    await expect(nav.getByRole("link", { name: "NFZ", exact: true })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "NFZ", exact: true })).toHaveCount(0);
     await expect(nav.getByRole("link", { name: "Zespół", exact: true })).toBeVisible();
     await expect(nav.getByRole("link", { name: "Cennik", exact: true })).toHaveCount(0);
   });
 
-  test("team page lists doctors without invented details", async ({ page }) => {
+  test("team page shows the team statement and no individual names", async ({ page }) => {
     await rejectOptional(page);
     await page.goto("/pl/zespol");
     await expect(page.locator("h1")).toHaveText("Poznaj nasz zespół");
-    await expect(page.getByRole("heading", { name: "Ewa Witkowska" })).toBeVisible();
+    await expect(page.getByText(/wysoko wykwalifikowanych i doświadczonych lekarzy/)).toBeVisible();
+    for (const name of ["Witkowska", "Stetska", "Gil", "Bajda"]) await expect(page.getByText(name)).toHaveCount(0);
   });
 
   test("sitemap lists the new pages", async ({ request }) => {
     const xml = await (await request.get("/sitemap.xml")).text();
-    for (const p of ["/pl/nfz", "/pl/zespol", "/pl/uslugi/protetyka", "/uk/poslugy/protetyka", "/fr/soins/protetyka"]) {
+    for (const p of ["/pl/zespol", "/pl/uslugi/protetyka", "/uk/poslugy/protetyka"]) {
       expect(xml, p).toContain(p + "</loc>");
     }
     expect(xml).not.toContain("/pl/cennik</loc>");
+    expect(xml).not.toContain("/fr");
+    expect(xml).not.toContain("/nfz</loc>");
   });
 });
 
@@ -121,5 +123,41 @@ test.describe("Mobile first screen", () => {
     const box = (await banner.boundingBox())!;
     expect(box.height, "banner height on a 375×812 phone").toBeLessThanOrEqual(220);
     await expect(page.locator("h1")).toBeInViewport();
+  });
+});
+
+test.describe("Owner's content update (19 Nov 2026)", () => {
+  test("Saturday 9–17 is shown as open", async ({ page }) => {
+    await rejectOptional(page);
+    await page.goto("/pl/kontakt");
+    const row = page.locator("tr", { has: page.getByRole("rowheader", { name: "Sobota" }) }).first();
+    await expect(row).toContainText("09:00 – 17:00");
+  });
+
+  test("no own-laboratory claims; partner labs instead", async ({ page }) => {
+    await rejectOptional(page);
+    for (const p of ["/pl", "/pl/o-nas", "/pl/uslugi", "/uk", "/uk/pro-nas"]) {
+      await page.goto(p);
+      const text = await page.locator("body").innerText();
+      expect(text, p).not.toMatch(/własne(go)? laboratori|власн\S* (зуботехнічн\S* )?лаборатор/i);
+    }
+    await page.goto("/pl/uslugi");
+    await expect(page.getByText(/laboratoria(mi)? (partnerskie|protetycznymi)/).first()).toBeVisible();
+  });
+
+  test("no French language option", async ({ page }) => {
+    await rejectOptional(page);
+    await page.goto("/pl");
+    await expect(page.locator('[lang="fr"]')).toHaveCount(0);
+    await expect(page.locator('link[hreflang="fr"]')).toHaveCount(0);
+  });
+
+  test("Facebook and Instagram logos link to the clinic's profiles", async ({ page }) => {
+    await rejectOptional(page);
+    await page.goto("/pl");
+    const footer = page.locator("footer");
+    await expect(footer.getByRole("link", { name: "Facebook" })).toHaveAttribute("href", "https://www.facebook.com/naszdentystapl");
+    await expect(footer.getByRole("link", { name: "Instagram" })).toHaveAttribute("href", "https://www.instagram.com/nasz_dentystazg/");
+    await expect(footer.locator('svg circle[fill="#0866FF"]')).toHaveCount(1);
   });
 });
