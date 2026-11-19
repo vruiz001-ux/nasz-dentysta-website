@@ -7,13 +7,16 @@ import clsx from "clsx";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import Image from "next/image";
-import { clinic } from "@/content/clinic";
+import { clinic, formatPhone } from "@/content/clinic";
 import { NAV } from "@/lib/nav";
+import { track } from "@/lib/analytics";
 
 
 export function Header() {
   const t = useTranslations("nav");
+  const tt = useTranslations("topbar");
   const pathname = usePathname();
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/"));
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -38,6 +41,19 @@ export function Header() {
 
   return (
     <>
+    {/* Desktop utility bar: both clinics' phones always one click away */}
+    <div className="hidden bg-navy text-ivory lg:block">
+      <div className="container-x flex h-10 items-center justify-end gap-6 text-sm">
+        <span className="text-ivory/70">{tt("call")}:</span>
+        {clinic.locations.map((l) => (
+          <a key={l.id} href={`tel:${l.phone}`} onClick={() => track("phone_click", { source: `topbar-${l.id}` })} className="inline-flex items-center gap-2 font-semibold hover:text-sage">
+            <span className="text-ivory/70">{l.label}</span>
+            <span className="tabular-nums">{formatPhone(l.phone)}</span>
+            {l.nfz && <span className="rounded-full bg-ivory/15 px-2 text-[0.7rem] font-bold tracking-wide">NFZ</span>}
+          </a>
+        ))}
+      </div>
+    </div>
     <header
       className={clsx(
         "sticky top-0 z-40 transition-all duration-500",
@@ -52,14 +68,14 @@ export function Header() {
         <nav aria-label={t("mainNav")} className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {NAV.slice(1).map((item) => {
-              const active = pathname === item.href;
+              const active = isActive(item.href);
               return (
                 <li key={item.key}>
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={clsx(
-                      "relative rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors",
+                      "relative rounded-full px-3 py-2 text-[0.95rem] font-medium transition-colors xl:px-4",
                       active ? "text-navy" : "text-navy/70 hover:text-navy",
                     )}
                   >
@@ -115,7 +131,7 @@ export function Header() {
               <li key={item.key} style={{ animationDelay: `${i * 40}ms` }} className="animate-[fadeUp_0.5s_both]">
                 <Link
                   href={item.href}
-                  aria-current={pathname === item.href ? "page" : undefined}
+                  aria-current={isActive(item.href) ? "page" : undefined}
                   className="flex min-h-14 items-center justify-between border-b border-ivory/10 text-3xl font-semibold tracking-tight aria-[current=page]:text-sage"
                 >
                   {t(item.key)}

@@ -1,19 +1,28 @@
 import type { MetadataRoute } from "next";
-import { routing, type AppPath } from "@/i18n/routing";
-import { absoluteUrl } from "@/lib/seo";
-
-const PAGES: AppPath[] = ["/", "/o-nas", "/uslugi", "/cennik", "/kontakt", "/polityka-prywatnosci"];
+import { routing } from "@/i18n/routing";
+import { absoluteUrl, type Href } from "@/lib/seo";
+import { activeServices } from "@/lib/site";
+import { clinic } from "@/content/clinic";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return PAGES.flatMap((href) =>
+  const pages: { href: Href; priority: number }[] = [
+    { href: "/", priority: 1 },
+    { href: "/uslugi", priority: 0.9 },
+    ...activeServices().map((slug) => ({ href: { pathname: "/uslugi/[slug]", params: { slug } } as Href, priority: 0.8 })),
+    ...(clinic.locations.some((l) => l.nfz) ? [{ href: "/nfz" as Href, priority: 0.9 }] : []),
+    { href: "/zespol", priority: 0.7 },
+    ...(clinic.prices.length ? [{ href: "/cennik" as Href, priority: 0.7 }] : []),
+    { href: "/o-nas", priority: 0.6 },
+    { href: "/kontakt", priority: 0.9 },
+    { href: "/polityka-prywatnosci", priority: 0.2 },
+  ];
+  return pages.flatMap(({ href, priority }) =>
     routing.locales.map((locale) => ({
       url: absoluteUrl(locale, href),
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
-      priority: href === "/" ? 1 : href === "/polityka-prywatnosci" ? 0.2 : 0.8,
-      alternates: {
-        languages: Object.fromEntries(routing.locales.map((l) => [l, absoluteUrl(l, href)])),
-      },
+      priority,
+      alternates: { languages: Object.fromEntries(routing.locales.map((l) => [l, absoluteUrl(l, href)])) },
     })),
   );
 }

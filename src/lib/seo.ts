@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
-import { routing, type AppPath, type Locale } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
 import { clinic } from "@/content/clinic";
 
 /** The netlify.app address must not compete with naszdentysta.pl in Google. */
@@ -9,13 +9,22 @@ export const noIndex = clinic.siteUrl.includes(".netlify.app") || process.env.NE
 
 const HREFLANG: Record<Locale, string> = { pl: "pl-PL", fr: "fr", uk: "uk" };
 
-export const absoluteUrl = (locale: Locale, href: AppPath) =>
-  clinic.siteUrl + getPathname({ locale, href });
+/** Any link target the router accepts, including dynamic routes ({ pathname, params }). */
+export type Href = Parameters<typeof getPathname>[0]["href"];
 
-export async function pageMetadata(locale: Locale, href: AppPath, key: "home" | "about" | "services" | "pricing" | "contact" | "privacy"): Promise<Metadata> {
+export const absoluteUrl = (locale: Locale, href: Href) => clinic.siteUrl + getPathname({ locale, href });
+
+type PageKey = "home" | "about" | "services" | "pricing" | "contact" | "privacy" | "nfz" | "team";
+
+export async function pageMetadata(
+  locale: Locale,
+  href: Href,
+  key: PageKey,
+  override?: { title: string; description: string },
+): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
-  const title = key === "home" ? t("homeTitle") : `${t(`${key}Title`)} | ${clinic.name}`;
-  const description = t(`${key}Description`);
+  const title = override?.title ?? (key === "home" ? t("homeTitle") : `${t(`${key}Title`)} | ${clinic.name}`);
+  const description = override?.description ?? t(`${key}Description`);
   const languages = Object.fromEntries(routing.locales.map((l) => [HREFLANG[l], absoluteUrl(l, href)]));
   languages["x-default"] = absoluteUrl("pl", href);
 

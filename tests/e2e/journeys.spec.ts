@@ -6,7 +6,7 @@ test.describe("Scenario A — new Polish visitor books a visit", () => {
     await rejectOptional(page);
     const calls = await mockForms(page);
     await page.goto("/pl");
-    await expect(page.locator("h1")).toHaveText("Twój uśmiech. Nasza pasja.");
+    await expect(page.locator("h1")).toHaveText("Dentysta w Zielonej Górze — leczenie na NFZ i prywatnie");
     await expect(page.locator("html")).toHaveAttribute("lang", "pl");
 
     await page.getByRole("link", { name: "Poznaj nasze usługi" }).first().click();

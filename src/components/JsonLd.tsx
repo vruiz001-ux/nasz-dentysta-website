@@ -1,6 +1,7 @@
 import { clinic, type Location } from "@/content/clinic";
 import { getPathname } from "@/i18n/navigation";
-import type { AppPath, Locale } from "@/i18n/routing";
+import type { Locale } from "@/i18n/routing";
+import type { Href } from "@/lib/seo";
 
 const DAY = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
@@ -48,7 +49,7 @@ export function ClinicJsonLd({ locale }: { locale: Locale }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
 }
 
-export function BreadcrumbJsonLd({ locale, items }: { locale: Locale; items: { name: string; href: AppPath }[] }) {
+export function BreadcrumbJsonLd({ locale, items }: { locale: Locale; items: { name: string; href: Href }[] }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

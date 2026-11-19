@@ -48,6 +48,12 @@ export type Location = {
   lat: number | null;
   lng: number | null;
   note?: Localized;
+  /**
+   * NFZ (public insurance) contract at this location, or null for private only.
+   * `services` = which of our services are (at least partly) available on NFZ here.
+   * The exact scope of NFZ-funded treatment is defined by NFZ, not by us.
+   */
+  nfz: { services: ServiceId[] } | null;
 };
 
 const DOCTOR: Localized = { pl: "Lekarz dentysta", fr: "Chirurgien-dentiste", uk: "Лікар-стоматолог" };
@@ -75,6 +81,9 @@ export const clinic = {
       phone: "+48683205066",
       lat: null,
       lng: null,
+      /** CONFIRM — NFZ open data (api.nfz.gov.pl, Oct 2026): contract for "poradnia stomatologiczna"
+       *  and "poradnia protetyki stomatologicznej" at Morelowa 23 only. */
+      nfz: { services: ["zachowawcza", "protetyka"] },
     },
     {
       id: "drzewna",
@@ -85,8 +94,18 @@ export const clinic = {
       phone: "+48683202396",
       lat: null,
       lng: null,
+      /** CONFIRM — no NFZ contract found for Drzewna 35 in NFZ open data. */
+      nfz: null,
     },
   ] as Location[],
+
+  /**
+   * Detailed treatment descriptions on the service pages (messages/*.json → serviceDetail).
+   * Keep `false` until a dentist from the practice has reviewed the text in every language.
+   * While `false`, the detailed sections appear ONLY on Netlify deploy previews
+   * (NEXT_PUBLIC_PREVIEW=1), never on the production site.
+   */
+  serviceContentReviewed: false,
 
   /** CONFIRM — from the previous redesign */
   whatsapp: "+48797707168" as string | null,
@@ -152,6 +171,11 @@ export const clinic = {
 /* ── helpers ───────────────────────────────────────────── */
 
 export const primaryPhone = () => clinic.locations[0]?.phone ?? null;
+
+/** Locations where this service is available on NFZ. */
+export const nfzLocationsFor = (id: ServiceId) => clinic.locations.filter((l) => l.nfz?.services.includes(id));
+
+export const nfzLocations = () => clinic.locations.filter((l) => l.nfz);
 
 export const locationAddress = (l: Location) => `${l.street}, ${l.postalCode} ${l.city}`;
 

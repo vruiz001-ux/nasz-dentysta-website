@@ -14,8 +14,12 @@
   --color-navy: #13293d;
   --color-navy-soft: #3d4f60;
   --color-ink-muted: #56636b;
+  /* NFZ badge — distinct from prices/private, AA on white */
+  --color-nfz: #1c6b45;
+  --color-nfz-tint: #e4f3ea;
 
-  --radius-card: 1.75rem;
+  /* Direction A (Nov 2026): calmer radii, larger body text for older readers */
+  --radius-card: 1rem;
   --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -27,6 +31,8 @@
   }
   body {
     @apply bg-ivory text-navy antialiased;
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.6;
     font-feature-settings: "ss01", "cv11";
   }
   ::selection {
@@ -58,10 +64,10 @@
     @apply inline-block h-px w-6 bg-teal;
   }
   .h-display {
-    @apply text-[2.6rem] leading-[1.02] font-semibold sm:text-6xl lg:text-[5.25rem];
+    @apply text-[2.15rem] leading-[1.08] font-semibold sm:text-5xl lg:text-[3.6rem];
   }
   .h-section {
-    @apply text-3xl leading-[1.08] font-semibold sm:text-4xl lg:text-5xl;
+    @apply text-[1.75rem] leading-[1.12] font-semibold sm:text-4xl lg:text-[2.6rem];
   }
   .lead {
     @apply text-lg leading-relaxed text-navy-soft sm:text-xl;
@@ -72,16 +78,19 @@
     transition-timing-function: var(--ease-soft);
   }
   .btn-primary {
-    @apply bg-navy text-ivory hover:bg-teal-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-navy/15;
+    @apply bg-navy text-ivory hover:bg-teal-dark;
   }
   .btn-teal {
-    @apply bg-teal-dark text-white hover:bg-navy hover:-translate-y-0.5;
+    @apply bg-teal-dark text-white hover:bg-navy;
   }
   .btn-ghost {
     @apply border border-navy/15 bg-white/60 text-navy backdrop-blur hover:border-navy/40 hover:bg-white;
   }
   .btn-light {
-    @apply bg-ivory text-navy hover:bg-white hover:-translate-y-0.5;
+    @apply bg-ivory text-navy hover:bg-white;
+  }
+  .badge-nfz {
+    @apply inline-flex items-center gap-1 rounded-full bg-nfz-tint px-2.5 py-0.5 text-xs font-bold tracking-wide text-nfz;
   }
   .btn-outline-light {
     @apply border border-ivory/30 text-ivory hover:bg-ivory/10;
@@ -99,16 +108,7 @@
   }
 }
 
-/* Reveal-on-scroll (progressive enhancement; content always visible without JS) */
-.js [data-reveal] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.8s var(--ease-soft), transform 0.8s var(--ease-soft);
-}
-.js [data-reveal].is-visible {
-  opacity: 1;
-  transform: none;
-}
+/* No scroll-triggered reveals (Direction A): content is visible on first paint. */
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -116,7 +116,6 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  .js [data-reveal] { opacity: 1; transform: none; }
 }
 
 @keyframes fadeUp {

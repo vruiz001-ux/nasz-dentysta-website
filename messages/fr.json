@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteTitle": "Nasz Dentysta — dentiste à Zielona Góra",
-    "homeTitle": "Dentiste à Zielona Góra — Nasz Dentysta, depuis 1989",
-    "homeDescription": "Deux cabinets dentaires à Zielona Góra (ul. Morelowa 23 et ul. Drzewna 35) et un laboratoire de prothèse intégré. Prothèses, implants, chirurgie, endodontie, orthodontie, soins pour enfants.",
+    "homeTitle": "Dentiste à Zielona Góra — NFZ et privé | Nasz Dentysta",
+    "homeDescription": "Deux cabinets dentaires à Zielona Góra : ul. Morelowa 23 (également NFZ) et ul. Drzewna 35. Laboratoire de prothèse intégré. Prothèses, implants, chirurgie, endodontie, orthodontie, soins des enfants. Nous parlons polonais et ukrainien.",
     "aboutTitle": "À propos",
     "aboutDescription": "Découvrez le cabinet Nasz Dentysta et l'équipe qui prendra soin de votre sourire.",
     "servicesTitle": "Soins dentaires",
@@ -12,7 +12,12 @@
     "contactTitle": "Contact et prise de rendez-vous",
     "contactDescription": "Adresse, horaires et formulaire de demande de rendez-vous du cabinet Nasz Dentysta.",
     "privacyTitle": "Politique de confidentialité",
-    "privacyDescription": "Comment le cabinet Nasz Dentysta traite vos données personnelles."
+    "privacyDescription": "Comment le cabinet Nasz Dentysta traite vos données personnelles.",
+    "nfzTitle": "Dentiste conventionné NFZ à Zielona Góra",
+    "nfzDescription": "Soins dentaires et prothèses pris en charge par le NFZ au cabinet Nasz Dentysta, ul. Morelowa 23 à Zielona Góra. Comment prendre rendez-vous et quoi apporter.",
+    "teamTitle": "Notre équipe",
+    "teamDescription": "Chirurgiens-dentistes, prothésiste et assistantes des cabinets Nasz Dentysta à Zielona Góra.",
+    "serviceTitle": "{name} à Zielona Góra | Nasz Dentysta"
   },
   "nav": {
     "home": "Accueil",
@@ -26,7 +31,9 @@
     "closeMenu": "Fermer le menu",
     "skip": "Aller au contenu",
     "language": "Choisir la langue",
-    "mainNav": "Navigation principale"
+    "mainNav": "Navigation principale",
+    "nfz": "NFZ",
+    "team": "Équipe"
   },
   "actions": {
     "book": "Prendre rendez-vous",
@@ -43,11 +50,14 @@
   "whatsappMessage": "Bonjour, je souhaiterais prendre rendez-vous dans votre cabinet. Pourriez-vous m'indiquer vos disponibilités ? Merci.",
   "hero": {
     "eyebrow": "Cabinets dentaires · Zielona Góra",
-    "title": "Votre sourire, notre passion.",
-    "subtitle": "Deux cabinets à Zielona Góra, notre propre laboratoire de prothèse et une équipe qui prend soin des sourires depuis 1989.",
+    "title": "Dentiste à Zielona Góra — soins NFZ et privés",
+    "subtitle": "Deux cabinets, un laboratoire de prothèse intégré et une équipe qui parle polonais et ukrainien.",
     "since": "Depuis 1989",
     "sinceText": "2 cabinets · laboratoire intégré",
-    "teamAlt": "Les dentistes de l'équipe Nasz Dentysta"
+    "teamAlt": "Les dentistes de l'équipe Nasz Dentysta",
+    "callTitle": "Appeler le cabinet",
+    "nfzChip": "NFZ et privé",
+    "privateChip": "privé"
   },
   "why": {
     "eyebrow": "Pourquoi nous",
@@ -128,7 +138,9 @@
         "short": "Traitement des maladies des gencives.",
         "long": "Saignements ou rétraction des gencives sont des signaux à ne pas négliger. Nous diagnostiquons et traitons les maladies parodontales."
       }
-    }
+    },
+    "details": "En savoir plus",
+    "nfzBadge": "NFZ"
   },
   "about": {
     "eyebrow": "À propos",
@@ -267,7 +279,8 @@
       "text": "Statistiques de visite anonymes (Google Tag Manager / Google Analytics) pour améliorer le site.",
       "notUsed": "Nous n'utilisons actuellement aucun outil de statistiques."
     },
-    "marketing": "Nous n'utilisons aucun cookie marketing ou publicitaire."
+    "marketing": "Nous n'utilisons aucun cookie marketing ou publicitaire.",
+    "short": "Les mécanismes nécessaires fonctionnent toujours. Google Maps et les statistiques uniquement avec votre accord."
   },
   "privacy": {
     "title": "Politique de confidentialité",
@@ -325,14 +338,14 @@
   },
   "partners": {
     "title": "Partenaires NFZ et Mediraty",
-    "text": "Nous proposons des soins pris en charge par le NFZ (assurance maladie polonaise) et des soins privés. Demandez-nous lesquels sont couverts."
+    "text": "Soins pris en charge par le NFZ au cabinet de la ul. Morelowa 23 ; soins privés dans les deux cabinets."
   },
   "faq": {
     "title": "Questions fréquentes",
     "items": {
       "nfz": {
         "q": "Acceptez-vous les patients du NFZ ?",
-        "a": "Oui. Nous proposons des soins pris en charge par le NFZ (assurance maladie polonaise) ainsi que des soins privés. Appelez-nous pour savoir lesquels sont couverts."
+        "a": "Oui, au cabinet de la ul. Morelowa 23 (soins dentaires et prothèses dans la limite de ce que finance le NFZ). Au cabinet de la ul. Drzewna 35, nous recevons en privé."
       },
       "uk": {
         "q": "Puis-je parler à un dentiste en ukrainien ?",
@@ -410,5 +423,124 @@
     },
     "ctaTitle": "Prenez soin de votre sourire dès aujourd'hui",
     "ctaText": "Prenez rendez-vous et découvrez comment nous pouvons vous aider."
+  },
+  "care": {
+    "eyebrow": "Comment souhaitez-vous être soigné ?",
+    "title": "NFZ ou privé — choisissez ce qui vous convient",
+    "nfz": {
+      "title": "Avec le NFZ",
+      "text": "Au cabinet de la ul. Morelowa 23 : soins dentaires et prothèses dans la limite de ce que finance le NFZ (assurance maladie publique polonaise). Une pièce d'identité suffit généralement.",
+      "cta": "Comment en bénéficier"
+    },
+    "private": {
+      "title": "En privé",
+      "text": "Dans les deux cabinets, toute la gamme de soins : implants, traitements de canal, orthodontie, prothèses de notre laboratoire.",
+      "cta": "Voir les soins"
+    },
+    "unsure": {
+      "title": "Vous hésitez ?",
+      "text": "Appelez-nous : nous vous dirons ce qui est possible avec le NFZ, ce qui est privé et quel cabinet contacter.",
+      "cta": "Appeler"
+    }
+  },
+  "teamPreview": {
+    "eyebrow": "Équipe",
+    "title": "Les dentistes qui vous recevront",
+    "all": "Toute l'équipe"
+  },
+  "teamPage": {
+    "eyebrow": "Équipe",
+    "title": "Découvrez notre équipe",
+    "intro": "Les chirurgiens-dentistes, le prothésiste et les assistantes qui travaillent dans nos cabinets de Zielona Góra."
+  },
+  "topbar": {
+    "call": "Téléphone"
+  },
+  "nfzPage": {
+    "eyebrow": "NFZ",
+    "title": "Soins dentaires pris en charge par le NFZ à Zielona Góra",
+    "intro": "Notre cabinet de la ul. Morelowa 23 est conventionné avec le Fonds national de santé polonais (NFZ). Voici comment bénéficier de soins pris en charge.",
+    "where": {
+      "h": "Où nous recevons avec le NFZ",
+      "p": "Les soins pris en charge par le NFZ sont assurés au cabinet de la ul. Morelowa 23 (soins dentaires et prothèses dentaires). Au cabinet de la ul. Drzewna 35, nous recevons en privé."
+    },
+    "covers": {
+      "h": "Ce que couvre le NFZ",
+      "p": "L'étendue des soins dentaires gratuits — notamment les types d'obturations et de prothèses et leur fréquence — est fixée par le NFZ. Certains actes et matériaux ne sont pas pris en charge ; nous vous indiquons alors le coût en privé avant le traitement."
+    },
+    "bring": {
+      "h": "Quoi apporter",
+      "p": "Une pièce d'identité. Nous vérifions vos droits dans le système eWUŚ. Pour toute question sur votre couverture, renseignez-vous à l'accueil."
+    },
+    "book": {
+      "h": "Comment prendre rendez-vous",
+      "p": "Les rendez-vous NFZ se prennent par téléphone auprès du cabinet de la ul. Morelowa. Pour les prothèses prises en charge par le NFZ, il peut y avoir une liste d'attente : l'accueil vous indiquera le délai."
+    },
+    "private": {
+      "h": "Soins privés",
+      "p": "Dans les deux cabinets, vous pouvez être soigné en privé, y compris pour des actes que le NFZ ne finance pas, comme les implants. Le coût est discuté avant le début du traitement."
+    },
+    "queue": "Consulter les délais d'attente actuels sur le site du NFZ"
+  },
+  "servicePage": {
+    "what": "En quoi cela consiste",
+    "when": "Quand consulter",
+    "visit": "Déroulement du traitement",
+    "after": "Après la visite",
+    "nfz": "Avec le NFZ",
+    "nfzWhere": "Pris en charge par le NFZ au cabinet : {places}. L'étendue des soins est fixée par le NFZ.",
+    "privateOnly": "Soins privés dans les deux cabinets.",
+    "privateAlso": "En privé — dans les deux cabinets.",
+    "price": "Prix",
+    "pricePending": "Le coût est fixé après l'examen — appelez-nous pour un prix indicatif.",
+    "seePrices": "Voir les tarifs",
+    "book": "Prendre rendez-vous",
+    "other": "Autres soins",
+    "draft": "TEXTE PROVISOIRE — à valider par un dentiste. Visible uniquement dans la version de test.",
+    "back": "Tous les soins"
+  },
+  "serviceDetail": {
+    "zachowawcza": {
+      "what": "La dentisterie conservatrice traite les caries et leurs conséquences. Le dentiste retire le tissu atteint et reconstruit la dent avec une obturation, généralement en composite de la couleur de la dent.",
+      "when": "En cas de sensibilité au froid ou au sucré, de tache, de cavité ou de douleur à la mastication. Mieux vaut toutefois consulter régulièrement : une carie détectée tôt demande un soin plus léger.",
+      "visit": "Après l'examen et, si nécessaire, une radiographie, le dentiste explique le plan de traitement. Le soin se fait généralement sous anesthésie locale ; les petites caries sont le plus souvent traitées en une séance.",
+      "after": "Après l'anesthésie, ne mangez pas tant que l'engourdissement persiste. La dent peut rester sensible quelques jours. Brossage, fil dentaire et contrôles réguliers aident à éviter de nouvelles caries."
+    },
+    "endodoncja": {
+      "what": "Le traitement de canal consiste à retirer la pulpe enflammée ou nécrosée à l'intérieur de la dent, puis à nettoyer et obturer hermétiquement les canaux radiculaires. Il permet de conserver une dent qu'il faudrait sinon extraire.",
+      "when": "En cas de douleur forte, spontanée ou nocturne, de réaction prolongée au chaud, de gonflement autour de la dent ou lorsque la carie a atteint la pulpe. L'indication est posée par le dentiste après examen et radiographie.",
+      "visit": "Le soin se fait sous anesthésie locale. Selon la dent et l'état des canaux, il peut nécessiter une ou plusieurs séances. La dent doit ensuite généralement être reconstruite, par une obturation ou une couronne.",
+      "after": "La dent peut être sensible à la mastication pendant quelques jours. Jusqu'à la reconstruction définitive, évitez de croquer des aliments durs avec cette dent. En cas de gonflement ou de forte douleur, appelez le cabinet."
+    },
+    "protetyka": {
+      "what": "La prothèse dentaire remplace les dents manquantes et reconstruit les dents très abîmées : couronnes, bridges, prothèses partielles et complètes. Les travaux sont réalisés par notre propre laboratoire, et le dentiste travaille directement avec le prothésiste.",
+      "when": "Lorsqu'il manque une ou plusieurs dents, lorsqu'une dent est très abîmée ou après un traitement de canal, ou lorsqu'une prothèse existante n'est plus bien ajustée.",
+      "visit": "Lors de la première visite, le dentiste examine vos dents et présente les solutions possibles et leur coût. Il prend ensuite des empreintes et le laboratoire réalise le travail. Plusieurs séances, dont des essayages, sont généralement nécessaires.",
+      "after": "Il faut un temps d'adaptation à une nouvelle prothèse : si elle gêne les premiers jours, revenez pour un ajustement. Couronnes, bridges et prothèses demandent une hygiène soignée et des contrôles réguliers."
+    },
+    "implantologia": {
+      "what": "Un implant est une vis en titane placée dans l'os à l'emplacement d'une dent perdue. Une fois intégré, il sert de support à une couronne, un bridge ou une prothèse.",
+      "when": "Lorsqu'il manque une ou plusieurs dents, ou lorsqu'une prothèse amovible tient mal. La faisabilité est évaluée par le dentiste après examen et imagerie : le volume osseux et l'état de santé général comptent notamment.",
+      "visit": "Le traitement commence par une consultation et un plan. La pose de l'implant se fait sous anesthésie locale. La prothèse est généralement réalisée après quelques mois de cicatrisation.",
+      "after": "Suivez les recommandations du dentiste concernant le froid, l'alimentation et l'hygiène. Un implant demande la même hygiène soignée que vos propres dents et des contrôles réguliers."
+    },
+    "chirurgia": {
+      "what": "La chirurgie dentaire comprend notamment les extractions, y compris des dents de sagesse, et les petites interventions dans la bouche.",
+      "when": "Lorsqu'une dent ne peut pas être sauvée, lorsqu'une dent de sagesse provoque douleur, inflammation ou manque de place, ou avant certaines étapes d'un traitement orthodontique ou prothétique.",
+      "visit": "Avant l'intervention, le dentiste fait le point sur votre santé — signalez vos médicaments, en particulier anticoagulants — et examine la radiographie. L'intervention se fait sous anesthésie locale.",
+      "after": "Vous recevrez des consignes après l'intervention. En général : ne mangez pas tant que l'anesthésie persiste ; le jour même, évitez les bains de bouche, les boissons chaudes et le tabac. En cas de douleur croissante, de fièvre ou de saignement, appelez le cabinet."
+    },
+    "ortodoncja": {
+      "what": "L'orthodontie corrige la position des dents et les défauts d'occlusion à l'aide d'appareils amovibles ou fixes.",
+      "when": "Chez l'enfant, il est utile de faire contrôler l'occlusion dès l'âge préscolaire et en début de scolarité. Les adultes consultent notamment pour des dents chevauchées, des espaces entre les dents ou avant un traitement prothétique.",
+      "visit": "Lors de la consultation, le dentiste évalue l'occlusion et prescrit les examens nécessaires, par exemple radiographies ou empreintes. Il propose ensuite un plan de traitement, le type d'appareil et la durée prévue.",
+      "after": "Le traitement demande des contrôles réguliers et une hygiène très rigoureuse. À la fin du traitement, une contention est généralement mise en place pour stabiliser le résultat."
+    },
+    "dziecieca": {
+      "what": "La dentisterie pédiatrique regroupe la prévention et les soins des dents de lait et définitives chez l'enfant, adaptés à son âge et à ses besoins.",
+      "when": "Prévoyez une première visite peu après l'apparition des premières dents, puis des contrôles réguliers. Consultez rapidement si l'enfant a mal ou si des taches ou des caries sont visibles.",
+      "visit": "Les premiers rendez-vous servent à familiariser l'enfant avec le cabinet. Le dentiste examine les dents, évalue l'hygiène et conseille les parents. Les soins se font calmement, étape par étape.",
+      "after": "Aidez votre enfant à se brosser les dents, limitez les boissons sucrées et le grignotage entre les repas, et pensez aux contrôles réguliers."
+    }
   }
 }

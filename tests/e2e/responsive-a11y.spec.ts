@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { rejectOptional } from "./helpers";
 
-const PAGES = ["/pl", "/pl/o-nas", "/pl/uslugi", "/pl/cennik", "/pl/kontakt", "/pl/polityka-prywatnosci", "/fr", "/fr/contact", "/uk", "/uk/poslugy"];
+const PAGES = ["/pl", "/pl/o-nas", "/pl/uslugi", "/pl/uslugi/protetyka", "/pl/nfz", "/pl/zespol", "/pl/cennik", "/pl/kontakt", "/pl/polityka-prywatnosci", "/fr", "/fr/contact", "/fr/soins/implantologia", "/uk", "/uk/poslugy", "/uk/nfz", "/uk/komanda"];
 const WIDTHS = [320, 375, 414, 480, 768, 1024, 1280, 1920];
 
 test.describe("Scenario E — responsive layout", () => {

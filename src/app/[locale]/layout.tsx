@@ -7,7 +7,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
 import { CookieConsent } from "@/components/CookieConsent";
-import { RevealObserver } from "@/components/Reveal";
 import { ClinicJsonLd } from "@/components/JsonLd";
 import { isPreview } from "@/lib/site";
 import { clinic } from "@/content/clinic";
@@ -61,7 +60,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <Footer />
           <FloatingActions />
           <CookieConsent />
-          <RevealObserver />
         </NextIntlClientProvider>
         <ClinicJsonLd locale={locale as Locale} />
       </body>

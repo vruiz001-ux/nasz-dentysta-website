@@ -68,18 +68,20 @@ export function CookieConsent() {
         <section
           id="nd-banner"
           aria-label={t("label")}
-          className="fixed inset-x-3 bottom-20 z-50 mx-auto max-w-xl rounded-3xl bg-navy p-5 text-ivory shadow-2xl sm:bottom-6 sm:p-6 lg:left-6 lg:right-auto lg:mx-0"
+          className="fixed inset-x-2 bottom-[4.75rem] z-50 mx-auto max-w-xl rounded-2xl bg-navy p-4 text-ivory shadow-2xl sm:inset-x-3 sm:bottom-6 sm:p-6 lg:left-6 lg:right-auto lg:mx-0"
         >
-          <h2 className="text-base font-semibold">{t("title")}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-ivory/85">
-            {t("text")}{" "}
+          {/* Phones: one short sentence (keeps the first screen readable); larger screens: full text */}
+          <h2 className="sr-only text-base font-semibold sm:not-sr-only">{t("title")}</h2>
+          <p className="text-sm leading-snug text-ivory/90 sm:mt-2 sm:leading-relaxed sm:text-ivory/85">
+            <span className="sm:hidden">{t("short")}</span>
+            <span className="hidden sm:inline">{t("text")}</span>{" "}
             <Link href="/polityka-prywatnosci" className="font-semibold text-sage underline underline-offset-2">{tf("privacy")}</Link>
           </p>
-          <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
-            <button type="button" onClick={() => commit({ analytics: true, maps: true })} className="btn-light !min-h-11">{t("accept")}</button>
-            <button type="button" onClick={() => commit({ analytics: false, maps: false })} className="btn-light !min-h-11">{t("reject")}</button>
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-4">
+            <button type="button" onClick={() => commit({ analytics: true, maps: true })} className="btn-light !min-h-11 !px-3 !text-sm sm:!text-[0.95rem]">{t("accept")}</button>
+            <button type="button" onClick={() => commit({ analytics: false, maps: false })} className="btn-light !min-h-11 !px-3 !text-sm sm:!text-[0.95rem]">{t("reject")}</button>
           </div>
-          <button type="button" onClick={() => openConsentSettings()} className="mt-3 min-h-11 w-full text-sm font-semibold text-sage underline underline-offset-4">
+          <button type="button" onClick={() => openConsentSettings()} className="mt-1 min-h-11 w-full text-sm font-semibold text-sage underline underline-offset-4 sm:mt-3">
             {t("settings")}
           </button>
         </section>
