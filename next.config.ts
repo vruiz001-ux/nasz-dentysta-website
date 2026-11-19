@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+import { legacyRedirects } from "./src/lib/legacy-redirects";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
@@ -25,9 +26,13 @@ const csp = [
 
 const isProd = process.env.NODE_ENV === "production";
 
+// Legacy URLs: see src/lib/legacy-redirects.ts (also applied in the middleware).
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: { formats: ["image/avif", "image/webp"] },
+  async redirects() {
+    return legacyRedirects.map((r) => ({ ...r, permanent: true }));
+  },
   async headers() {
     return [
       {
