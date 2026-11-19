@@ -97,6 +97,21 @@ test.describe("Navigation", () => {
   });
 });
 
+test.describe("Mobile bottom bar", () => {
+  // Instant scrolling, so the position is measured after the focus scroll has finished.
+  test.use({ reducedMotion: "reduce" });
+  test("keyboard focus is never hidden under the fixed action bar (WCAG 2.4.11)", async ({ page }) => {
+    await rejectOptional(page);
+    await page.setViewportSize({ width: 375, height: 700 });
+    await page.goto("/pl/uslugi");
+    const bar = (await page.locator('nav[aria-label="Umów wizytę"]').boundingBox())!;
+    const link = page.locator("#protetyka").getByRole("link", { name: /Szczegóły/ });
+    await link.focus();
+    const box = (await link.boundingBox())!;
+    expect(box.y + box.height, "focused link bottom vs bar top").toBeLessThanOrEqual(bar.y);
+  });
+});
+
 test.describe("Mobile first screen", () => {
   test("cookie banner leaves the hero readable on a phone", async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });

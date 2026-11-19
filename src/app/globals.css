@@ -28,6 +28,12 @@
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    /* Mobile: keep focused / scrolled-to elements clear of the fixed bottom action bar
+       (WCAG 2.2 — 2.4.11 Focus Not Obscured). The bar is hidden from lg up. */
+    scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+  @media (min-width: 64rem) {
+    html { scroll-padding-bottom: 0; }
   }
   body {
     @apply bg-ivory text-navy antialiased;
