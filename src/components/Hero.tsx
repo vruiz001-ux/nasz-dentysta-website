@@ -23,15 +23,16 @@ export async function Hero() {
           <p className="eyebrow">{t("hero.eyebrow")}</p>
           <h1 id="hero-title" className="h-display mt-4 max-w-3xl">
             {t.rich("hero.title", {
-              // Official NFZ logo in place of the letters; alt keeps "NFZ" in the heading for screen readers and SEO.
+              // NFZ letter mark (cropped from the official logo) in place of the letters;
+              // alt keeps "NFZ" in the heading for screen readers and SEO.
               nfz: () => (
                 <Image
-                  src="/images/nfz.png"
+                  src="/images/nfz-mark.png"
                   alt="NFZ"
-                  width={1024}
-                  height={388}
+                  width={674}
+                  height={270}
                   priority
-                  className="inline-block h-[0.95em] w-auto -translate-y-[0.06em] align-baseline"
+                  className="inline-block h-[0.74em] w-auto align-baseline"
                 />
               ),
             })}
