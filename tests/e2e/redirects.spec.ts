@@ -16,6 +16,9 @@ const pages = [
   "/pl/cennik", "/fr/tarifs", "/uk/tsiny",
   "/pl/kontakt", "/fr/contact", "/uk/kontakty",
   "/pl/polityka-prywatnosci", "/fr/politique-de-confidentialite", "/uk/polityka-konfidentsiinosti",
+  "/pl/nfz", "/fr/nfz", "/uk/nfz",
+  "/pl/zespol", "/fr/equipe", "/uk/komanda",
+  "/pl/uslugi/protetyka", "/fr/soins/protetyka", "/uk/poslugy/protetyka",
 ];
 
 const legacy: [string, string][] = [

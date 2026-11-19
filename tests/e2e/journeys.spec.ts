@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
-import { mockForms, rejectOptional, openMenuIfMobile } from "./helpers";
+import { mockForms, rejectOptional, openMenuIfMobile, blockPreviewToolbar } from "./helpers";
 
 test.describe("Scenario A — new Polish visitor books a visit", () => {
   test("home → services → booking CTA → successful mocked request", async ({ page }) => {
     await rejectOptional(page);
     const calls = await mockForms(page);
     await page.goto("/pl");
-    await expect(page.locator("h1")).toHaveText("Twój uśmiech. Nasza pasja.");
+    await expect(page.locator("h1")).toHaveText("Dentysta w Zielonej Górze — leczenie na NFZ i prywatnie");
     await expect(page.locator("html")).toHaveAttribute("lang", "pl");
 
     await page.getByRole("link", { name: "Poznaj nasze usługi" }).first().click();
@@ -84,6 +84,7 @@ test.describe("Scenario D — privacy-conscious visitor", () => {
       if (!u.protocol.startsWith("http")) return;
       if (!firstParty.has(u.hostname)) external.push(u.hostname);
     });
+    await blockPreviewToolbar(page);
     await page.goto("/pl/kontakt");
     const banner = page.getByRole("region", { name: "Ustawienia prywatności" });
     await expect(banner).toBeVisible();
@@ -96,7 +97,7 @@ test.describe("Scenario D — privacy-conscious visitor", () => {
 
     await reject.click();
     await expect(banner).toBeHidden();
-    await expect(page.locator("iframe")).toHaveCount(0);
+    await expect(page.locator("iframe[src*='google']")).toHaveCount(0);
     const stored = await page.evaluate(() => JSON.parse(localStorage.getItem("nd-consent")!));
     expect(stored).toMatchObject({ necessary: true, analytics: false, maps: false, version: "2026-10-13" });
 

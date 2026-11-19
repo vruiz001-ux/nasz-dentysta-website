@@ -71,16 +71,16 @@ export async function AboutPage() {
       {/* 2 — Services */}
       <section aria-labelledby="about-services" className="bg-sand/50 py-24 sm:py-28">
         <div className="container-x">
-          <div className="mx-auto max-w-2xl text-center" data-reveal>
+          <div className="mx-auto max-w-2xl text-center">
             <p className="eyebrow justify-center">{t("servicesEyebrow")}</p>
             <h2 id="about-services" className="h-section mt-4">{t("servicesTitle")}</h2>
             <p className="lead mt-4 !text-lg">{t("servicesIntro")}</p>
           </div>
           <ul className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((id, i) => {
+            {services.map((id) => {
               const Icon = SERVICE_ICONS[id];
               return (
-                <li key={id} data-reveal style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
+                <li key={id}>
                   <Link href={{ pathname: "/uslugi", hash: id }} className="card group flex h-full flex-col p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/[0.07]">
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sage text-teal-dark transition-colors duration-500 group-hover:bg-navy group-hover:text-sage">
                       <Icon className="h-5 w-5" aria-hidden />
@@ -95,7 +95,7 @@ export async function AboutPage() {
                 </li>
               );
             })}
-            <li data-reveal>
+            <li>
               <Link href={{ pathname: "/kontakt", hash: "wizyta" }} className="group flex h-full flex-col rounded-[var(--radius-card)] bg-navy p-6 text-ivory transition-all duration-500 hover:-translate-y-1 hover:bg-teal-dark">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ivory/10 text-sage">
                   <CalendarPlus className="h-5 w-5" aria-hidden />
@@ -114,7 +114,7 @@ export async function AboutPage() {
       {/* 3 — Why trust us */}
       <section aria-labelledby="about-trust" className="py-24 sm:py-28">
         <div className="container-x grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5" data-reveal>
+          <div className="lg:col-span-5">
             <p className="eyebrow">{t("trustEyebrow")}</p>
             <h2 id="about-trust" className="h-section mt-4">{t("trustTitle")}</h2>
             <p className="lead mt-5 !text-lg">{t("trustText")}</p>
@@ -124,8 +124,8 @@ export async function AboutPage() {
             </Link>
           </div>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
-            {trust.map(({ key, icon: Icon }, i) => (
-              <li key={key} data-reveal style={{ transitionDelay: `${i * 60}ms` }} className="card flex gap-4 p-6">
+            {trust.map(({ key, icon: Icon }) => (
+              <li key={key} className="card flex gap-4 p-6">
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-sage text-teal-dark">
                   <Icon className="h-5 w-5" aria-hidden />
                 </span>
@@ -140,7 +140,7 @@ export async function AboutPage() {
 
         {/* 4 — Key facts strip */}
         <div className="container-x mt-16">
-          <ul className="grid grid-cols-1 divide-y divide-navy/10 rounded-[var(--radius-card)] bg-sage/60 sm:grid-cols-3 sm:divide-x sm:divide-y-0" data-reveal>
+          <ul className="grid grid-cols-1 divide-y divide-navy/10 rounded-[var(--radius-card)] bg-sage/60 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {stats.map(({ key, icon: Icon }) => (
               <li key={key} className="flex items-center gap-4 px-6 py-6 sm:justify-center">
                 <Icon className="h-7 w-7 shrink-0 text-teal-dark" aria-hidden />
@@ -157,7 +157,7 @@ export async function AboutPage() {
       {/* 5 — Closing CTA */}
       <section aria-labelledby="about-cta" className="pb-24 sm:pb-28">
         <div className="container-x">
-          <div className="grid grid-cols-1 overflow-hidden rounded-[2.5rem] bg-sand lg:grid-cols-2" data-reveal>
+          <div className="grid grid-cols-1 overflow-hidden rounded-[2.5rem] bg-sand lg:grid-cols-2">
             <div className="p-8 sm:p-12 lg:p-14">
               <h2 id="about-cta" className="h-section">{t("ctaTitle")}</h2>
               <p className="lead mt-4 !text-lg">{t("ctaText")}</p>

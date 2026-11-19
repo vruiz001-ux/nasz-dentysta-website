@@ -11,9 +11,12 @@ export async function Locations({ withMaps = true }: { withMaps?: boolean }) {
   return (
     <div id="gabinety" className="grid scroll-mt-28 gap-6 md:grid-cols-2">
       {clinic.locations.map((l) => (
-        <article key={l.id} className="card flex flex-col overflow-hidden" data-reveal>
+        <article key={l.id} className="card flex flex-col overflow-hidden">
           <div className="flex-1 p-7 sm:p-8">
-            <p className="eyebrow">{t("contact.clinic")}</p>
+            <div id={l.id} className="flex scroll-mt-28 flex-wrap items-center justify-between gap-2">
+              <p className="eyebrow">{t("contact.clinic")}</p>
+              {l.nfz ? <span className="badge-nfz">{t("hero.nfzChip")}</span> : <span className="text-sm text-ink-muted">{t("hero.privateChip")}</span>}
+            </div>
             <h3 className="mt-3 text-2xl font-semibold">{l.label}</h3>
             <address className="mt-4 flex items-start gap-3 not-italic text-navy-soft">
               <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-teal-dark" aria-hidden />

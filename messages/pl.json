@@ -1,8 +1,8 @@
 {
   "meta": {
     "siteTitle": "Nasz Dentysta — dentysta Zielona Góra",
-    "homeTitle": "Dentysta Zielona Góra — Nasz Dentysta, od 1989 roku",
-    "homeDescription": "Dwa gabinety stomatologiczne w Zielonej Górze (ul. Morelowa 23 i ul. Drzewna 35) i własne laboratorium protetyczne. Protetyka, implanty, chirurgia, endodoncja, ortodoncja, leczenie dzieci. NFZ i prywatnie.",
+    "homeTitle": "Dentysta Zielona Góra — NFZ i prywatnie | Nasz Dentysta",
+    "homeDescription": "Dwa gabinety stomatologiczne w Zielonej Górze: ul. Morelowa 23 (także NFZ) i ul. Drzewna 35. Własne laboratorium protetyczne. Protetyka, implanty, chirurgia, leczenie kanałowe, ortodoncja, leczenie dzieci. Mówimy po polsku i ukraińsku.",
     "aboutTitle": "O nas",
     "aboutDescription": "Poznaj gabinet Nasz Dentysta i zespół, który zadba o Twój uśmiech.",
     "servicesTitle": "Usługi stomatologiczne",
@@ -12,7 +12,12 @@
     "contactTitle": "Kontakt i umówienie wizyty",
     "contactDescription": "Adres, godziny otwarcia i formularz zgłoszenia wizyty w gabinecie Nasz Dentysta.",
     "privacyTitle": "Polityka prywatności",
-    "privacyDescription": "Zasady przetwarzania danych osobowych przez gabinet Nasz Dentysta."
+    "privacyDescription": "Zasady przetwarzania danych osobowych przez gabinet Nasz Dentysta.",
+    "nfzTitle": "Dentysta na NFZ w Zielonej Górze",
+    "nfzDescription": "Leczenie stomatologiczne i protetyka w ramach NFZ w gabinecie Nasz Dentysta przy ul. Morelowej 23 w Zielonej Górze. Jak się umówić i co zabrać.",
+    "teamTitle": "Nasz zespół",
+    "teamDescription": "Lekarze dentyści, technik dentystyczny i asystentki gabinetów Nasz Dentysta w Zielonej Górze.",
+    "serviceTitle": "{name} Zielona Góra | Nasz Dentysta"
   },
   "nav": {
     "home": "Strona główna",
@@ -26,7 +31,9 @@
     "closeMenu": "Zamknij menu",
     "skip": "Przejdź do treści",
     "language": "Wybierz język",
-    "mainNav": "Nawigacja główna"
+    "mainNav": "Nawigacja główna",
+    "nfz": "NFZ",
+    "team": "Zespół"
   },
   "actions": {
     "book": "Umów wizytę",
@@ -43,11 +50,14 @@
   "whatsappMessage": "Dzień dobry, chciałbym/chciałabym umówić wizytę w Państwa gabinecie. Proszę o informację o dostępnych terminach.",
   "hero": {
     "eyebrow": "Gabinety stomatologiczne · Zielona Góra",
-    "title": "Twój uśmiech. Nasza pasja.",
-    "subtitle": "Dwa gabinety w Zielonej Górze, własne laboratorium protetyczne i zespół, który dba o uśmiechy pacjentów od 1989 roku.",
+    "title": "Dentysta w Zielonej Górze — leczenie na NFZ i prywatnie",
+    "subtitle": "Dwa gabinety, własne laboratorium protetyczne i zespół, który mówi po polsku i ukraińsku.",
     "since": "Od 1989 roku",
     "sinceText": "2 gabinety · własne laboratorium",
-    "teamAlt": "Lekarze zespołu Nasz Dentysta"
+    "teamAlt": "Lekarze zespołu Nasz Dentysta",
+    "callTitle": "Zadzwoń do gabinetu",
+    "nfzChip": "NFZ i prywatnie",
+    "privateChip": "prywatnie"
   },
   "why": {
     "eyebrow": "Dlaczego my",
@@ -128,7 +138,9 @@
         "short": "Leczenie chorób dziąseł i przyzębia.",
         "long": "Krwawienie dziąseł czy ich cofanie się to sygnały, których nie warto lekceważyć. Diagnozujemy i leczymy choroby przyzębia."
       }
-    }
+    },
+    "details": "Szczegóły",
+    "nfzBadge": "NFZ"
   },
   "about": {
     "eyebrow": "O nas",
@@ -267,7 +279,8 @@
       "text": "Anonimowe statystyki odwiedzin (Google Tag Manager / Google Analytics), które pomagają nam ulepszać stronę.",
       "notUsed": "Obecnie nie używamy narzędzi analitycznych."
     },
-    "marketing": "Nie używamy plików cookies marketingowych ani reklamowych."
+    "marketing": "Nie używamy plików cookies marketingowych ani reklamowych.",
+    "short": "Niezbędne mechanizmy działają zawsze. Mapy Google i statystyki — tylko za Twoją zgodą."
   },
   "privacy": {
     "title": "Polityka prywatności",
@@ -325,14 +338,14 @@
   },
   "partners": {
     "title": "Współpracujemy z NFZ i Mediraty",
-    "text": "Oferujemy leczenie w ramach NFZ oraz prywatnie. Zapytaj, które świadczenia są dostępne w ramach NFZ."
+    "text": "Leczenie w ramach NFZ oferujemy w gabinecie przy ul. Morelowej 23, prywatnie — w obu gabinetach."
   },
   "faq": {
     "title": "Najczęstsze pytania",
     "items": {
       "nfz": {
         "q": "Czy przyjmujecie pacjentów w ramach NFZ?",
-        "a": "Tak. Oferujemy zarówno świadczenia w ramach NFZ, jak i leczenie prywatne. Zadzwoń, aby dowiedzieć się, które usługi są dostępne w ramach NFZ."
+        "a": "Tak — w gabinecie przy ul. Morelowej 23 (leczenie stomatologiczne i protetyka w zakresie finansowanym przez NFZ). W gabinecie przy ul. Drzewnej 35 przyjmujemy prywatnie."
       },
       "uk": {
         "q": "Czy mogę porozmawiać z lekarzem po ukraińsku?",
@@ -410,5 +423,124 @@
     },
     "ctaTitle": "Zadbaj o swój uśmiech już dziś",
     "ctaText": "Umów się na wizytę i przekonaj się, jak możemy Ci pomóc."
+  },
+  "care": {
+    "eyebrow": "Jak chcesz się leczyć?",
+    "title": "NFZ czy prywatnie — wybierz, co Ci odpowiada",
+    "nfz": {
+      "title": "Na NFZ",
+      "text": "W gabinecie przy ul. Morelowej 23: leczenie stomatologiczne i protetyka w zakresie finansowanym przez NFZ. Zwykle wystarczy dokument tożsamości.",
+      "cta": "Jak skorzystać z NFZ"
+    },
+    "private": {
+      "title": "Prywatnie",
+      "text": "W obu gabinetach, pełen zakres leczenia: implanty, leczenie kanałowe, ortodoncja, protetyka z własnego laboratorium.",
+      "cta": "Zobacz usługi"
+    },
+    "unsure": {
+      "title": "Nie wiesz?",
+      "text": "Zadzwoń — podpowiemy, co możesz wykonać na NFZ, a co prywatnie, i do którego gabinetu się zgłosić.",
+      "cta": "Zadzwoń"
+    }
+  },
+  "teamPreview": {
+    "eyebrow": "Zespół",
+    "title": "Lekarze, którzy Cię przyjmą",
+    "all": "Cały zespół"
+  },
+  "teamPage": {
+    "eyebrow": "Zespół",
+    "title": "Poznaj nasz zespół",
+    "intro": "Lekarze dentyści, technik dentystyczny i asystentki pracujący w naszych gabinetach w Zielonej Górze."
+  },
+  "topbar": {
+    "call": "Zadzwoń"
+  },
+  "nfzPage": {
+    "eyebrow": "NFZ",
+    "title": "Leczenie stomatologiczne na NFZ w Zielonej Górze",
+    "intro": "Umowę z Narodowym Funduszem Zdrowia ma nasz gabinet przy ul. Morelowej 23. Poniżej wyjaśniamy, jak skorzystać z leczenia w ramach NFZ.",
+    "where": {
+      "h": "Gdzie przyjmujemy na NFZ",
+      "p": "Świadczenia w ramach NFZ realizujemy w gabinecie przy ul. Morelowej 23 (poradnia stomatologiczna i poradnia protetyki stomatologicznej). W gabinecie przy ul. Drzewnej 35 przyjmujemy prywatnie."
+    },
+    "covers": {
+      "h": "Co obejmuje NFZ",
+      "p": "Zakres bezpłatnego leczenia stomatologicznego — w tym rodzaje wypełnień i protez oraz to, jak często można je otrzymać — określa NFZ. Część zabiegów i materiałów nie jest finansowana; wtedy przed leczeniem przedstawimy koszt leczenia prywatnego."
+    },
+    "bring": {
+      "h": "Co zabrać",
+      "p": "Dokument tożsamości. Twoje prawo do świadczeń sprawdzamy w systemie eWUŚ. Jeśli masz pytania o uprawnienia (np. numer PESEL ze statusem UKR), zapytaj w rejestracji."
+    },
+    "book": {
+      "h": "Jak się umówić",
+      "p": "Na wizytę w ramach NFZ umówisz się telefonicznie w gabinecie przy ul. Morelowej. Na leczenie protetyczne w ramach NFZ może obowiązywać kolejka — termin podamy w rejestracji."
+    },
+    "private": {
+      "h": "Leczenie prywatne",
+      "p": "W obu gabinetach możesz leczyć się prywatnie — także zabiegi, których NFZ nie finansuje, np. implanty. Koszt omawiamy przed rozpoczęciem leczenia."
+    },
+    "queue": "Sprawdź aktualne terminy oczekiwania w serwisie NFZ"
+  },
+  "servicePage": {
+    "what": "Na czym polega",
+    "when": "Kiedy warto się zgłosić",
+    "visit": "Jak przebiega leczenie",
+    "after": "Po wizycie",
+    "nfz": "Na NFZ",
+    "nfzWhere": "Dostępne na NFZ w gabinecie: {places}. Zakres świadczeń określa NFZ.",
+    "privateOnly": "Leczenie prywatne w obu gabinetach.",
+    "privateAlso": "Prywatnie — w obu gabinetach.",
+    "price": "Cena",
+    "pricePending": "Koszt ustalamy po badaniu — zadzwoń, podamy orientacyjną cenę.",
+    "seePrices": "Zobacz cennik",
+    "book": "Umów konsultację",
+    "other": "Inne usługi",
+    "draft": "PROJEKT TREŚCI — do weryfikacji przez lekarza. Widoczny tylko w wersji testowej.",
+    "back": "Wszystkie usługi"
+  },
+  "serviceDetail": {
+    "zachowawcza": {
+      "what": "Stomatologia zachowawcza to leczenie próchnicy i jej skutków. Lekarz usuwa zmienioną tkankę i odbudowuje ząb wypełnieniem, zwykle z materiału kompozytowego dobranego kolorem do zęba.",
+      "when": "Gdy pojawia się nadwrażliwość na zimno lub słodkie, przebarwienie, ubytek albo ból przy nagryzaniu. Najlepiej jednak zgłaszać się regularnie na przegląd — wcześnie wykryta próchnica wymaga mniejszego zabiegu.",
+      "visit": "Po badaniu i w razie potrzeby zdjęciu RTG lekarz omawia plan leczenia. Zabieg zwykle wykonujemy w znieczuleniu miejscowym; niewielkie ubytki leczymy najczęściej podczas jednej wizyty.",
+      "after": "Po znieczuleniu nie jedz, dopóki nie minie drętwienie. Przez kilka dni ząb może być wrażliwy. Regularne szczotkowanie, nitkowanie i kontrole pomagają uniknąć kolejnych ubytków."
+    },
+    "endodoncja": {
+      "what": "Leczenie kanałowe polega na usunięciu zmienionej zapalnie lub obumarłej miazgi z wnętrza zęba, oczyszczeniu i szczelnym wypełnieniu kanałów korzeniowych. Pozwala zachować ząb, który w innym przypadku trzeba by usunąć.",
+      "when": "Przy silnym, samoistnym lub nocnym bólu zęba, długo utrzymującej się reakcji na ciepło, obrzęku w okolicy zęba lub gdy próchnica dotarła do miazgi. O wskazaniu decyduje lekarz po badaniu i zdjęciu RTG.",
+      "visit": "Zabieg odbywa się w znieczuleniu miejscowym. W zależności od zęba i stanu kanałów leczenie może wymagać jednej lub kilku wizyt. Po leczeniu ząb zwykle trzeba odbudować — wypełnieniem lub koroną.",
+      "after": "Przez kilka dni ząb może być tkliwy przy nagryzaniu. Do czasu ostatecznej odbudowy unikaj gryzienia twardych pokarmów leczonym zębem. Jeśli pojawi się obrzęk lub silny ból, zadzwoń do gabinetu."
+    },
+    "protetyka": {
+      "what": "Protetyka to uzupełnianie brakujących zębów i odbudowa zębów mocno zniszczonych: korony, mosty, protezy częściowe i całkowite. Prace wykonuje nasze własne laboratorium protetyczne, a lekarz konsultuje je bezpośrednio z technikiem.",
+      "when": "Gdy brakuje jednego lub kilku zębów, gdy ząb jest bardzo zniszczony lub po leczeniu kanałowym, a także gdy dotychczasowa proteza przestała dobrze przylegać.",
+      "visit": "Na pierwszej wizycie lekarz bada zęby, omawia możliwe rozwiązania i ich koszt. Następnie pobiera wyciski, a laboratorium wykonuje pracę. Zwykle potrzebnych jest kilka wizyt, w tym przymiarki.",
+      "after": "Do nowej protezy trzeba się przyzwyczaić — jeśli w pierwszych dniach uwiera, zgłoś się do korekty. Korony, mosty i protezy wymagają starannej higieny i regularnych kontroli."
+    },
+    "implantologia": {
+      "what": "Implant to tytanowy wkręt umieszczany w kości w miejscu utraconego zęba. Po wgojeniu stanowi podparcie dla korony, mostu lub protezy.",
+      "when": "Gdy brakuje jednego lub kilku zębów albo gdy proteza ruchoma źle się utrzymuje. O tym, czy implant jest możliwy, decyduje lekarz po badaniu i diagnostyce radiologicznej — znaczenie ma m.in. ilość kości i ogólny stan zdrowia.",
+      "visit": "Leczenie zaczyna się od konsultacji i planu. Wszczepienie implantu odbywa się w znieczuleniu miejscowym. Odbudowę protetyczną wykonuje się zwykle po kilku miesiącach gojenia.",
+      "after": "Stosuj się do zaleceń lekarza dotyczących chłodzenia, diety i higieny. Implant wymaga tak samo starannej higieny jak własne zęby oraz regularnych kontroli."
+    },
+    "chirurgia": {
+      "what": "Chirurgia stomatologiczna obejmuje m.in. usuwanie zębów, w tym zębów mądrości, oraz drobne zabiegi w obrębie jamy ustnej.",
+      "when": "Gdy zęba nie da się uratować, gdy ząb mądrości powoduje ból, stany zapalne lub brakuje dla niego miejsca, a także przed niektórymi etapami leczenia ortodontycznego lub protetycznego.",
+      "visit": "Przed zabiegiem lekarz przeprowadza wywiad — poinformuj o przyjmowanych lekach, zwłaszcza przeciwkrzepliwych — i ocenia zdjęcie RTG. Zabieg odbywa się w znieczuleniu miejscowym.",
+      "after": "Otrzymasz zalecenia po zabiegu. Zwykle: nie jedz do ustąpienia znieczulenia, w dniu zabiegu unikaj płukania jamy ustnej, gorących napojów i palenia. Przy nasilającym się bólu, gorączce lub krwawieniu zadzwoń do gabinetu."
+    },
+    "ortodoncja": {
+      "what": "Ortodoncja zajmuje się korygowaniem nieprawidłowego ustawienia zębów i wad zgryzu za pomocą aparatów zdejmowanych lub stałych.",
+      "when": "U dzieci warto skonsultować zgryz już w wieku przedszkolnym i wczesnoszkolnym. Dorośli zgłaszają się m.in. z powodu stłoczeń, szpar między zębami lub przed leczeniem protetycznym.",
+      "visit": "Na konsultacji lekarz ocenia zgryz i zleca potrzebną diagnostykę, np. zdjęcia RTG lub wyciski. Na tej podstawie przedstawia plan leczenia, rodzaj aparatu i przewidywany czas leczenia.",
+      "after": "Leczenie wymaga regularnych wizyt kontrolnych i bardzo dokładnej higieny. Po zakończeniu leczenia zwykle stosuje się retencję, która utrwala efekt."
+    },
+    "dziecieca": {
+      "what": "Stomatologia dziecięca to profilaktyka i leczenie zębów mlecznych i stałych u dzieci, prowadzone w sposób dostosowany do wieku i potrzeb małego pacjenta.",
+      "when": "Pierwszą wizytę warto zaplanować wkrótce po wyrżnięciu pierwszych zębów, a później zgłaszać się regularnie na przeglądy. Pilnie — gdy dziecko skarży się na ból albo widać przebarwienia lub ubytki.",
+      "visit": "Pierwsze spotkania służą oswojeniu dziecka z gabinetem. Lekarz ogląda zęby, ocenia higienę i doradza rodzicom. Leczenie prowadzimy spokojnie, krok po kroku.",
+      "after": "Pomagaj dziecku w szczotkowaniu, ograniczaj słodkie napoje i przekąski między posiłkami i pamiętaj o regularnych kontrolach."
+    }
   }
 }

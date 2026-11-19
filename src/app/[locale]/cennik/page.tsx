@@ -28,7 +28,7 @@ export default async function Pricing({ params }: { params: Promise<{ locale: Lo
           {groups.length ? (
             <div className="grid gap-6 lg:grid-cols-2">
               {groups.map((g) => (
-                <section key={g.id} data-reveal aria-labelledby={`p-${g.id}`} className="card p-7 sm:p-8">
+                <section key={g.id} aria-labelledby={`p-${g.id}`} className="card p-7 sm:p-8">
                   <h2 id={`p-${g.id}`} className="text-xl font-semibold sm:text-2xl">{t(`services.items.${g.id}.name`)}</h2>
                   <table className="mt-5 w-full">
                     <thead className="sr-only">

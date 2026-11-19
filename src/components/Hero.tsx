@@ -1,78 +1,83 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { ArrowRight, MapPin, Languages } from "lucide-react";
+import { ArrowRight, MapPin, Phone } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { clinic, whatsappLink } from "@/content/clinic";
+import { clinic, whatsappLink, formatPhone } from "@/content/clinic";
 import { TrackedLink } from "./TrackedLink";
 import { WhatsAppIcon } from "./icons";
 
+/**
+ * Home hero (Direction A). Answers, above the fold: who / where / NFZ or private / how to book.
+ * Sized to its content (no 100vh) so the clinics and actions are visible on a phone's first screen.
+ */
 export async function Hero() {
   const t = await getTranslations();
   const wa = whatsappLink(t("whatsappMessage"));
 
-  const chips = [
-    { icon: MapPin, text: `Zielona Góra · ${clinic.locations.map((l) => l.label).join(" / ")}` },
-    clinic.spokenLanguages.length > 1 && { icon: Languages, text: "PL · УКР" },
-  ].filter(Boolean) as { icon: typeof MapPin; text: string }[];
-
   return (
-    <section aria-labelledby="hero-title" className="relative -mt-20 overflow-hidden pt-20">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-40 right-[-10%] h-[38rem] w-[38rem] rounded-full bg-sage blur-3xl" />
-        <div className="absolute bottom-[-20%] left-[-15%] h-[30rem] w-[30rem] rounded-full bg-sand blur-3xl" />
-      </div>
+    <section aria-labelledby="hero-title" className="relative overflow-hidden">
+      <div aria-hidden className="pointer-events-none absolute -right-40 -top-40 -z-10 h-[34rem] w-[34rem] rounded-full bg-sage blur-3xl" />
 
-      <div className="container-x grid items-center gap-14 py-12 sm:py-16 lg:min-h-[calc(100svh-5rem)] lg:grid-cols-12 lg:gap-10 lg:py-20">
-        <div className="lg:col-span-6">
+      <div className="container-x grid items-center gap-10 pb-14 pt-6 sm:pt-10 lg:grid-cols-12 lg:gap-12 lg:pb-20">
+        <div className="lg:col-span-7">
           <p className="eyebrow">{t("hero.eyebrow")}</p>
-          <h1 id="hero-title" className="h-display mt-5">{t("hero.title")}</h1>
-          <p className="lead mt-6 max-w-xl">{t("hero.subtitle")}</p>
+          <h1 id="hero-title" className="h-display mt-4 max-w-3xl">{t("hero.title")}</h1>
+          <p className="lead mt-5 max-w-2xl">{t("hero.subtitle")}</p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link href={{ pathname: "/kontakt", hash: "wizyta" }} className="btn-primary group sm:!min-h-14 sm:!px-8">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link href={{ pathname: "/kontakt", hash: "wizyta" }} className="btn-primary sm:!min-h-13 sm:!px-7">
               {t("actions.book")}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
-            <Link href="/uslugi" className="btn-ghost sm:!min-h-14 sm:!px-8">{t("actions.exploreServices")}</Link>
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             {wa && (
-              <TrackedLink event="whatsapp_click" source="hero" href={wa} target="_blank" rel="noopener noreferrer" aria-label={t("actions.whatsappAria")} className="inline-flex items-center gap-2 text-sm font-semibold text-[#17633e] underline-offset-4 hover:underline">
-                <WhatsAppIcon className="h-5 w-5" /> {t("actions.whatsappLong")}
+              <TrackedLink event="whatsapp_click" source="hero" href={wa} target="_blank" rel="noopener noreferrer" aria-label={t("actions.whatsappAria")} className="btn-ghost !hidden sm:!inline-flex sm:!min-h-13 sm:!px-7">
+                <WhatsAppIcon className="h-5 w-5 text-[#17633e]" /> {t("actions.whatsappLong")}
               </TrackedLink>
             )}
-            <ul className="flex flex-wrap gap-2">
-              {chips.map(({ icon: Icon, text }) => (
-                <li key={text} className="flex items-center gap-1.5 rounded-full bg-white/80 px-3 py-1.5 text-xs font-semibold text-navy-soft ring-1 ring-navy/10">
-                  <Icon className="h-3.5 w-3.5 text-teal-dark" aria-hidden /> {text}
-                </li>
-              ))}
-            </ul>
           </div>
+
+          {/* Both clinics, each with its own phone and NFZ status — the most-needed facts */}
+          <ul aria-label={t("hero.callTitle")} className="mt-8 grid gap-3 sm:grid-cols-2">
+            {clinic.locations.map((l) => (
+              <li key={l.id} className="card flex items-start justify-between gap-3 p-4">
+                <div className="min-w-0">
+                  <p className="flex items-center gap-1.5 font-semibold">
+                    <MapPin className="h-4 w-4 shrink-0 text-teal-dark" aria-hidden /> {l.street}
+                  </p>
+                  <p className="mt-1">
+                    {l.nfz ? (
+                      <span className="badge-nfz">{t("hero.nfzChip")}</span>
+                    ) : (
+                      <span className="text-sm text-ink-muted">{t("hero.privateChip")}</span>
+                    )}
+                  </p>
+                </div>
+                <TrackedLink event="phone_click" source={`hero-${l.id}`} href={`tel:${l.phone}`} className="inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full bg-sage px-3.5 text-sm font-semibold tabular-nums text-navy hover:bg-sage-deep">
+                  <Phone className="h-4 w-4" aria-hidden />
+                  <span className="sr-only">{t("actions.call")} {l.label}: </span>
+                  {formatPhone(l.phone)}
+                </TrackedLink>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* One hero photo (clinic.images.hero). Until a licensed photo is set, a neutral brand graphic is shown. */}
-        <div className="relative lg:col-span-6">
-          <div className="relative aspect-[530/377] overflow-hidden rounded-[2.5rem] bg-white shadow-xl shadow-navy/[0.08] ring-1 ring-navy/[0.06]">
+        <div className="lg:col-span-5">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] bg-white ring-1 ring-navy/[0.06]">
             {clinic.images.hero ? (
               <Image
                 src={clinic.images.hero}
                 alt=""
                 fill
                 priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                quality={90}
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                quality={85}
                 className="object-cover"
                 style={{ objectPosition: clinic.images.heroFocus ?? "center" }}
               />
             ) : (
               <HeroArtwork />
             )}
-          </div>
-          <div className="absolute -bottom-8 left-4 rounded-3xl bg-navy px-6 py-5 text-ivory shadow-2xl shadow-navy/25 sm:-bottom-6 sm:left-[-1.5rem]">
-            <p className="text-3xl font-semibold tracking-tight">{t("hero.since")}</p>
-            <p className="mt-1 text-sm text-ivory/75">{t("hero.sinceText")}</p>
           </div>
         </div>
       </div>
